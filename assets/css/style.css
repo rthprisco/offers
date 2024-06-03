@@ -8,19 +8,5 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: 'Poppins', sans-serif;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    background-color: var(--primary-blue);
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
 }
