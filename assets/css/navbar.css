@@ -20,10 +20,9 @@ header nav a {
     text-decoration: none;
 }
 
-header nav a i::before {
-    font-size: 32px;
+header nav a img {
     height: 32px;
-    color: #fff;
+    filter: invert(100%);
     padding-right: 12px;
 }
 
