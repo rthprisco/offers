@@ -1,0 +1,13 @@
+/* @media screen and (max-width: 480px) {
+    header {
+        height: 120px;
+    }
+
+    input.search {
+        max-width: 420px;
+    }
+
+    header nav a span {
+        display: none;
+    }
+} */
