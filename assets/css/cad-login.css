@@ -1,0 +1,106 @@
+.caixa-modelo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+    padding: 0px 32px 32px;
+    z-index: 2;
+}
+
+.caixa-cadastro {
+}
+
+.caixa-login {
+    display: none;
+    position: absolute;
+    top: calc(100vh - 75%);
+}
+
+.caixa-modelo .btn-close {
+    background: transparent;
+    padding: 8px 8px;
+    border: none;
+    position: relative;
+    left: -55%;
+}
+
+.caixa-modelo .btn-close img {
+    height: 12px;
+    user-select: none;
+}
+
+.caixa-modelo h1 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.caixa-modelo .input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.caixa-modelo .input input {
+    font-size: 16px;
+    min-width: 262px;
+    padding: 4px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 8px;
+}
+
+.caixa-modelo .btn-enviar {
+    background: var(--primary-red);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 6px 48px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+    margin: 10px 0;
+}
+
+.caixa-modelo .btn-enviar:hover {
+    background: #E82832;
+}
+
+.caixa-modelo p {
+    font-size: 16px;
+    color: var(--dark-gray);
+}
+
+.caixa-modelo a {
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+
+.caixa-modelo a:hover {
+    text-decoration: underline;
+}
+
+a.esq-sehna {
+    text-align: end;
+}
+
+.caixa-modelo .link-cadastro p,
+a.esq-sehna {
+    font-size: 13px;
+}
+
+.caixa-modelo .link-cadastro {
+    margin-top: 10px;
+}
+
+.caixa-modelo button {
+    cursor: pointer;
+}
+
+
+.ocultar {
+    display: none;
+}
+
+.open-login:hover {
+    cursor: pointer;
+}

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/banner.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/cad-login.css">
 
     <!-- CDN - BoxIcons  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -17,6 +18,25 @@
 </head>
 
 <body>
+
+    <div class="caixa-modelo caixa-login">
+        <button class="btn-close"><img src="assets/images/icons/close.png" alt="ícone close"></button>
+        <h1>Faça seu login</h1>
+        <div class="input">
+            <p>E-mail</p>
+            <input type="text">
+        </div>
+        <div class="input">
+            <p>Senha</p>
+            <input type="password">
+            <a href="#" class="esq-sehna">Esqueceu sua senha?</a>
+        </div>
+        <button class="btn-enviar">Entrar</button>
+        <div class="link-cadastro">
+            <p>Ainda não tem cadastro?<a href="cadastro.html"> Cadastre-se</a></p>
+        </div>
+    </div>
+
     <header>
         <img src="assets/images/Logo.png" alt="Logo" width="80" height="65">
         <div class="search-bar">
@@ -25,7 +45,7 @@
             <i class="fi fi-br-search"></i>
         </div>
         <nav>
-            <a href="#">
+            <a class="open-login">
                 <img src="assets/images/icons/navbar/user.png" alt="ícone usuário">
                 <span>Faça seu login <br> ou cadastre-se</span>
             </a>
@@ -45,9 +65,8 @@
     </header>
     <main>
         <div class="banner">
-
         </div>
-
+        
         <div class="categorias">
             <div class="cat">
                 <img src="assets/images/icons/categorias/water-bottle.png" alt="ícone categoria">
@@ -98,9 +117,7 @@
                 <p>Perfumaria e higiene</p>
             </div>
         </div>
-
         <h2>Promoções da semana!</h2>
-
         <section class="produtos-container">
             <div class="produto"></div>
             <div class="produto"></div>
@@ -122,9 +139,13 @@
             <div class="produto"></div>
             <div class="produto"></div>
         </section>
-
     </main>
     <footer></footer>
+
+    <div class="filtro"></div>
+
+    <script src="assets/js/cad-login.js"></script>
+
 </body>
 
 </html>
