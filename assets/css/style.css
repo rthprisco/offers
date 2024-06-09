@@ -46,6 +46,25 @@ main {
     background: var(--gray);
     border-radius: 12px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+    transition: 0.5s;
+}
+
+.cat:hover {
+    cursor: pointer;
+    background: var(--primary-red);
+}
+
+/* .categorias:hover > :not(:hover) {
+    opacity: 0.4;
+    scale: (0.9);
+} */
+
+.cat:hover > img {
+    filter: invert(100%);
+}
+
+.cat:hover > p {
+    color: var(--white);
 }
 
 .cat img {

@@ -7,8 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/mobile.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/cad-login.css">
 
@@ -64,7 +63,32 @@
         </nav>
     </header>
     <main>
-        <div class="banner">
+        
+        <div class="slider">
+            <div class="slides">
+
+                <div class="slide first">
+                    <img src="assets/images/slides/banner-principal.png" alt="slide 01">
+                </div>
+                <div class="slide">
+                    <img src="assets/images/slides/slide-01.jpg" alt="slide 02">
+                </div>
+                <div class="slide">
+                    <img src="assets/images/slides/slide-03.jpg" alt="slide 03">
+                </div>
+                <div class="slide">
+                    <img src="assets/images/slides/slide-04.webp" alt="slide 04">
+                </div>
+                
+            </div>
+
+            <div class="steps">
+                <input type="radio" class="step" id="step-01" name="step" checked>
+                <input type="radio" class="step" id="step-02" name="step">
+                <input type="radio" class="step" id="step-03" name="step">
+                <input type="radio" class="step" id="step-04" name="step">
+            </div>
+
         </div>
         
         <div class="categorias">
@@ -145,6 +169,7 @@
     <div class="filtro"></div>
 
     <script src="assets/js/cad-login.js"></script>
+    <script src="assets/js/slider.js"></script>
 
 </body>
 
