@@ -1,5 +1,5 @@
 .slider {
-    margin: 63px auto 71px;
+    margin: 63px auto 20px;
     width: 1200px;
     height: 320px;
     overflow: hidden;
@@ -8,7 +8,7 @@
 .slides {
     display: flex;
     width: 400%;
-    height: 320px;
+    height: 300px;
 }
 
 .slide {
@@ -19,6 +19,7 @@
 
 .slide img {
     width: 1200px;
+    height: 300px;
 }
 
 .steps {
