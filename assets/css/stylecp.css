@@ -14,8 +14,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    font-size: medium;
+    
+}
+
 .container1 {
-    max-width: 1200px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
@@ -51,36 +60,72 @@
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    align-items: center; 
 }
+
 .produto {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
+
 .produto img {
     max-width: 80px;
     margin-right: 20px;
 }
+
 .produto-info {
     flex-grow: 1;
 }
+
 .produto-preço {
     font-weight: bold;
 }
+
 .loja-button {
-    background-color: #007bff;
+    background-color: #E82832;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-    position: absolute;
-    bottom: 100;
-    right: 375px;
+    margin-left: auto;
+}
+
+.historico-preco {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.bar {
+    width: 100px;
+    margin: 0 10px;
+    background-color: #007bff;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.bar-labels {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    margin-top: 10px;
+}
+.bar-label {
+    width: 100px;
+    text-align: center;
+    margin: 0 10px;
 }
