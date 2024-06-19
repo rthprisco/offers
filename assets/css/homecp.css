@@ -1,0 +1,113 @@
+:root {
+    --background: #f1f1f1;
+    --primary-red: #FF2934;
+    --primary-blue: #4450FA;
+    --gray: #D9D9D9;
+    --white: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.caixa1 {
+    text-align: center;
+}
+.caixa1 h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    
+}
+.caixa1 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.search-box {
+    display: flex;
+    justify-content: center;
+}
+.search-box input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+}
+.search-box button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #E82832;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+.search-box button:hover {
+    background-color: #555;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 20px); /* Adjusting the width to account for gap */
+}
+
+.product img {
+    height: 150px;
+    
+}
+
+h3 {
+    font-size: 17px;
+    margin: 15px 0;
+}
+
+p {
+    font-size: 14px;
+    color: #777;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.compare-button {
+    background-color: #E82832;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.compare-button:hover {
+    background-color: #dfd4d4;
+}

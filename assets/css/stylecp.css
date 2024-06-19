@@ -99,33 +99,61 @@ body{
     margin-left: auto;
 }
 
-.historico-preco {
-    width: 600px;
-    height: 400px;
+.chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grafico-container {
     display: flex;
     align-items: flex-end;
     border: 1px solid #ccc;
     padding: 10px;
     box-sizing: border-box;
+    position: relative;
 }
-.bar {
+
+.barra {
     width: 100px;
     margin: 0 10px;
-    background-color: #007bff;
+    background-color: #E82832;
     text-align: center;
     color: white;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    position: relative;
 }
-.bar-labels {
+
+.rot-barras {
     display: flex;
     justify-content: center;
-    width: 600px;
+    width: 100%;
     margin-top: 10px;
 }
-.bar-label {
+
+.rot-barra {
     width: 100px;
     text-align: center;
     margin: 0 10px;
+}
+
+.y-axis {
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.y-axis div {
+    text-align: right;
+}
+
+.y-axis-label {
+    margin: 0;
+    padding: 0;
 }
