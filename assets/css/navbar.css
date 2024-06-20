@@ -37,14 +37,14 @@ header nav a img {
 .search-bar {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 454px;
 }
 
 input.search {
     height: 40px;
     font-size: 14px;
-    width: 454px;
-    /* min-width: 400px;
-    max-width: 600px; */
+    width: 100%;
     border: none;
     border-radius: 12px;
     padding-left: 16px;
