@@ -17,3 +17,5 @@ const valor = document.querySelector(".valor")
 function total(){
     valor.innerHTML =120*  n.value
 }
+
+const remove = document.querySelector(".remove")
