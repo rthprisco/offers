@@ -125,6 +125,12 @@ table tbody tr td{
     font-size: 18px;
     margin: 0 10px;
 }  
+.quant input{
+    width: 50px;
+    text-align: center;
+    border: none;
+    height: 30px;
+}
 
 /*FINALIZADOR*/
 .compras header{
