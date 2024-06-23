@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*estrutura geral e cabeçalho*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background-color: #4450FA;
+    color: aliceblue;
+    font-size: 24px;
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: center;
+}
+button{
+    cursor: pointer;   
+}
+
+
+main{
+    background-color: #F1F1F1;
+    padding: 0px 30px 40px;
+}
+main .page-title{
+    font-size: 40px;
+    padding: 50px 0;
+    text-align: center;
+}
+main .content{
+    display: flex;
+    
+}
+main content , aside{
+    background-color: #ffffff;
+    min-width: 250px;
+    border-radius: 30px;
+}
+main section{ 
+    flex: 1;
+}
+
+/*Tabela*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table thead tr th{
+    text-align: left;
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    color: #aaa;
+}
+table tbody tr td{
+    padding: 30px 0;  
+    border-bottom: 3px solid #ccc;
+}
+
+/*produto*/
+.product{
+    display: flex;
+    align-items: center;
+}
+.product img{
+    border-radius: 6px;
+}
+.product .info{
+    margin-left: 20px;
+}
+.product .info .name{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.product .info .category{
+    color: #595959;
+}
+
+/*Botão(X)*/
+.remove{
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 100%;
+    font-size: 20px;
+    width: 30px;
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.remove:hover{
+        background-color: #FF2934; 
+}
+/*Botão quantidade*/
+.quant{
+    background-color: #ffffff;
+    display: inline-flex;
+    justify-content: space-around;
+    min-width: 80px;
+    align-items: center;
+    border-radius: 30px;
+}
+.quant button{
+    background-color: #ffffff;
+    border: 0;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quant button:hover{
+    background-color: #aaaa;
+    border-radius: 100%;
+    font-size: 20px;
+    height: 0px;
+    width: 20px;
+}
+/*span( valor da quantidade)*/
+.quant span{
+    font-size: 18px;
+    margin: 0 10px;
+}  
+
+/*FINALIZADOR*/
+.compras header{
+    background-color: #FF2934;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+aside button{
+    background-color: #c3c3c3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    border: 0;
+    padding: 10px 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-weight: bold;
+}
+aside{
+    margin-left: 30px;
+    box-shadow: 1px 1px 5px #595959;
+}
+aside .inform{
+    padding: 10px;
+}
+aside span{
+    font-size: 15px;
+}
+aside .compras header{
+    padding: 10px;
+    font-size: 15px;
+}
+aside .compras footer{
+    padding: 10px;
+    background-color: #efefef;
+}
+aside .compras{
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+aside button:hover{
+    background-color: rgb(83, 185, 83);
+}
+.inform span{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+}
+
+footer{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
