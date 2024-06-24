@@ -11,4 +11,15 @@ footer {
 footer a {
     text-decoration: none;
     color: var(--white);
+}  
+
+footer .redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer .redes a i {
+    font-size: 20px;
+    color: var(--text);
 }

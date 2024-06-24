@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFers - Comparativo de preços de supermercados</title>
+    <link rel="shortcut icon" href="assets/images/favicon-offers.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <link rel="stylesheet" href="assets/css/criar-lista.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="link-home">
+            <img src="assets/images/Logo.png" alt="Logo" width="80" height="65">
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquise pelo seu produto..." class="search">
+            <img src="assets/images/icons/search.png" alt="ícone de pesquisa">
+        </div>
+        <nav>
+            <a class="open-login">
+                <img src="assets/images/icons/navbar/user.png" alt="ícone usuário">
+                <span>Faça seu login <br> ou cadastre-se</span>
+            </a>
+            <a href="criar-lista.html">
+                <img src="assets/images/icons/navbar/clipboard.png" alt="ícone criar lista">
+                <span>Crie sua lista <br> de compras</span>
+            </a>
+            <a href="comparar-produtos.html">
+                <img src="assets/images/icons/navbar/two-arrow.png" alt="ícone comparar produtos">
+                <span>Comparar <br> Produtos</span>
+            </a>
+            <a href="#">
+                <img src="assets/images/icons/navbar/journal.png" alt="ícone encartes">
+                <span>Confira os <br> encartes</span>
+            </a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="todo-app">
+            <h2><i class='bx bx-list-plus'></i> Minha Lista</h2>
+            <div class="entrada">
+                <input type="text" id="put" placeholder="Escreva um item...">
+                <button onclick="AddTask()">Adicionar</button>
+            </div>
+            <ul id="lista-container"></ul>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 - OFFers</p>
+        <div class="redes">
+            <a href="https://www.instagram.com/darasautoservice/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="assets/js/criar-lista.js"></script>
+</body>
+
+</html>

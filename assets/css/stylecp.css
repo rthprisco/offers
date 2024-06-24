@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background: #f1f1f1;
+    --primary-red: #FF2934;
+    --primary-blue: #4450FA;
+    --gray: #D9D9D9;
+    --white: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    font-size: medium;
+    
+}
+
+.container1 {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.produto1 {
+    display: flex;
+    align-items: center;
+}
+.produto1 img {
+    max-width: 200px;
+    margin-right: 20px;
+}
+.detalhes {
+    flex: 1;
+}
+.titulo-produto {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.produto-preço1 {
+    font-size: 18px;
+    color: #e74c3c;
+}
+.avaliacao {
+    font-size: 16px;
+    color: #f39c12;
+}
+.historico-de-preco {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    align-items: center; 
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.produto img {
+    max-width: 80px;
+    margin-right: 20px;
+}
+
+.produto-info {
+    flex-grow: 1;
+}
+
+.produto-preço {
+    font-weight: bold;
+}
+
+.loja-button {
+    background-color: #E82832;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grafico-container {
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.barra {
+    width: 100px;
+    margin: 0 10px;
+    background-color: #E82832;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.rot-barras {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.rot-barra {
+    width: 100px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.y-axis {
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.y-axis div {
+    text-align: right;
+}
+
+.y-axis-label {
+    margin: 0;
+    padding: 0;
+}
