@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFers - Comparativo de preços de supermercados</title>
+    <link rel="shortcut icon" href="/images/favicon-offers.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/slider.css">
+    <link rel="stylesheet" href="/css/card-produto.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/cad-login.css">
+
+    <!-- <link rel="stylesheet" href=" /css/mobile.css"> -->
+
+    <!-- CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+
+    <form action="/login" method="POST" class="caixa-modelo caixa-login">
+        <button class="btn-close"><img src=" /images/icons/close.png" alt="ícone close"></button>
+        <h1>Faça seu login</h1>
+        <div class="input">
+            <p>E-mail</p>
+            <input type="text" name="email">
+        </div>
+        <div class="input">
+            <p>Senha</p>
+            <input type="password" name="senha">
+            <a href="#" class="esq-sehna">Esqueceu sua senha?</a>
+        </div>
+        <button type="submit" class="btn-enviar">Entrar</button>
+
+        <div class="link-cadastro">
+            <p>Ainda não tem cadastro?<a href="./cadastro"> Cadastre-se</a></p>
+        </div>
+    </form>
+
+    <%- include('partials/navbar') %>
+
+        <main>
+
+            <div class="slider">
+                <div class="slides">
+
+                    <div class="slide first">
+                        <img src=" /images/slides/banner-principal.png" alt="slide 01">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/slides/slide-01.jpg" alt="slide 02">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/slides/slide-03.jpg" alt="slide 03">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/slides/slide-04.webp" alt="slide 04">
+                    </div>
+
+                </div>
+
+                <div class="steps">
+                    <input type="radio" class="step" id="step-01" name="step" checked>
+                    <input type="radio" class="step" id="step-02" name="step">
+                    <input type="radio" class="step" id="step-03" name="step">
+                    <input type="radio" class="step" id="step-04" name="step">
+                </div>
+
+            </div>
+
+            <div class="categorias">
+                <div class="cat">
+                    <img src="/images/icons/categorias/water-bottle.png" alt="ícone categoria">
+                    <p>Bebidas</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/cookies.png" alt="ícone categoria">
+                    <p>Biscoitos</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/carne.png" alt="ícone categoria carnes">
+                    <p>Carnes</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/farinha.png" alt="ícone categoria">
+                    <p>Cereais e farinhas</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/frozen-food.png" alt="ícone categoria">
+                    <p>Congelados</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/laticinios.png" alt="ícone categoria">
+                    <p>Frios e laticínios</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/frutas.png" alt="ícone categoria">
+                    <p>Hortifruti</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/cleaning.png" alt="ícone categoria">
+                    <p>Limpeza</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/sweets.png" alt="ícone categoria">
+                    <p>Matinais e sobremesas</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/shopping-bag.png" alt="ícone categoria">
+                    <p>Mercearia</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/breads.png" alt="ícone categoria">
+                    <p>Padaria</p>
+                </div>
+                <div class="cat">
+                    <img src="/images/icons/categorias/shampoo.png" alt="ícone categoria">
+                    <p>Perfumaria e higiene</p>
+                </div>
+            </div>
+
+            <h2>Promoções da semana!</h2>
+            <section class="produtos-container">
+
+                <% produtos.forEach(produto=> { %>
+                    <div class="produto">
+                        <img src="<%= produto.img %>" alt="produto" width="120">
+                        <p class="titulo">
+                            <%= produto.titulo %>
+                        </p>
+                        <div class="precos">
+                            <p class="preco-anterior">
+                                <%= produto.preco %>
+                            </p>
+                            <p class="preco-promocao">
+                                <%= produto.promocao %>
+                            </p>
+                        </div>
+                        <div class="footer">
+                            <img src="<%= produto.mercado %>" alt="mercado" width="50">
+                            <span>
+                                <%= produto.validade %>
+                            </span>
+                        </div>
+                    </div>
+                    <% }) %>
+
+            </section>
+
+            <div class="pagination">
+                <img class="chevron" src="/images/icons/left-chevron.png" alt="página anterior">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>. . .</span>
+                <img class="chevron" src="/images/icons/right-chevron.png" alt="próxima página">
+            </div>
+
+        </main>
+        <footer>
+            <p>© 2024 - OFFers</p>
+            <div class="redes">
+                <a href="https://www.instagram.com/darasautoservice/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+        </footer>
+
+        <div class="filtro"></div>
+
+        <script src="/js/cad-login.js"></script>
+        <script src="/js/slider.js"></script>
+        <script src="/js/teste-main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="/css/variables.css">
+   <link rel="stylesheet" href="/css/navbar.css">
+   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="/css/cad-login.css">
+</head>
+
+<body>
+   <header>
+      <a href="/" class="link-home">
+         <img src="/images/Logo.png" alt="Logo" width="80" height="65">
+      </a>
+   </header>
+
+   <form action="/enviar-cadastro" method="POST" id="form-cad">
+      <div class="caixa-modelo caixa-cadastro">
+         <a href="/" class="btn-close"><img src="/images/icons/close.png" alt="ícone close"></a>
+         <h1>Faça seu cadastro</h1>
+         <div class="input">
+            <p>Nome completo </p>
+            <input type="text" id="nome" name="nome">
+         </div>
+         <div class="input">
+            <p>E-mail </p>
+            <input type="text" id="email" name="email">
+         </div>
+         <div class="input">
+            <p>Telefone </p>
+            <input type="text" id="tel" name="tel">
+         </div>
+         <div class="input">
+            <p>Senha </p>
+            <input type="password" id="senha" name="senha">
+         </div>
+         <div class="input">
+            <p>Confirmar senha </p>
+            <input type="password" id="senha2" name="senha2">
+         </div>
+         <br>
+         <button type="submit" class="btn-enviar" id="criar-cadastro">Confirmar</button>
+      </div>
+   </form>
+
+   <!-- <script src="/js/cad-login.js"></script> -->
+   <!-- <script src="/js/teste-cad.js"></script> -->
+</body>
+
+</html>
