@@ -29,16 +29,18 @@
 <body>
 
 
-    <form action="/login" method="POST" class="caixa-modelo caixa-login">
-        <button class="btn-close"><img src=" /images/icons/close.png" alt="ícone close"></button>
+    <form action="/login" method="POST" id="login-form" class="caixa-modelo caixa-login">
+        <span class="btn-close" style="cursor: pointer;"><img src=" /images/icons/close.png" alt="ícone close"></span>
         <h1>Faça seu login</h1>
         <div class="input">
             <p>E-mail</p>
-            <input type="text" name="email">
+            <input type="text" id="email" name="email">
+            <span id="span-email" class="span-error"></span>
         </div>
         <div class="input">
             <p>Senha</p>
-            <input type="password" name="senha">
+            <input type="password" id="senha" name="senha">
+            <span id="span-senha" class="span-error"></span>
             <a href="#" class="esq-sehna">Esqueceu sua senha?</a>
         </div>
         <button type="submit" class="btn-enviar">Entrar</button>

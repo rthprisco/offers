@@ -4,44 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OFFers - Comparativo de preços de supermercados</title>
-    <link rel="shortcut icon" href="../assets/images/favicon-offers.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon-offers.png" type="image/x-icon">
 
     <link rel="stylesheet" href="..assets/css/variables.css">
-    <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/navbar.css">
-    <link rel="stylesheet" href="../assets/css/stylecp.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/stylecp.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <img src="../assets/images/Logo.png" alt="Logo" width="80" height="65">
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquise pelo seu produto..." class="search">
-            <i class="fi fi-rr-search"></i>
-            <i class="fi fi-br-search"></i>
-        </div>
-        <nav>
-            <a href="#">
-                <img src="../assets/images/icons/navbar/user.png" alt="ícone usuário">
-                <span>Faça seu login <br> ou cadastre-se</span>
-            </a>
-            <a href="#">
-                <img src="../assets/images/icons/navbar/clipboard.png" alt="ícone criar lista">
-                <span>Crie sua lista <br> de compras</span>
-            </a>
-            <a href="#">
-                <img src="../assets/images/icons/navbar/two-arrow.png" alt="ícone comparar produtos">
-                <span>Comparar <br> Produtos</span>
-            </a>
-            <a href="#">
-                <img src="../assets/images/icons/navbar/journal.png" alt="ícone encartes">
-                <span>Confira os <br> encartes</span>
-            </a>
-        </nav>
-    </header>
+    <%- include('partials/navbar') %>
     <div class="container1">
         <div class="produto1">
-            <img src="../assets/images/cp/produtos/arroz.jpg" alt="feijão">
+            <img src="/images/cp/produtos/arroz.jpg" alt="feijão">
             <div class="detalhes">
                 <h1 class="titulo-produto">Arroz Branco Prato Fino 5 Kg</h1>
                 <p class="produto-preço1">R$ 43,90</p>
@@ -66,19 +41,19 @@
                 <div class="barra" style="height: 200px">R$ 43,50</div>
             </div>
             <div class="rot-barras">
-                <div class="rot-barra">Janeiro</div>
-                <div class="rot-barra">Fevereiro</div>
-                <div class="rot-barra">Março</div>
-                <div class="rot-barra">Maio</div>
-                <div class="rot-barra">Abril</div>
-                <div class="rot-barra">Junho</div>    
+                <div class="rot-barra">Jan</div>
+                <div class="rot-barra">Fev</div>
+                <div class="rot-barra">Mar</div>
+                <div class="rot-barra">Mai</div>
+                <div class="rot-barra">Abr</div>
+                <div class="rot-barra">Jun</div>    
             </div>
         </div>
     </div>
 <main>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-royal.png" alt="Descrição da imagem">
+            <img src="/images/cp/logo-royal.png" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Royal Supermercados</h2>
                 <p>Por apenas</p>
@@ -89,7 +64,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-bramil.webp" alt="Descrição da imagem">
+            <img src="/images/cp/logo-bramil.webp" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Bramil Supermercados</h2>
                 <p>Por apenas</p>
@@ -100,7 +75,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-nagumo.png" alt="Descrição da imagem">
+            <img src="/images/cp/logo-nagumo.png" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Nagumo</h2>
                 <p>Por apenas</p>
@@ -111,7 +86,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-ville.png" alt="Descrição da imagem">
+            <img src="/images/cp/logo-ville.png" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Ville Supermercados</h2>
                 <p>Por apenas</p>
@@ -122,7 +97,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-spani.png" alt="Descrição da imagem">
+            <img src="/images/cp/logo-spani.png" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Spani Atacadista</h2>
                 <p>Por apenas</p>
@@ -133,7 +108,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-sm.png" alt="Descrição da imagem">
+            <img src="/images/cp/logo-sm.png" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Rede Supermarket</h2>
                 <p>Por apenas</p>
@@ -144,7 +119,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-365.jpeg" alt="Descrição da imagem">
+            <img src="/images/cp/logo-365.jpeg" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>365 Supermercados</h2>
                 <p>Por apenas</p>
@@ -155,7 +130,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-royale.png" alt="Descrição da imagem">
+            <img src="/images/cp/logo-royale.png" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Empório Royale</h2>
                 <p>Por apenas</p>
@@ -166,7 +141,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-perola.jpeg" alt="Descrição da imagem">
+            <img src="/images/cp/logo-perola.jpeg" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Supermercado Pérola</h2>
                 <p>Por apenas</p>
@@ -177,7 +152,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-extra.png" alt="Descrição da imagem">
+            <img src="/images/cp/logo-extra.png" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Mercado Extra</h2>
                 <p>Por apenas</p>
@@ -188,7 +163,7 @@
     </div>
     <div class="container">
         <div class="produto">
-            <img src="../assets/images/cp/logo-beirario.png" alt="Descrição da imagem">
+            <img src="/images/cp/logo-beirario.png" alt="Descrição da imagem">
             <div class="produto-info">
                 <h2>Supermercado Beira Rio</h2>
                 <p>Por apenas</p>

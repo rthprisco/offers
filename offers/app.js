@@ -86,22 +86,6 @@ app.post('/login', (req, res) => {
     return res.status(200).json({ redirectUrl: '/' });
 });
 
-app.get('/criar-lista', (req, res) => {
-    return res.render('criar-lista', { nome: req.session.nome })
-});
-
-app.get('/comparar-produtos', (req, res) => {
-    return res.render('comparar-produtos', { nome: req.session.nome })
-});
-
-app.get('/feijao', (req, res) => {
-    return res.render('feijao', { nome: req.session.nome })
-});
-
-app.get('/minha-conta', (req, res) => {
-    return res.render('minha-conta', { nome: req.session.nome })
-});
-
 // Inicia o servidor
 
 const port = 3000;

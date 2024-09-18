@@ -33,6 +33,9 @@ main {
     display: flex;
     gap: 24px;
     padding: 45px 0;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .cat {
@@ -92,6 +95,11 @@ h2 {
     grid-template-columns: repeat(6, 1fr);
     gap: 24px;
     padding: 45px 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .pagination {

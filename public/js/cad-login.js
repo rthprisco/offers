@@ -14,30 +14,42 @@ btnOpen.addEventListener('click', () => {
     filtro.style.display = 'flex';
 });
 
-// const btnCreateUser = document.querySelector('#criar-cadastro');
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const users = []
+document.querySelector('#login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-//     btnCreateUser.addEventListener('click', () => {
-//         const nome = document.querySelector('#nome').value;
-//         const email = document.querySelector('#email').value;
-//         const tel = document.querySelector('#tel').value;
-//         const senha = document.querySelector('#senha').value;
-//         const senha2 = document.querySelector('#senha2').value;
+    const email = document.querySelector('#email');
+    const senha = document.querySelector('#senha');
+    const spanEmail = document.querySelector('#span-email');
+    const spanSenha = document.querySelector('#span-senha');
 
-//         if (senha !== senha2) {
-//             alert('As senhas não são iguais.')
-//         }
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email.value, senha: senha.value })
+        });
 
-        
-//         users.push({id: users.length + 1, nome, email, tel, senha});
-        
-//         localStorage.setItem('users', users)
+        const data = await response.json();
 
-//         console.log(users);
-//     })
-// });
-
-// id, nome, email, tel, senha
-
+        if (response.ok) {
+            window.location.href = data.redirectUrl;
+        }
+        else {
+            if (data.message === 'Usuário não encontrado') {
+                email.style.border = '1px solid red'
+                spanEmail.innerHTML = data.message;
+            }
+            else {
+                senha.style.border = '1px solid red'
+                spanSenha.innerHTML = data.message;
+            }
+        }
+    }
+    catch (error) {
+        alert('Erro no servidor');
+        console.log(error)
+    }
+});

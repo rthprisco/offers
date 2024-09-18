@@ -85,12 +85,17 @@ a.esq-sehna {
 }
 
 .caixa-modelo .link-cadastro p,
-a.esq-sehna {
+a.esq-sehna, .span-error {
     font-size: 13px;
+}
+
+.span-error {
+    color: red;
 }
 
 .caixa-modelo .link-cadastro {
     margin-top: 10px;
+    z-index: 99999;
 }
 
 .caixa-modelo button {

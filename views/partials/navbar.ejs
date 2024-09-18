@@ -1,5 +1,5 @@
-<header>
-    <a href="index.html" class="link-home">
+<header id="">
+    <a href="/" class="link-home">
         <img src="/images/Logo.png" alt="Logo" width="80" height="65">
     </a>
     <div class="search-bar">
@@ -7,7 +7,11 @@
         <img src="/images/icons/search.png" alt="ícone de pesquisa">
     </div>
     <nav>
-        <a class="open-login">
+        <a class="open-login" 
+            <% if (nome) { %>
+                href='/minha-conta'
+            <% } %>
+        >
             <img src="/images/icons/navbar/user.png" alt="ícone usuário">
             <% if (nome) { %>
                 <span>Olá, <%= nome %>!</span>
@@ -15,11 +19,11 @@
                 <span>Faça seu login ou cadastre-se</span>
             <% } %>
         </a>
-        <a href="criar-lista.html">
+        <a href="/criar-lista">
             <img src="/images/icons/navbar/clipboard.png" alt="ícone criar lista">
             <span>Crie sua lista de compras</span>
         </a>
-        <a href="comparar-produtos.html">
+        <a href="/comparar-produtos">
             <img src="/images/icons/navbar/two-arrow.png" alt="ícone comparar produtos">
             <span>Comparar Produtos</span>
         </a>
@@ -28,4 +32,40 @@
             <span>Confira os encartes</span>
         </a>
     </nav>
+</header>
+
+<header id="cel">
+    
+    <a href="index.html" class="Logo">
+        <img  src="assets/images/Logo.png" alt="Logo" width="80" height="65">
+    </a>
+    <div id="search-bar">
+        <input type="text" placeholder="Pesquise pelo seu produto..." class="search">
+        <img src="assets/images/icons/search.png" alt="ícone de pesquisa">
+    </div>
+    <nav id="nav">
+        <button id="btn-mobile">
+
+            <span id="hamburger"></span>
+        </button>
+        <ul id="menu">
+            <a class="open-login">
+                <img src="assets/images/icons/navbar/user.png" alt="ícone usuário">
+                <span>Login <br> ou Cadastre-se</span>
+            </a>
+            <a href="criar-lista.html">
+                <img src="assets/images/icons/navbar/clipboard.png" alt="ícone criar lista">
+                <span>Crie sua lista <br> de compras</span>
+            </a>
+            <a href="comparar-produtos.html">
+                <img src="assets/images/icons/navbar/two-arrow.png" alt="ícone comparar produtos">
+                <span>Comparar <br> Produtos</span>
+            </a>
+            <a href="#">
+                <img src="assets/images/icons/navbar/journal.png" alt="ícone encartes">
+                <span>Confira os <br> encartes</span>
+            </a>
+         </ul>
+    </nav>
+    
 </header>
