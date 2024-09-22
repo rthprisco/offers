@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -23,8 +24,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 1440px;
 
     margin: 0 auto;
 }

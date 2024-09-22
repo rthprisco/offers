@@ -105,6 +105,6 @@ app.get('/minha-conta', (req, res) => {
 // Inicia o servidor
 
 const port = 3000;
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
