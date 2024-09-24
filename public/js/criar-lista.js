@@ -6,6 +6,7 @@ function AddTask() {
         alert("Campo em branco");
     } else {
         let li = document.createElement("li");
+        li.classList.add('item-list');
         li.innerHTML = input.value;
         lista.appendChild(li);
         let span = document.createElement("span");

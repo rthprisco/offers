@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-.container {
+.container-lista {
     width: 100%;
     min-height: 100vh;
     background-color: #F1F1F1;
@@ -74,7 +67,7 @@ button.add-task:hover {
 }
 
 /* lista */
-ul li {
+.lista-container .item-list {
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
@@ -83,7 +76,7 @@ ul li {
     position: relative;
 }
 
-ul li::before {
+.lista-container .item-list::before {
     content: '';
     position: absolute;
     height: 28px;
@@ -96,16 +89,16 @@ ul li::before {
     left: 8px;
 }
 
-ul li.checked {
+.checked {
     color: #7e7d7d;
     text-decoration: line-through;
 }
 
-ul li.checked::before {
+.lista-container .item-list.checked::before {
     background-image: url(../images/lista/checked.png);
 }
 
-ul li span {
+.lista-container .item-list span {
     position: absolute;
     right: 0;
     top: 5px;
@@ -117,7 +110,7 @@ ul li span {
     text-align: center;
 }
 
-ul li span:hover {
+.lista-container .item-list span:hover {
     background-color: #F1F1F1;
     border-radius: 50%;
 }

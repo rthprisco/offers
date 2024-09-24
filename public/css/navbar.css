@@ -193,22 +193,22 @@ nav {
     padding-block: 10px;
 }
 
-.nav-list li a {
+.nav-list .nav-item a {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.nav-list li img {
+.nav-list .nav-item img {
     filter: invert(100%);
     width: 28px;
 }
 
-.nav-list li span {
+.nav-list .nav-item span {
     padding-left: 16px;
 }
 
-.nav-list li span:not(.user) {
+.nav-list .nav-item span:not(.user) {
     display: none;
 }
 
@@ -311,7 +311,7 @@ nav {
         justify-content: start;
     }
 
-    .nav-list li {
+    .nav-list .nav-item {
         width: 100%;
         display: flex;
         justify-content: start;
@@ -334,7 +334,7 @@ nav {
     }
 
 
-    .nav-list li span:not(.user) {
+    .nav-list .nav-item span:not(.user) {
         display: block;
     }
 

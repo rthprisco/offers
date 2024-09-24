@@ -11,8 +11,11 @@
             <button></button>
         </div>
         <ul class="nav-list">
-            <li>
-                <a href="#" class="open-login">
+            <li class="nav-item">
+                <a 
+                <% if (nome) { %>
+                    href="/minha-conta"
+                <% }%> class="open-login">
                     <img src="/images/icons/navbar/user.png" alt="ícone usuário">
                     <% if (nome) { %>
                         <span class="user">Olá, <%= nome %>!</span>
@@ -21,19 +24,19 @@
                     <% } %>
                 </a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="/criar-lista" title="Crie sua lista de compras">
                     <img src="/images/icons/navbar/clipboard.png" alt="ícone criar lista">
                     <span>Crie sua lista de compras</span>
                 </a>
             </li>
-            <li>
-                <a href="#" title="Comparar Produtos">
+            <li class="nav-item">
+                <a href="/comparar-produtos" title="Comparar Produtos">
                     <img src="/images/icons/navbar/two-arrow.png" alt="ícone comparar produtos">
                     <span>Comparar Produtos</span>
                 </a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="#" title="Confira os encartes">
                     <img src="/images/icons/navbar/journal.png" alt="ícone encartes">
                     <span>Confira os encartes</span>
@@ -44,39 +47,3 @@
 </header>
 
 <script defer src="/js/navbar.js"></script>
-
-<!-- <header id="">
-    <a href="/" class="link-home">
-        <img src="/images/Logo.png" alt="Logo" width="80" height="65">
-    </a>
-    <div class="search-bar">
-        <input type="text" placeholder="Pesquise pelo seu produto..." class="search">
-        <img src="/images/icons/search.png" alt="ícone de pesquisa">
-    </div>
-    <nav>
-        <a class="open-login" 
-            <% if (nome) { %>
-                href='/minha-conta'
-            <% } %>
-        >
-            <img src="/images/icons/navbar/user.png" alt="ícone usuário">
-            <% if (nome) { %>
-                <span>Olá, <%= nome %>!</span>
-            <% } else { %>
-                <span>Faça seu login ou cadastre-se</span>
-            <% } %>
-        </a>
-        <a href="/criar-lista">
-            <img src="/images/icons/navbar/clipboard.png" alt="ícone criar lista">
-            <span>Crie sua lista de compras</span>
-        </a>
-        <a href="/comparar-produtos">
-            <img src="/images/icons/navbar/two-arrow.png" alt="ícone comparar produtos">
-            <span>Comparar Produtos</span>
-        </a>
-        <a href="#">
-            <img src="/images/icons/navbar/journal.png" alt="ícone encartes">
-            <span>Confira os encartes</span>
-        </a>
-    </nav>
-</header> -->
