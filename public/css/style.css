@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -24,17 +25,22 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 
-    margin: 0 auto;
+    margin: 60px auto;
+    overflow-x: hidden;
 }
 
 .categorias {
     display: flex;
     gap: 24px;
     padding: 45px 0;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
     align-items: center;
     justify-content: center;
+
+    width: 100%;
 }
 
 .cat {
@@ -62,11 +68,11 @@ main {
     scale: (0.9);
 } */
 
-.cat:hover > img {
+.cat:hover>img {
     filter: invert(100%);
 }
 
-.cat:hover > p {
+.cat:hover>p {
     color: var(--white);
 }
 
@@ -93,12 +99,12 @@ h2 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 24px;
-    padding: 45px 0;
+    padding: 45px 200px;
 
-    display: flex;
+    /* display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .pagination {
@@ -126,4 +132,34 @@ h2 {
     background: #000;
     opacity: 0.7;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 130px;
+    }
+
+    .categorias {
+        overflow-x: auto;
+        justify-content: start;
+        gap: 16px;
+        padding: 45px 20px;
+    }
+
+    .categorias::-webkit-scrollbar {
+        display: none; /* Esconder a barra de scroll no Chrome e Safari */
+    }
+
+    .cat {
+        width: 85px;
+        height: 85px;
+    }
+
+    .produtos-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 45px 20px;
+    }
+    
 }

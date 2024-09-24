@@ -1,16 +1,19 @@
 <header>
     <nav class="nav">
-        <a href="/" class="logo"><img src="/images/Logo.png" alt="Logo"></a>
+        <div class="logo">
+            <a href="/"><img src="/images/Logo.png" alt="Logo"></a>
+        </div>
         <div class="search-bar">
             <input type="text" placeholder="Pesquise pelo seu produto..." class="search">
-            <img src="/images/icons/search.png" alt="ícone de pesquisa">
+            <!-- <img src="/images/icons/search.png" alt="ícone de pesquisa"> -->
         </div>
-        <button class="hamburger"></button>
+        <div class="hamburguer">
+            <button></button>
+        </div>
         <ul class="nav-list">
             <li>
                 <a href="#" class="open-login">
                     <img src="/images/icons/navbar/user.png" alt="ícone usuário">
-                    <!-- <span class="user">Faça seu login ou cadastre-se</span> -->
                     <% if (nome) { %>
                         <span class="user">Olá, <%= nome %>!</span>
                     <% } else { %>

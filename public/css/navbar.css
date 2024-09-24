@@ -143,9 +143,9 @@ nav {
     align-items: center;
 }
 
-.logo img {
+.logo a img {
     width: 80px;
-    height: 65px;
+    height: auto;
 }
 
 /* Search Bar */
@@ -159,8 +159,8 @@ nav {
 
 .search-bar input {
     height: 40px;
-    font-size: 14px;
     width: 100%;
+    font-size: 14px;
     border: none;
     border-radius: 12px;
     padding: 0 16px;
@@ -212,7 +212,7 @@ nav {
     display: none;
 }
 
-.hamburger {
+.hamburguer button {
     display: none;
     border: none;
     background: none;
@@ -220,8 +220,8 @@ nav {
     cursor: pointer;
 }
 
-.hamburger::after,
-.hamburger::before {
+.hamburguer button::after,
+.hamburguer button::before {
     content: " ";
     display: block;
     width: 30px;
@@ -235,24 +235,46 @@ nav {
 @media (max-width: 768px) {
     header {
         position: fixed;
-        height: 120px;
+        height: 110px;
+    }
+
+    nav {
+        flex-wrap: wrap;
     }
 
     .logo {
+        order: 1;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding-left: 24px;
+
         position: relative;
-        top: -10px;
-        left: 10px;
+        top: 6px;
     }
 
-    .logo img {
-        width: 70px;
-        height: 55px;
+    .logo a img {
+        width: 60px;
+        height: auto;
+    }
+
+    .hamburguer {
+        order: 2;
+        width: 50%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .hamburguer button {
+        display: block;
+        z-index: 1;
+        margin-right: 24px;
     }
 
     .search-bar {
-        position: absolute;
-        top: 60px;
-        width: 90%;
+        order: 3;
+        width: 100%;
+        margin: 0 20px;
     }
 
     .search-bar input {
@@ -261,11 +283,6 @@ nav {
 
     .search-bar img {
         left: 330px;
-    }
-
-    .hamburger {
-        display: block;
-        z-index: 1;
     }
 
     .nav-list {
@@ -288,6 +305,16 @@ nav {
     .nav-list a {
         font-size: 16px;
         opacity: 0;
+
+        
+        display: flex;
+        justify-content: start;
+    }
+
+    .nav-list li {
+        width: 100%;
+        display: flex;
+        justify-content: start;
     }
 
     .nav-list li:nth-child(1) a {
@@ -306,6 +333,11 @@ nav {
         transition: 0.5s 0.8s;
     }
 
+
+    .nav-list li span:not(.user) {
+        display: block;
+    }
+
     /* Estilos ativos */
 
     .nav.active .nav-list {
@@ -317,18 +349,17 @@ nav {
         opacity: 1;
     }
 
-    .nav.active .hamburger {
+    .nav.active .hamburguer button {
         position: fixed;
         top: 26px;
-        right: 16px;
         border-top-color: transparent;
     }
 
-    .nav.active .hamburger::before {
+    .nav.active .hamburguer button::before {
         transform: rotate(135deg);
     }
 
-    .nav.active .hamburger::after {
+    .nav.active .hamburguer button::after {
         transform: rotate(-135deg);
         top: -7px;
     }
