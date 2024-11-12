@@ -4,6 +4,7 @@
         width: 100%;
         max-width: 480px;
         overflow-x: hidden;
+        display: flex;
     }
 
     header {
@@ -80,4 +81,16 @@
         border-radius: 12px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
     }
+
+    /* ---Pag Cadastro--- */
+
+    .caixa-modelo {
+        display: flex;
+        align-items: center;   
+    }
+    
+    #form-cad{
+        display: flex;
+    }
+     
 }

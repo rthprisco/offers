@@ -9,7 +9,7 @@ export function createCardProduto(produto) {
             <p class="preco-promocao">${produto.promocao}</p>
         </div>
         <div class="footer">
-            <img src="${produto.mercado}" alt="mercado" width="50">
+            <img src="${produto.mercado}" alt="mercado" width="40">
             <span>Oferta válida até 28/06</span>
         </div>
     `;

@@ -33,13 +33,13 @@
 }
 
 .produto .precos .preco-anterior {
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: line-through;
     color: var(--dark-gray);
 }
 
 .produto .precos .preco-promocao {
-    font-size: 24px;
+    font-size: 20   px;
     color: var(--primary-red);
     font-weight: 700;
 }
