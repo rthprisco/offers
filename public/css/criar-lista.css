@@ -82,7 +82,7 @@ button.add-task:hover {
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(../images/lista/unchecked.png);
+    background-image: url(./public/images/lista/unchecked.png);
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -95,7 +95,7 @@ button.add-task:hover {
 }
 
 .lista-container .item-list.checked::before {
-    background-image: url(../images/lista/checked.png);
+    background-image: url(/public/images/lista/checked.png);
 }
 
 .lista-container .item-list span {

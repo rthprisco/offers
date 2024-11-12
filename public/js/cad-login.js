@@ -1,6 +1,6 @@
 const box = document.querySelector('.caixa-modelo');
 const btnClose = document.querySelector('.btn-close');
-const btnOpen = document.querySelector('.open-login');
+const btnOpen = document.querySelector('#open-login');
 const filtro = document.querySelector('.filtro');
 
 

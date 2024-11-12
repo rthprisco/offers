@@ -1,146 +1,164 @@
 [
     {
-        "img": "/images/produtos/corona.jpg",
+        "img": "./public/images/produtos/corona.jpg",
         "titulo": "Cerveja Corona 330ml Cero Sunbrew Zero Álcool",
         "preco": "R$ 6,69 un.",
         "promocao": "R$ 5,99 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "bebidas"
     },
     {
-        "img": "/images/produtos/bisnaguinha.jpg",
+        "img": "./public/images/produtos/bisnaguinha.jpg",
         "titulo": "Pão Bisnaguinha Tradicional Seven Boys 300g",
         "preco": "R$ 7,99 un.",
         "promocao": "R$ 6,99 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "padaria"
     },
     {
-        "img": "/images/produtos/sardinha.jpg",
+        "img": "./public/images/produtos/sardinha.jpg",
         "titulo": "Sardinha Palmeira 125g Molho Tomate",
         "preco": "R$ 6,49 un.",
         "promocao": "R$ 4,89 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "carnes"
     },
     {
-        "img": "/images/produtos/ativ.jpg",
+        "img": "./public/images/produtos/ativ.jpg",
         "titulo": "Refresco Ativ Plus 290ml Guaraná E Açai",
         "preco": "R$ 0,99 un.",
         "promocao": "R$ 0,79 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "bebidas"
     },
     {
-        "img": "/images/produtos/toddy.jpg",
+        "img": "./public/images/produtos/toddy.jpg",
         "titulo": "Achoc. Toddy 1,02kg Original Sache Econo",
         "preco": "R$ 18,99 un.",
         "promocao": "R$ 16,98 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "mercearia"
     },
     {
-        "img": "/images/produtos/danone.jpg",
+        "img": "./public/images/produtos/danone.jpg",
         "titulo": "Iogurte Natural Danone 160g Desnatado",
         "preco": "R$ 3,59 un.",
         "promocao": "R$ 2,99 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "frios-e-laticinios"
     },
     {
-        "img": "/images/produtos/carne-seca.jpg",
+        "img": "./public/images/produtos/carne-seca.jpg",
         "titulo": "Carne Seca Lagarto 500g Embalado",
         "preco": "R$ 24,95 un.",
         "promocao": "R$ 23,95 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "carnes"
     },
     {
-        "img": "/images/produtos/sabonete.jpg",
+        "img": "./public/images/produtos/sabonete.jpg",
         "titulo": "Sabonete Em Barra Nivea Erva Doce 85g",
         "preco": "R$ 2,69 un.",
         "promocao": "R$ 2,49 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "perfumaria-e-higiene"
     },
     {
-        "img": "/images/produtos/refresco.jpg",
+        "img": "./public/images/produtos/refresco.jpg",
         "titulo": "Refresco Em Pó Frisco 18g Morango E Iogurte",
         "preco": "R$ 0,99 un.",
         "promocao": "R$ 0,89 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "mercearia"
     },
     {
-        "img": "/images/produtos/chocolate.jpg",
+        "img": "./public/images/produtos/chocolate.jpg",
         "titulo": "Chocolate Em Barra Lacta Amaro 40% Cacau 80g",
         "preco": "R$ 7,99 un.",
         "promocao": "R$ 5,89 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "matinais-e-sobremesas"
     },
     {
-        "img": "/images/produtos/cafe.jpg",
+        "img": "./public/images/produtos/cafe.jpg",
         "titulo": "Café Soluvel 3 Corações 50g Descafeinado",
         "preco": "R$ 13,99 un.",
         "promocao": "R$ 4,99 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "mercearia"
     },
     {
-        "img": "/images/produtos/vinho.jpg",
+        "img": "./public/images/produtos/vinho.jpg",
         "titulo": "Vinho Uruguaio C Suenos 750ml Tannat/ Merlot",
         "preco": "R$ 29,90 un.",
         "promocao": "R$ 20,90 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "bebidas"
     },
     {
-        "img": "/images/produtos/leite.jpg",
+        "img": "./public/images/produtos/leite.jpg",
         "titulo": "Leite Fermentado Activia Aveia 800g",
         "preco": "R$ 14,90 un.",
         "promocao": "R$ 12,49 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "frios-e-laticinios"
     },
     {
-        "img": "/images/produtos/odorizador.jpg",
+        "img": "./public/images/produtos/odorizador.jpg",
         "titulo": "Odorizador Glade 360ml Frutas&flores Gts20%",
         "preco": "R$ 17,45 un.",
         "promocao": "R$ 11,99 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "perfumaria-e-higiene"
     },
     {
-        "img": "/images/produtos/torta.jpg",
+        "img": "./public/images/produtos/torta.jpg",
         "titulo": "Torta De Frango Com Palmito, Milho E Requeijão Sadia 500g",
         "preco": "R$ 24,90 un.",
         "promocao": "R$ 15,74 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria":"padaria"
     },
     {
-        "img": "/images/produtos/linguica-suina.jpg",
+        "img": "./public/images/produtos/linguica-suina.jpg",
         "titulo": "Linguiça Suína Seara 5kg Pacote Fechado",
         "preco": "R$ 89,90 un.",
         "promocao": "R$ 74,95 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "carnes"
     },
     {
-        "img": "/images/produtos/amaciante.jpg",
+        "img": "./public/images/produtos/amaciante.jpg",
         "titulo": "Amaciante Diluído Ypê 1,6l Intenso",
         "preco": "R$ 8,79 un.",
         "promocao": "R$ 5,99 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "perfumaria-e-higiene"
     },
     {
-        "img": "/images/produtos/requeijao.jpg",
+        "img":"./public/images/produtos/requeijao.jpg",
         "titulo": "Requeijão Pedra Selada 200g Tradicional",
         "preco": "R$ 8,99 un.",
         "promocao": "R$ 5,99 un.",
-        "mercado": "/images/logo-royal.jpg",
-        "validade": "Oferta válida até 28/06"
+        "mercado": "./public/images/logo-royal.jpg",
+        "validade": "Oferta válida até 28/06",
+        "categoria": "frios-e-laticinios"
     }
 ]

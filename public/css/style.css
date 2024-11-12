@@ -122,6 +122,11 @@ h2 {
     height: 24px;
 }
 
+.pagination .pag-atual {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
 .filtro {
     display: none;
     position: fixed;

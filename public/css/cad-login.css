@@ -8,11 +8,16 @@
     padding: 0px 32px 32px;
     z-index: 2;
 
-    position: fixed;
+    /* position: fixed; */
+}
+
+#form-cad{
+    display: flex;
+    justify-content: center;
 }
 
 .caixa-cadastro {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .caixa-login {
@@ -48,7 +53,7 @@
 .caixa-modelo .input input {
     font-size: 16px;
     min-width: 262px;
-    padding: 4px;
+    padding: 4px 8px;
     border: 1px solid var(--dark-gray);
     border-radius: 8px;
 }
@@ -87,12 +92,20 @@ a.esq-sehna {
 }
 
 .caixa-modelo .link-cadastro p,
-a.esq-sehna, .span-error {
+a.esq-sehna{
     font-size: 13px;
 }
 
 .span-error {
+    display: none;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
     color: red;
+    border: 1px solid red;
+    border-radius: 8px;
+    background: #ffe6e7;
+    padding: 4px;
 }
 
 .caixa-modelo .link-cadastro {
