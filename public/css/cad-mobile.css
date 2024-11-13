@@ -1,0 +1,19 @@
+@media screen and (max-width: 480px) {
+   
+
+    header {
+        display: flex;
+        position: static;
+        height: 80px;
+    }
+
+    #logo{        
+        margin-top: 20px;
+    }
+
+    .caixa-cadastro{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}
