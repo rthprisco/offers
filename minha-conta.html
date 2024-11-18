@@ -13,44 +13,46 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/css/minha-conta.css">
+    <link rel="stylesheet" href="./public/css/navbar.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/footer.css"> 
+    <link rel="stylesheet" href="./public/css/card-produto.css">
 </head>
 
 <body>
+    <header id="header"></header>
 
-    <div class="menu">
-        <nav>
-            <ul>
-                <div class="usuario">
-                    <i class="fa-solid fa-user"></i>
-                    <p>Nome</p>
-                    <a href="#">Minha Conta</a>
-                </div>
-
-                <div class="linha1"></div>
-                <li><a href="#">Meu Carrinho</a></li>
-                <li><a href="#">Favoritos</a></li>
-                <div class="linha1"></div>
-                <li><a href="#">Trocar de Senha</a></li>
-                <div class="linha1"></div>
-                <li><a href="#">Central de Ajuda</a></li>
-                <li><a href="#">Termo de Uso</a></li>
-                <li id="logout"><a href="index.html">Sair</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <footer id="footer"></footer>
-
-    <!-- Componentes JS -->
-    <script src="./partials/footer.js"></script>
-
+    <main>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <div class="usuario">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Nome</p>
+                        <a href="#">Minha Conta</a>
+                    </div>
+                    <div class="linha1"></div>
+                    <li><a href="#">Meu Carrinho</a></li>
+                    <li><a href="#">Favoritos</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <div class="linha1"></div>
+                    <li><a href="#">Trocar de Senha</a></li>
+                    <div class="linha1"></div>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Termo de Uso</a></li>
+                    <li id="logout"><a href="index.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+    
     <script>
         document.querySelector('#logout').addEventListener('click', function () {
             localStorage.setItem('loggedInUser', null);
             // window.location.href = 'index.html';
         });
     </script>
-
+    <script src="./partials/navbar.js"></script>
 </body>
 
 </html>
