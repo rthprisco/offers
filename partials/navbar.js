@@ -10,9 +10,9 @@ function createNavbar() {
         <div class="logo">
             <a href="/"><img src="/public/images/Logo.png" alt="Logo"></a>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquise pelo seu produto..." class="search">
-            <!-- <img src="/public/images/icons/search.png" alt="ícone de pesquisa"> -->
+        <div class="search-form">
+            <input placeholder="Pesquise pelo seu produto..." id="search-input" class="product-input">
+            <img src="/public/images/icons/search.png" alt="ícone de pesquisa">
         </div>
         <div class="hamburguer">
             <button></button>
