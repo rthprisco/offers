@@ -4,10 +4,13 @@ const itemsPerPage = 12;
 let currentPage = 1;
 let produtos = [];
 
-async function fetchProdutos() {
+async function fetchProdutos(categoria) {
     try {
         const data = await fetch('../../produtos.json').then(response => response.json());
-        produtos = data || [];
+
+        if (categoria) produtos = data.filter(e => e.categoria === categoria)
+            else produtos = data || [];
+
         displayProdutos();
     } catch (error) {
         console.error('Erro ao buscar dados:', error);
@@ -52,3 +55,10 @@ document.getElementById('prev-btn').addEventListener('click', prevPage);
 document.getElementById('next-btn').addEventListener('click', nextPage);
 
 fetchProdutos();
+
+// Filtro por categoria
+document.querySelectorAll('.cat').forEach(cat => {
+    cat.addEventListener('click', () => {
+        fetchProdutos(cat.id);
+    })
+});
