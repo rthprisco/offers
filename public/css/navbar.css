@@ -234,7 +234,6 @@ nav {
 
 @media (max-width: 768px) {
     header {
-        position: fixed;
         height: 110px;
     }
 
