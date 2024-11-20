@@ -10,7 +10,7 @@ async function fetchProdutos(categoria) {
 
         if (categoria) produtos = data.filter(e => e.categoria === categoria)
             else produtos = data || [];
-
+        
         displayProdutos();
     } catch (error) {
         console.error('Erro ao buscar dados:', error);
@@ -23,7 +23,7 @@ function displayProdutos() {
 
     if (!produtos || produtos.length === 0) {
         console.error('Nenhum produto encontrado.');
-        produtosContainer.textContent = 'Nenhum produto encontrado.';
+        // produtosContainer.textContent = 'Nenhum produto encontrado.';
         return;
     }
 
