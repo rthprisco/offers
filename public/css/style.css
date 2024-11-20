@@ -140,10 +140,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    main {
-        margin-top: 130px;
-    }
-
+   
     .categorias {
         overflow-x: auto;
         justify-content: start;

@@ -33,7 +33,7 @@
     }
 
     header nav {
-        display: none;
+        /* display: none; */
         position: absolute;
         gap: 16px;
     }

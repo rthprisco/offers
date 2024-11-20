@@ -67,7 +67,7 @@ button.add-task:hover {
 }
 
 /* lista */
-.lista-container .item-list {
+#lista-container .item-list {
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
@@ -76,13 +76,13 @@ button.add-task:hover {
     position: relative;
 }
 
-.lista-container .item-list::before {
+#lista-container .item-list::before {
     content: '';
     position: absolute;
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(./public/images/lista/unchecked.png);
+    background-image: url(../images/lista/unchecked.png);
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -94,11 +94,11 @@ button.add-task:hover {
     text-decoration: line-through;
 }
 
-.lista-container .item-list.checked::before {
-    background-image: url(/public/images/lista/checked.png);
+#lista-container .item-list.checked::before {
+    background-image: url(../images/lista/checked.png);
 }
 
-.lista-container .item-list span {
+#lista-container .item-list span {
     position: absolute;
     right: 0;
     top: 5px;
@@ -110,7 +110,15 @@ button.add-task:hover {
     text-align: center;
 }
 
-.lista-container .item-list span:hover {
+#lista-container .item-list span:hover {
     background-color: #F1F1F1;
     border-radius: 50%;
 }
+
+@media screen and (max-width: 480px){
+
+    .todo-app {
+        margin-top: 20px;
+    }
+}
+    

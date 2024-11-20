@@ -9,17 +9,20 @@
    <link rel="stylesheet" href="./public/css/navbar.css">
    <link rel="stylesheet" href="./public/css/style.css">
    <link rel="stylesheet" href="./public/css/cad-login.css">
-   <link rel="stylesheet" href="./public/css/mobile.css">
+   <!-- <link rel="stylesheet" href="./public/css/mobile.css"> -->
    <link rel="stylesheet" href="./public/css/cad-mobile.css">
    <link rel="stylesheet" href="./public/css/footer.css">
+
+   <link rel="shortcut icon" href="/images/favicon-offers.png" type="image/x-icon">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 </head>
 
 <body>
-   <header>
-      <a href="/" class="link-home">
-         <img id="logo" src="./public/images/Logo.png" alt="Logo" width="80" height="65">
-      </a>
-   </header>
+   
+   <header id="header"></header>
 
    <form id="form-cad">
       <div class="caixa-modelo caixa-cadastro">
@@ -55,11 +58,13 @@
       </div>
    </form>
 
-   <script src="public/js/cadastro.js"></script>
+   <footer id="footer"></footer>
+
+   <script src="./partials/navbar.js"></script>
+   <script src="./partials/footer.js"></script>
+   
+
+   <script src="./public/js/cadastro.js"></script>
 </body>
 
-<footer id="footer"></footer>
- 
-
-<script src="./partials/footer.js"></script>
 </html>
