@@ -1,4 +1,5 @@
-const searchForm = document.querySelector('#search-input')
+import { createCardProduto } from '../../partials/produto.js';
+
 const productList = document.querySelector('.product-list')
 const priceChart = document.querySelector('.price-chart')
 
@@ -17,15 +18,28 @@ document.addEventListener('DOMContentLoaded', async function (event) {
 
 function displayItems(products) {
     console.log(products)
-    productList.innerHTML = products.map(product => `
-        <div class="product-card">
-        <img src="${product.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg')}" alt="${product.title}">
-        <h3>${product.title}</h3>
-        <p class="product-price">${product.price.toLocaleString('pt-br', { style: "currency", currency: "BRL" })}</p>
-        <p class="product-store">Fornecedor: ${product.seller.nickname}</p>
+
+    products.forEach(p => {
+        const produto = {
+            img: p.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg'),  
+            titulo: p.title,
+            mercado: p.seller.nickname,
+            promocao: p.price
+        };
+
+        productList.appendChild(createCardProduto(produto));
+
+    });
+
+    // productList.innerHTML = products.map(product => `
+    //     <div class="product-card">
+    //     <img src="${product.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg')}" alt="${product.title}">
+    //     <h3>${product.title}</h3>
+    //     <p class="product-price">${product.price.toLocaleString('pt-br', { style: "currency", currency: "BRL" })}</p>
+    //     <p class="product-store">Fornecedor: ${product.seller.nickname}</p>
     
-        </div>
-        `).join('')
+    //     </div>
+    //     `).join('')
 }
 
 // function updatePriceChart(products) {
