@@ -19,15 +19,6 @@ async function fetchProducts() {
     displayItems(products)
 }
 
-// document.addEventListener('DOMContentLoaded', async function (event) {
-//     const data = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${produto}&limit=24&offset=${offset}`)
-//         .then(response => response.json());
-
-//     const products = data.results
-
-//     displayItems(products)
-// });
-
 function displayItems(products) {
     productList.innerHTML = '';
 
