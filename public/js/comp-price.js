@@ -1,46 +1,65 @@
 import { createCardProduto } from '../../partials/produto.js';
 
-const productList = document.querySelector('.product-list')
+const productList = document.querySelector('.produtos-container')
 const priceChart = document.querySelector('.price-chart')
 
 const params = new URLSearchParams(window.location.search);
 const produto = params.get('produto');
 
+let offset = 0;
+
 let myChart = ""
 
-document.addEventListener('DOMContentLoaded', async function (event) {
-    const data = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${produto}`)
-    const products = (await data.json()).results.slice(0, 12)
+async function fetchProducts() {
+    const data = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${produto}&limit=24&offset=${offset}`)
+        .then(response => response.json());
+
+    const products = data.results;
 
     displayItems(products)
-    // updatePriceChart(products)
-});
+}
+
+// document.addEventListener('DOMContentLoaded', async function (event) {
+//     const data = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${produto}&limit=24&offset=${offset}`)
+//         .then(response => response.json());
+
+//     const products = data.results
+
+//     displayItems(products)
+// });
 
 function displayItems(products) {
-    console.log(products)
+    productList.innerHTML = '';
 
     products.forEach(p => {
         const produto = {
             img: p.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg'),  
             titulo: p.title,
             mercado: p.seller.nickname,
+            preco_original: p.original_price,
             promocao: p.price
         };
 
         productList.appendChild(createCardProduto(produto));
-
     });
-
-    // productList.innerHTML = products.map(product => `
-    //     <div class="product-card">
-    //     <img src="${product.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg')}" alt="${product.title}">
-    //     <h3>${product.title}</h3>
-    //     <p class="product-price">${product.price.toLocaleString('pt-br', { style: "currency", currency: "BRL" })}</p>
-    //     <p class="product-store">Fornecedor: ${product.seller.nickname}</p>
-    
-    //     </div>
-    //     `).join('')
 }
+
+fetchProducts();
+
+function nextPage() {
+    offset += 24;
+    fetchProducts();
+}
+
+function prevPage() {
+    if (offset > 0) {
+        offset -= 24;
+        fetchProducts();
+    }
+}
+
+document.getElementById('prev-btn').addEventListener('click', prevPage);
+document.getElementById('next-btn').addEventListener('click', nextPage);
 
 // function updatePriceChart(products) {
 //     const ctx = priceChart.getContext('2d');

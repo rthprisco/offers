@@ -1,4 +1,4 @@
-import { createCardProduto } from '../../partials/produto.js';
+import { createCardProduto } from "../../partials/produto.js";
 
 const itemsPerPage = 12;
 let currentPage = 1;
@@ -8,22 +8,24 @@ async function fetchProdutos(categoria) {
     try {
         const data = await fetch('../../produtos.json').then(response => response.json());
 
-        if (categoria) produtos = data.filter(e => e.categoria === categoria)
+        if (categoria) produtos = data.filter(e => e.categoria === categoria);
             else produtos = data || [];
-        
+
         displayProdutos();
-    } catch (error) {
+    } 
+    catch (error) {
         console.error('Erro ao buscar dados:', error);
     }
 }
 
-function displayProdutos() {
+fetchProdutos();
+
+async function displayProdutos() {
     const produtosContainer = document.querySelector('.produtos-container');
     produtosContainer.innerHTML = '';
 
     if (!produtos || produtos.length === 0) {
         console.error('Nenhum produto encontrado.');
-        // produtosContainer.textContent = 'Nenhum produto encontrado.';
         return;
     }
 
@@ -53,8 +55,6 @@ function prevPage() {
 
 document.getElementById('prev-btn').addEventListener('click', prevPage);
 document.getElementById('next-btn').addEventListener('click', nextPage);
-
-fetchProdutos();
 
 // Filtro por categoria
 document.querySelectorAll('.cat').forEach(cat => {

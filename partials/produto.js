@@ -5,8 +5,8 @@ export function createCardProduto(produto) {
         <img src="${produto.img}" alt="produto" width="120">
         <p class="titulo">${produto.titulo}</p>
         <div class="precos">
-            <p class="preco-anterior">${produto.preco}</p>
-            <p class="preco-promocao">R$ ${produto.promocao}</p>
+            <p class="preco-anterior" ${isOriginalPrice(produto.preco_original)}">R$ ${(produto.preco_original)}</p>
+            <p class="preco-promocao">R$ ${(produto.promocao).toFixed(2)}</p>
         </div>
         <div class="footer">
             <span>Mercado: ${produto.mercado}</span>
@@ -15,5 +15,6 @@ export function createCardProduto(produto) {
     return card;
 }
 
-// <img src="${produto.mercado}" alt="mercado" width="40">
-// <span>Oferta válida até 28/06</span>
+function isOriginalPrice(price) {
+    if (!price) return 'style="display: none;"';
+}
