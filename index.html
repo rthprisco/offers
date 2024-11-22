@@ -27,7 +27,15 @@
 </head>
 
 <body>
-
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <h2>Digite o CEP</h2>
+          <input type="text" id="cep" placeholder="Digite o CEP">
+          <button onclick="buscarCep()">Buscar</button>
+          <button onclick="closeModal()">Fechar</button>
+        </div>
+      </div>
+   
     <form id="login-form" class="caixa-modelo caixa-login">
         <span class="btn-close" style="cursor: pointer;"><img src="./public/images/icons/close.png"
                 alt="ícone close"></span>
