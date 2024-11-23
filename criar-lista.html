@@ -22,6 +22,18 @@
 </head>
 
 <body>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <h2>Digite o CEP</h2>
+          <input type="text" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="formatarCep(this)">
+          <button onclick="buscarCep()">Buscar</button>
+          <button onclick="closeModal()">Fechar</button>
+        </div>
+      </div>
+
+      
+
     <header id="header"></header>
     
     <div class="container-lista">

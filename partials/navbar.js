@@ -12,10 +12,9 @@ function createNavbar() {
         </div>
         <div class="search-form">
             <input placeholder="Pesquise pelo seu produto..." id="search-input" class="product-input">
-            <img src="/public/images/icons/search.png" alt="ícone de pesquisa">
-            <div class="box-app">
-                <div class="icon" onclick="openModal()">Digite seu cep</div>
-                <div id="result" class="result-container"></div>
+            <div id="result" class="result-container">
+            <p id="welcome" class="welcome-message" onclick="openModal()"><i class="fa-solid fa-location-dot"></i> Insira seu CEP</p>
+            <p id="cep-info" class="cep-info hidden" onclick="openModal()"></p>
             </div>
         </div>
         <div class="hamburguer">
@@ -54,40 +53,65 @@ const nav = document.querySelector('.nav');
 
 hamburger.addEventListener('click', () => nav.classList.toggle('active'));
 
-
-// Função para abrir o modal
 function openModal() {
     document.getElementById('modal').style.display = 'flex';
-}
-
-// Função para fechar o modal
-function closeModal() {
+  }
+  
+  function closeModal() {
     document.getElementById('modal').style.display = 'none';
-}
-
-// Função para buscar o CEP
-async function buscarCep() {
-    const cep = document.getElementById('cep').value;
+  }
+  
+  function formatarCep(input) {
+    let cep = input.value.replace(/\D/g, ''); // Remove tudo que não é número
+    if (cep.length > 5) {
+      cep = `${cep.slice(0, 5)}-${cep.slice(5, 8)}`; // Adiciona o hífen
+    }
+    input.value = cep;
+  }
+  
+  async function buscarCep() {
+    const cep = document.getElementById('cep').value.replace('-', ''); // Remove o hífen para busca
     const resultDiv = document.getElementById('result');
-
+    const welcomeMessage = document.getElementById('welcome');
+    const cepInfo = document.getElementById('cep-info');
+  
     if (!cep) {
-        resultDiv.innerHTML = "<p style='color: red;'>Por favor, digite um CEP.</p>";
-        return;
+      resultDiv.innerHTML = "<p style='color: red;'>Por favor, digite um CEP.</p>";
+      return;
     }
-
+  
     try {
-        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-        if (!response.ok) throw new Error('Erro ao buscar o CEP');
-        const data = await response.json();
-
-        if (data.erro) {
-            resultDiv.innerHTML = "<p style='color: red;'>CEP não encontrado.</p>";
-            return;
-        }
-
-        resultDiv.innerHTML = `<p>${data.localidade || 'N/A'} - ${data.uf || 'N/A'}</p>`;
-        closeModal(); // Fecha o modal após a busca
+      const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+      if (!response.ok) throw new Error('Erro ao buscar o CEP');
+      const data = await response.json();
+  
+      if (data.erro) {
+        resultDiv.innerHTML = "<p style='color: red;'>CEP não encontrado.</p>";
+        return;
+      }
+  
+      localStorage.setItem('userCep', JSON.stringify(data));
+  
+      welcomeMessage.classList.add('hidden');
+      cepInfo.classList.remove('hidden');
+      cepInfo.textContent = `${data.localidade || 'N/A'} - ${data.uf || 'N/A'}`;
+      closeModal(); 
     } catch (error) {
-        resultDiv.innerHTML = `<p style='color: red;'>Erro: ${error.message}</p>`;
+      resultDiv.innerHTML = `<p style='color: red;'>Erro: ${error.message}</p>`;
     }
-}
+  }
+  
+  function carregarCepSalvo() {
+    const savedCep = localStorage.getItem('userCep');
+    if (savedCep) {
+      const data = JSON.parse(savedCep);
+      const welcomeMessage = document.getElementById('welcome');
+      const cepInfo = document.getElementById('cep-info');
+      
+      welcomeMessage.classList.add('hidden');
+      cepInfo.classList.remove('hidden');
+      cepInfo.textContent = `${data.localidade || 'N/A'} - ${data.uf || 'N/A'}`;
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', carregarCepSalvo);  
