@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/97c47b7afc.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../public/images/favicon-offers.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../public/css/navbar.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/variables.css">
+    <link rel="stylesheet" href="../public/css/pag-produto.css">
+</head>
+<body>
+
+    <header id="header"></header>
+    
+    <main>
+        
+        <div class="content">
+
+            <div class="first-colunm"> 
+
+                <div>
+                    <div class="product-img">
+                        <img src="../public/images/produtos/cafe.jpg" alt="produtos">
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn-save"><i class="fa-regular fa-heart"></i>Salvar</button>
+                        <!-- <i class="fa-solid fa-heart"></i> CORACAO CHEIO -->
+                        <button class="btn-share"><i class="fa-regular fa-share-from-square"></i> Compartilhar </button>
+                    </div>
+                </div>
+
+                
+            
+
+            </div> <!-- first colunm -->
+
+            <div class="second-colunm">
+
+                <div class="second-box">
+
+                    <div >
+                        <h2> Titulo produto Marca peso 500g </h2>
+                        <span id="rating">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                    </div>
+
+                    <div >
+                        <p> preço via mercado </p>
+                        <p id="original-price"> R$ 699,99 </p>
+                        <h2 id="price"> R$ 500,00 </h2>
+                        <button class="btn-buy"> Comprar </button>
+                    </div>
+
+                </div>
+
+            </div> <!-- second colunm -->
+
+        
+    
+            <div class="third-colunm">
+
+                <div class="compare-box"> 
+
+                    <p class="compare-text"> Menor preço histórico: </p>
+
+                    <div class="meter">
+                        <div class="outer-circle">
+                            <div class="needle center"></div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <div class="alert-box">
+
+                    <div class="toggle-box">
+                        <div class="alert-text">
+
+                            <p id="alert-title"> <i class="fa-regular fa-bell"></i> Definir alerta ? </p>
+
+                            <p id="alert-desc"> avisaremos quando o preço baixar </p>
+                        </div>
+
+                        <input type="checkbox" id="check">  </input>
+                        <label for="check" class="toggle-button"></label>
+                    </div>
+
+                </div>
+
+            </div> <!-- third colunm -->
+
+        </div> <!-- content -->
+
+        <div class="info-box">
+
+            <button class="btn-rating"> <i class="fa-regular fa-star"></i> Avaliações </button>
+
+            <button class="btn-description"> <i class="fa-solid fa-list"></i> Descrição </button>
+
+        </div>
+
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="../partials/navbar.js"></script>
+    <script src="../partials/footer.js"></script>
+</body>
+</html>
