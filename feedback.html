@@ -57,8 +57,8 @@
                             <div class="imgUser"></div>
                             <strong>Laisa</strong>
                         </div>
-                        <form action="" class="form-post">
-                            <textarea name="textarea" id="" placeholder="Adicione um Comentário."></textarea>
+                        <form action="" class="form-post" id="formPost">
+                            <textarea name="textarea" id="textarea" placeholder="Adicione um Comentário."></textarea>
 
                             <div class="iconsButton">
                                 <div class="icons">
@@ -72,43 +72,7 @@
                         </form>
                     </div>
 
-                   <ul class="posts">
-                    <li class="post">
-                        <div class="inforUserPost">
-                            <div class="imgUserPost"></div>
-                            <div class="nomeANDhora">
-                                <strong>Araujo</strong>
-                                <p>12h</p>
-                            </div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam quos officiis impedit tempore rerum! Ab nostrum, unde fugit laborum eveniet, sunt dolorem, perferendis dolor quod sit eius? Debitis, culpa iure.</p>
-
-                        <div class="btnPost">
-                            <button type="button" class="filePost" id="like"><img src="./public/images/feedback/heart.svg" alt="Curtir">Curtir</button>
-                            <button type="button" class="filePost" id="comment"><img src="./public/images/feedback/comment.svg" alt="Comentar">Comentar</button>
-                            <button type="button" class="filePost" id="compart"><img src="./public/images/feedback/share.svg" alt="Compartilhar">Compartilhar</button>
-                        </div>
-                    </li>
-                   </ul>
-
-                   <ul class="posts">
-                    <li class="post">
-                        <div class="inforUserPost">
-                            <div class="imgUserPost"></div>
-                            <div class="nomeANDhora">
-                                <strong>Araujo</strong>
-                                <p>12h</p>
-                            </div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam quos officiis impedit tempore rerum! Ab nostrum, unde fugit laborum eveniet, sunt dolorem, perferendis dolor quod sit eius? Debitis, culpa iure.</p>
-
-                        <div class="btnPost">
-                            <button type="button" class="filePost" id="like"><img src="./public/images/feedback/heart.svg" alt="Curtir">Curtir</button>
-                            <button type="button" class="filePost" id="comment"><img src="./public/images/feedback/comment.svg" alt="Comentar">Comentar</button>
-                            <button type="button" class="filePost" id="compart"><img src="./public/images/feedback/share.svg" alt="Compartilhar">Compartilhar</button>
-                        </div>
-                    </li>
-                   </ul>
+                   <ul class="posts" id="posts"></ul>
             </section>
 
          </div>
@@ -130,6 +94,7 @@
     </footer>
     <script src="./partials/navbar.js"></script>
     <script src="./public/js/comentarios.js"></script>
+    <script type='module' src="./public/js/feedback.js"></script>
 
 </body>
 </html>
