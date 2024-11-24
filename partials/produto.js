@@ -9,7 +9,7 @@ export function createCardProduto(produto) {
             <p class="preco-promocao">R$ ${(produto.promocao).toFixed(2)}</p>
         </div>
         <div class="footer">
-            <span>Por: ${produto.mercado}</span>
+            <span>${produto.mercado}</span>
         </div>
     `;
     return card;

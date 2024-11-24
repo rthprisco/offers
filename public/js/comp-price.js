@@ -16,7 +16,21 @@ async function fetchProducts() {
 
     const products = data.results;
 
-    displayItems(products)
+    displayItems(products);
+
+    const productsHTML = document.querySelector('.produtos-container');
+    const productsArray = Array.from(productsHTML.children);
+
+    productsHTML.childNodes.forEach(p => {
+        p.addEventListener('click', () => {
+            const productIndex = productsArray.indexOf(p);
+            const productSelect = JSON.stringify(products[productIndex]);
+
+            window.location.href = `product.html?product=${encodeURIComponent(productSelect)}`;
+        });
+    });
+
+    // console.log(productsHTML);
 }
 
 function displayItems(products) {
@@ -24,9 +38,9 @@ function displayItems(products) {
 
     products.forEach(p => {
         const produto = {
-            img: p.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg'),  
+            img: p.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg'),
             titulo: p.title,
-            mercado: p.seller.nickname,
+            mercado: p.official_store_name || p.seller.nickname,
             preco_original: p.original_price,
             promocao: p.price
         };

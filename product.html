@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,8 @@
     <link rel="shortcut icon" href="../public/images/favicon-offers.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../public/css/navbar.css">
     <link rel="stylesheet" href="../public/css/footer.css">
@@ -18,19 +19,20 @@
     <link rel="stylesheet" href="../public/css/variables.css">
     <link rel="stylesheet" href="../public/css/pag-produto.css">
 </head>
+
 <body>
 
     <header id="header"></header>
-    
+
     <main>
-        
+
         <div class="content">
 
-            <div class="first-colunm"> 
+            <div class="first-colunm">
 
                 <div>
                     <div class="product-img">
-                        <img src="../public/images/produtos/cafe.jpg" alt="produtos">
+                        <img src="../public/images/produtos/cafe.jpg" alt="produto" id="product-img">
                     </div>
 
                     <div class="actions">
@@ -40,8 +42,8 @@
                     </div>
                 </div>
 
-                
-            
+
+
 
             </div> <!-- first colunm -->
 
@@ -49,8 +51,8 @@
 
                 <div class="second-box">
 
-                    <div >
-                        <h2> Titulo produto Marca peso 500g </h2>
+                    <div>
+                        <h2 id="title"> Titulo produto Marca peso 500g </h2>
                         <span id="rating">
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
@@ -60,22 +62,22 @@
                         </span>
                     </div>
 
-                    <div >
-                        <p> preço via mercado </p>
-                        <p id="original-price"> R$ 699,99 </p>
-                        <h2 id="price"> R$ 500,00 </h2>
-                        <button class="btn-buy"> Comprar </button>
+                    <div>
+                        <p id="market"> preço via mercado </p>
+                        <p id="original-price"></p>
+                        <h2 id="price"></h2>
+                        <a href="#" target="_blank" id="link-buy"><button class="btn-buy"> Comprar </button></a>
                     </div>
 
                 </div>
 
             </div> <!-- second colunm -->
 
-        
-    
+
+
             <div class="third-colunm">
 
-                <div class="compare-box"> 
+                <div class="compare-box">
 
                     <p class="compare-text"> Menor preço histórico: </p>
 
@@ -84,7 +86,7 @@
                             <div class="needle center"></div>
                         </div>
                     </div>
-                    
+
 
                 </div>
 
@@ -98,7 +100,7 @@
                             <p id="alert-desc"> avisaremos quando o preço baixar </p>
                         </div>
 
-                        <input type="checkbox" id="check">  </input>
+                        <input type="checkbox" id="check"> </input>
                         <label for="check" class="toggle-button"></label>
                     </div>
 
@@ -120,7 +122,28 @@
 
     <footer id="footer"></footer>
 
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const produto = params.get('product');
+
+        const productObj = JSON.parse(produto);
+
+        console.log(productObj);
+
+        document.querySelector('#title').innerText = productObj.title;
+        document.querySelector('#market').innerText = productObj.official_store_name || productObj.seller.nickname;
+
+        if (productObj.original_price) {
+            document.querySelector('#original-price').innerText = `R$ ${(productObj.original_price).toFixed(2)}`;
+        }
+        
+        document.querySelector('#price').innerText = `R$ ${(productObj.price).toFixed(2)}`;
+        document.querySelector('#link-buy').href = productObj.permalink;
+        document.querySelector('#product-img').src = productObj.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg')
+    </script>
+
     <script src="../partials/navbar.js"></script>
     <script src="../partials/footer.js"></script>
 </body>
+
 </html>

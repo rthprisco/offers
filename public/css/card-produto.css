@@ -1,10 +1,11 @@
 .produto {
-    height: 300px;
+    /* height: 260px; */
     background: var(--white);
     border-radius: 12px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
     display: flex;
     flex-direction: column;
+    gap: 8px;
     align-items: center;
     padding: 8px;
     cursor: pointer;
@@ -20,17 +21,15 @@
     font-size: 14px;
     text-align: center;
 
-    /* Estilos para truncar após 2 linhas */
+    /* Limita a 2 linhas */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    /* Limita a 2 linhas */
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .produto .precos {
-    margin: 10px;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -59,6 +58,12 @@
 .produto .footer span {
     font-size: 12px;
     color: var(--dark-gray);
+
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; */
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
 }
 
 
