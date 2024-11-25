@@ -1,5 +1,8 @@
 const loginForm = document.querySelector('#login-form');
-const btnOpen = document.querySelector('.open-login');
+
+const btnOpen = document.querySelector('.open');
+
+
 const btnClose = document.querySelector('.btn-close');
 const filtro = document.querySelector('.filtro');
 

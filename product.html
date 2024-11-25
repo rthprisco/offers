@@ -13,8 +13,6 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="../public/css/navbar.css">
-    <link rel="stylesheet" href="../public/css/footer.css">
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="../public/css/pag-produto.css">
     <link rel="stylesheet" href="../public/css/variables.css">
@@ -32,7 +30,6 @@
 
                 <div class="first-colunm">
 
-                    <div>
                         <div class="product-img">
                             <img src="../public/images/produtos/cafe.jpg" alt="produto" id="product-img">
                         </div>
@@ -43,7 +40,6 @@
                             <button class="btn-share"><i class="fa-regular fa-share-from-square"></i> Compartilhar
                             </button>
                         </div>
-                    </div>
                     
                 </div> <!-- first colunm -->
 
@@ -117,7 +113,7 @@
                 <button class="btn-description"> <i class="fa-solid fa-list"></i> Descrição </button>
 
             </div>
-
+            
         </div> <!-- content -->
 
     </main>
@@ -144,8 +140,8 @@
         document.querySelector('#product-img').src = productObj.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg')
     </script>
 
-    <script src="../partials/navbar.js"></script>
-    <script src="../partials/footer.js"></script>
+    <script src="../partials/navbar.js" type="module"></script>
+    <script src="../partials/footer.js" type="module"></script>
 </body>
 
 </html>

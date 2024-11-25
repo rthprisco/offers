@@ -1,3 +1,5 @@
+import { linkCSS } from "../public/js/utils.js";
+
 function userLogged() {
     const user = JSON.parse(localStorage.getItem('loggedInUser'));
     return user !== null ? `Olá, ${user.nome}!` : 'Faça seu login ou cadastre-se';
@@ -19,8 +21,8 @@ function createNavbar() {
         </div>
         <div class="nav-list">
             <ul>
-                <li class="nav-item">
-                    <a href="#" class="open-login">
+                <li class="nav-item" class="meu">
+                    <a href="#" class="open">
                         <img src="/public/images/icons/navbar/user.png" alt="ícone usuário">
                         <span class="user">${userLogged()}</span>
                     </a>
@@ -40,10 +42,14 @@ function createNavbar() {
             </ul>
         </div>
     `;
+    
+    linkCSS('public/css/navbar.css')
+
     return card;
 }
 
 document.querySelector('#header').appendChild(createNavbar());
+
 
 
 // Menu hamburguer
