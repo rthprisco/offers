@@ -1,16 +1,14 @@
-body {
-  justify-content: center;
-  /* Centraliza horizontalmente */
-  align-items: center;
-  /* Centraliza verticalmente */
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .slider-container {
   position: relative;
   max-width: 100%;
-  margin: auto;
+  margin: 0 auto;
   overflow: hidden;
-  /* margin: 25px auto 20px; */
 }
 
 .slider {
@@ -28,7 +26,6 @@ body {
 
 .slide img {
   width: 100%;
-  /* display: block; */
   height: 100%;
   object-fit: cover;
 }

@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="../public/css/navbar.css">
     <link rel="stylesheet" href="../public/css/footer.css">
     <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="../public/css/variables.css">
     <link rel="stylesheet" href="../public/css/pag-produto.css">
+    <link rel="stylesheet" href="../public/css/variables.css">
 </head>
 
 <body>
@@ -28,95 +28,97 @@
 
         <div class="content">
 
-            <div class="first-colunm">
+            <div class="content-product">
 
-                <div>
-                    <div class="product-img">
-                        <img src="../public/images/produtos/cafe.jpg" alt="produto" id="product-img">
-                    </div>
-
-                    <div class="actions">
-                        <button class="btn-save"><i class="fa-regular fa-heart"></i>Salvar</button>
-                        <!-- <i class="fa-solid fa-heart"></i> CORACAO CHEIO -->
-                        <button class="btn-share"><i class="fa-regular fa-share-from-square"></i> Compartilhar </button>
-                    </div>
-                </div>
-
-
-
-
-            </div> <!-- first colunm -->
-
-            <div class="second-colunm">
-
-                <div class="second-box">
+                <div class="first-colunm">
 
                     <div>
-                        <h2 id="title"> Titulo produto Marca peso 500g </h2>
-                        <span id="rating">
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </span>
-                    </div>
-
-                    <div>
-                        <p id="market"> preço via mercado </p>
-                        <p id="original-price"></p>
-                        <h2 id="price"></h2>
-                        <a href="#" target="_blank" id="link-buy"><button class="btn-buy"> Comprar </button></a>
-                    </div>
-
-                </div>
-
-            </div> <!-- second colunm -->
-
-
-
-            <div class="third-colunm">
-
-                <div class="compare-box">
-
-                    <p class="compare-text"> Menor preço histórico: </p>
-
-                    <div class="meter">
-                        <div class="outer-circle">
-                            <div class="needle center"></div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="alert-box">
-
-                    <div class="toggle-box">
-                        <div class="alert-text">
-
-                            <p id="alert-title"> <i class="fa-regular fa-bell"></i> Definir alerta ? </p>
-
-                            <p id="alert-desc"> avisaremos quando o preço baixar </p>
+                        <div class="product-img">
+                            <img src="../public/images/produtos/cafe.jpg" alt="produto" id="product-img">
                         </div>
 
-                        <input type="checkbox" id="check"> </input>
-                        <label for="check" class="toggle-button"></label>
+                        <div class="actions">
+                            <button class="btn-save"><i class="fa-regular fa-heart"></i>Salvar</button>
+                            <!-- <i class="fa-solid fa-heart"></i> CORACAO CHEIO -->
+                            <button class="btn-share"><i class="fa-regular fa-share-from-square"></i> Compartilhar
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div> <!-- first colunm -->
+
+                <div class="second-colunm">
+
+                    <div class="second-box">
+
+                        <div>
+                            <h2 id="title"> Titulo produto Marca peso 500g </h2>
+                            <span id="rating">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+
+                        <div>
+                            <p id="market"> preço via mercado </p>
+                            <p id="original-price"></p>
+                            <h2 id="price"></h2>
+                            <a href="#" target="_blank" id="link-buy"><button class="btn-buy"> Comprar </button></a>
+                        </div>
+
                     </div>
 
-                </div>
+                </div> <!-- second colunm -->
 
-            </div> <!-- third colunm -->
+
+
+                <div class="third-colunm">
+
+                    <div class="compare-box">
+
+                        <p class="compare-text"> Menor preço histórico: </p>
+
+                        <div class="meter">
+                            <div class="outer-circle">
+                                <div class="needle center"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="alert-box">
+
+                        <div class="toggle-box">
+                            <div class="alert-text">
+
+                                <p id="alert-title"> <i class="fa-regular fa-bell"></i> Definir alerta ? </p>
+
+                                <p id="alert-desc"> avisaremos quando o preço baixar </p>
+                            </div>
+
+                            <input type="checkbox" id="check"> </input>
+                            <label for="check" class="toggle-button"></label>
+                        </div>
+
+                    </div>
+
+                </div> <!-- third colunm -->
+
+            </div>
+
+            <div class="info-box">
+
+                <button class="btn-rating"> <i class="fa-regular fa-star"></i> Avaliações </button>
+
+                <button class="btn-description"> <i class="fa-solid fa-list"></i> Descrição </button>
+
+            </div>
 
         </div> <!-- content -->
-
-        <div class="info-box">
-
-            <button class="btn-rating"> <i class="fa-regular fa-star"></i> Avaliações </button>
-
-            <button class="btn-description"> <i class="fa-solid fa-list"></i> Descrição </button>
-
-        </div>
 
     </main>
 
@@ -136,7 +138,7 @@
         if (productObj.original_price) {
             document.querySelector('#original-price').innerText = `R$ ${(productObj.original_price).toFixed(2)}`;
         }
-        
+
         document.querySelector('#price').innerText = `R$ ${(productObj.price).toFixed(2)}`;
         document.querySelector('#link-buy').href = productObj.permalink;
         document.querySelector('#product-img').src = productObj.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg')

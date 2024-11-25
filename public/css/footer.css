@@ -3,10 +3,10 @@ footer {
     height: 120px;
     background-color: var(--primary-blue);
     color: var(--white);
-    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-shrink: 0;
 }
 
 footer a {

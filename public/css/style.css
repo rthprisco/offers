@@ -8,38 +8,51 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
+html, body {
+    height: 100%;
+}
+
+body, main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 45px;
+}
+
+body {
     background: var(--background);
+}
+
+main {
+    justify-content: center;
+    flex: 1;
     width: 100%;
 }
+
+
 
 img {
     -webkit-user-drag: none;
 }
 
-main {
+/* main {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 60px auto;
-    /* overflow-x: hidden; */
-}
+    /* overflow-x: hidden; 
+} */
 
 .categorias {
     display: flex;
     gap: 24px;
-    padding: 45px 0;
     flex-flow: row nowrap;
-    overflow-x: scroll;
+    overflow-x: hidden;
     align-items: center;
     justify-content: center;
-
     width: 100%;
+    overflow: visible;
 }
 
 .cat {
@@ -99,7 +112,6 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 24px;
     width: 60%;
-    /* padding: 45px 200px; */
 }
 
 .pagination {
@@ -109,7 +121,6 @@ h2 {
     color: var(--dark-gray);
     font-size: 16px;
     cursor: pointer;
-    margin-top: 40px;
 }
 
 .pagination .chevron {
@@ -135,12 +146,16 @@ h2 {
 }
 
 @media (max-width: 768px) {
+
+    body, main {
+        gap: 30px;
+    }
    
     .categorias {
         overflow-x: auto;
         justify-content: start;
         gap: 16px;
-        padding: 45px 20px;
+        padding: 8px 20px;
     }
 
     .categorias::-webkit-scrollbar {

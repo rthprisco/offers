@@ -17,26 +17,28 @@ function createNavbar() {
         <div class="hamburguer">
             <button></button>
         </div>
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a href="#" class="open-login">
-                    <img src="/public/images/icons/navbar/user.png" alt="ícone usuário">
-                    <span class="user">${userLogged()}</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="criar-lista.html" title="Crie sua lista de compras">
-                    <img src="/public/images/icons/navbar/clipboard.png" alt="ícone criar lista">
-                    <span>Crie sua lista de compras</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" title="Confira os encartes">
-                    <img src="/public/images/icons/navbar/journal.png" alt="ícone encartes">
-                    <span>Confira os encartes</span>
-                </a>
-            </li>
-        </ul>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item">
+                    <a href="#" class="open-login">
+                        <img src="/public/images/icons/navbar/user.png" alt="ícone usuário">
+                        <span class="user">${userLogged()}</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="criar-lista.html" title="Crie sua lista de compras">
+                        <img src="/public/images/icons/navbar/clipboard.png" alt="ícone criar lista">
+                        <span>Crie sua lista de compras</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" title="Confira os encartes">
+                        <img src="/public/images/icons/navbar/journal.png" alt="ícone encartes">
+                        <span>Confira os encartes</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     `;
     return card;
 }

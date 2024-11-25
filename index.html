@@ -53,23 +53,26 @@
 
     <main>
 
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide active"><img src="./public/images/slides/banner-principal.png" alt="banner-principal"></div>
-                <div class="slide"><img src="./public/images/slides/slide-01.jpg" alt="Imagem 1"></div>
-                <div class="slide"><img src="./public/images/slides/slide-02.jpg" alt="Imagem 2"></div>
-                <div class="slide"><img src="./public/images/slides/slide-03.jpg" alt="Imagem 3"></div>
-                <div class="slide"><img src="./public/images/slides/slide-04.webp" alt="Imagem 4"></div>
+        <div class="carousel">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active"><img src="./public/images/slides/banner-principal.png" alt="banner-principal"></div>
+                    <div class="slide"><img src="./public/images/slides/slide-01.jpg" alt="Imagem 1"></div>
+                    <div class="slide"><img src="./public/images/slides/slide-02.jpg" alt="Imagem 2"></div>
+                    <div class="slide"><img src="./public/images/slides/slide-03.jpg" alt="Imagem 3"></div>
+                    <div class="slide"><img src="./public/images/slides/slide-04.webp" alt="Imagem 4"></div>
+                </div>
+            </div>
+    
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
             </div>
         </div>
-
-        <div style="text-align: center;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
+       
 
         <div class="categorias">
             <div class="cat" id="bebidas">
@@ -122,7 +125,7 @@
             </div>
         </div>
 
-        <h2>Promoções da semana!</h2>
+        <!-- <h2>Promoções da semana!</h2> -->
         <section class="produtos-container"></section>
 
         <div class="pagination" id="pagination-controls">

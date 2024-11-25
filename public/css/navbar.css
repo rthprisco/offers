@@ -1,14 +1,13 @@
 header {
     background: var(--primary-blue);
     width: 100%;
-    top: 0;
     z-index: 1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+    flex-shrink: 0;
 }
 
 nav {
     height: 98px;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -55,7 +54,7 @@ nav {
     pointer-events: none; /* Garante que a imagem não bloqueie cliques no input */
 }
 
-.nav-list {
+.nav-list ul {
     display: flex;
     list-style: none;
     align-items: center;
@@ -166,11 +165,15 @@ nav {
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
 
-        flex-direction: column;
         align-items: center;
-        gap: 0;
+        justify-content: center;
+    }
 
-        pointer-events: none;
+    .nav-list ul {
+        position: relative;
+        top: 20%;
+        flex-direction: column;
+        /* pointer-events: none; */
     }
 
     .nav-list a {
