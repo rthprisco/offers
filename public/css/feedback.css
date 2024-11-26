@@ -1,82 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-
-/* Container Principal */
-.container{
-    display: flex;
-    width: 80%;
-    margin: 20px auto;
-}
-
-/* Sidebar */
-.sidebar {
-    max-width: 100%;
-    background-color: #ffff;
-    padding: 20px;
-    margin-right: 20px;
-    border-radius: 5px;
-    height: auto;
-}
-.sidebar h3 {
-    color: #4450FA;
-}
-.sidebar ul {
-    list-style: none;
-    margin-top: 10px;
-}
-.sidebar ul li {
-    padding: 10px 0;
-    font-size: 14px;
-    color: #555;
-}
-.sidebar a{
-    color: #888;
-}
-
-/* Lista de Tópicos */
-.topics {
-    flex: 1;
-    width: 75%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    height: auto;
-}
-.topics h2 {
-    color: #4450FA;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-.topic-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-.topic-item:last-child {
-    border-bottom: none;
-}
-.topic-item h4 {
-    color: #333;
-    margin-bottom: 5px;
-}
-.topic-item .meta-info {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 10px;
-    /* padding-top: 20px; */
-}
-.topic-item p {
-    font-size: 14px;
-    color: #555;
-    text-align: justify;
-}
-
 /* ADICIONAR OS COMENTARIOS */
-.newpost{
+.newpost {
     background-color: #f1f1f1;
     margin: 15px 0;
     padding: 25px;
@@ -84,55 +7,60 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    border-radius: 10px;
-    box-shadow: 1px 0 3px black;
+    align-items: flex-start;
+    border-radius: 15px;
+    /* box-shadow: 0 0 4px rgba(0, 0, 0, .25); */
 }
-.newpost .infoUser{
+
+.newpost .infoUser {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.newpost .infoUser .imgUser{
+
+.newpost .infoUser .imgUser {
     width: 35px;
     height: 35px;
     border-radius: 50%;
     background-color: #333;
 }
-.newpost .infoUser strong{
+
+.newpost .infoUser strong {
     font-size: 16px;
     color: #4450FA;
     margin-left: 10px;
 }
-.newpost .form-post{
+
+.newpost .form-post {
     display: flex;
     flex-direction: column;
-    width: 100%; 
+    width: 100%;
 }
-.newpost .form-post textarea{
+
+.newpost .form-post textarea {
     background-color: #FBFBFB;
     margin: 15px 0;
     padding: 25px;
     border-radius: 10px;
-    resize: none; 
+    resize: none;
     border: 0;
     outline: none;
-
-    font-weight: bold;
 }
 
-.newpost .form-post .iconsButton{
+.newpost .form-post .iconsButton {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.newpost .form-post .iconsButton .icons{
+
+.newpost .form-post .iconsButton .icons {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100px;
 }
-.newpost .form-post .iconsButton .icons button{
+
+.newpost .form-post .iconsButton .icons button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,64 +70,80 @@
     border: 0;
     cursor: pointer;
 }
-.newpost .form-post .iconsButton .btnSubmit{
-    background-color: #FF2934;
-    color: #fff;
-    padding: 10px 10px;
+
+.newpost .form-post .iconsButton .btnSubmit {
     outline: none;
     cursor: pointer;
-    border: 0;
-    border-radius: 10px;
-    font-weight: bold;
-    max-width: 100%;
+
+    background: var(--primary-red);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 6px 48px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
+    margin: 10px 0;
 }
-.newpost .form-post .iconsButton .tggbtnSubmit:hover{
+
+.newpost .form-post .iconsButton .btnSubmit:hover {
+    background: #E82832;
+}
+
+.newpost .form-post .iconsButton .tggbtnSubmit:hover {
     background-color: #4450FA;
 }
 
 /* COMENTARIOS PUBLICADOS */
-.posts .post{
-    list-style-type: none;    
+.posts .post {
+    list-style-type: none;
     margin-bottom: 50px;
-    background-color: #FBFBFB;
+    background-color: #F1F1F1;
     border-radius: 10px;
-    box-shadow: 1px 0 3px rgb(0,0,0,0.2);
+    /* box-shadow: 1px 0 3px rgb(0, 0, 0, 0.2); */
     padding: 25px;
     width: 100%;
 
 }
-.posts .post .inforUserPost{
+
+.posts .post .inforUserPost {
     display: flex;
     align-items: center;
 }
-.posts .post .inforUserPost .imgUserPost{
+
+.posts .post .inforUserPost .imgUserPost {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: #FF2934;
 }
-.posts .post .inforUserPost .nomeANDhora{
+
+.posts .post .inforUserPost .nomeANDhora {
     margin-left: 10px;
 }
-.posts .post .inforUserPost .nomeANDhora >strong{
+
+.posts .post .inforUserPost .nomeANDhora>strong {
     color: #4450FA;
 }
-.posts .post .inforUserPost .nomeANDhora >p{
+
+.posts .post .inforUserPost .nomeANDhora>p {
     color: #555;
 }
-.posts .post >p{
+
+.posts .post>p {
     width: 100%;
     padding: 10px;
-    color:#333;
+    color: #333;
 
 }
+
 /* button (curtir,comen,compart) */
-.posts .post .btnPost{
+.posts .post .btnPost {
     display: flex;
     align-items: center;
     max-width: 100%;
     flex-flow: wrap;
 }
+
 .posts .post .btnPost .filePost {
     margin-right: 10px;
     padding: 5px 10px;
@@ -215,25 +159,32 @@
     max-width: 100%;
     font-size: 12px;
 }
-.posts .post .btnPost .filePost img{
+
+.posts .post .btnPost .filePost img {
     margin-right: 5px;
 }
-#like{
+
+#like {
     background-color: #FF2934;
 }
-#like:hover{
+
+#like:hover {
     background-color: #dadada;
 }
-#comment{
+
+#comment {
     background-color: gold;
 }
-#comment:hover{
+
+#comment:hover {
     background-color: #dadada;
 }
-#compart{
+
+#compart {
     background-color: #4450FA;
 }
-#compart:hover{
+
+#compart:hover {
     background-color: #dadada;
 }
 
@@ -274,7 +225,9 @@
         height: 15px;
     }
 
-    #like, #comment, #compart {
+    #like,
+    #comment,
+    #compart {
         font-size: 12px;
     }
 }
@@ -307,7 +260,9 @@
         height: 15px;
     }
 
-    #like, #comment, #compart {
+    #like,
+    #comment,
+    #compart {
         font-size: 12px;
     }
 

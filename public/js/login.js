@@ -9,7 +9,7 @@ const filtro = document.querySelector('.filtro');
 btnOpen.addEventListener('click', () => {
     const isLoggedIn = localStorage.getItem('loggedInUser');
 
-    if (isLoggedIn !== 'null') {
+    if (isLoggedIn) {
         window.location.href = 'minha-conta.html';
     } else {
         loginForm.style.display = 'flex';

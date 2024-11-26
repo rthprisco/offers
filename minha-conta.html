@@ -48,7 +48,7 @@
     
     <script>
         document.querySelector('#logout').addEventListener('click', function () {
-            localStorage.setItem('loggedInUser', null);
+            localStorage.removeItem('loggedInUser');
             // window.location.href = 'index.html';
         });
     </script>

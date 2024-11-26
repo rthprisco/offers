@@ -1,3 +1,9 @@
+export function isLogged() {
+    const user = localStorage.getItem('loggedInUser');
+    return !!user;
+}
+
+
 export function linkCSS(path) {
     const css = document.createElement('link');
 

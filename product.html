@@ -13,9 +13,12 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="../public/css/pag-produto.css">
-    <link rel="stylesheet" href="../public/css/variables.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/pag-produto.css">
+    <link rel="stylesheet" href="public/css/variables.css">
+
+    <link rel="stylesheet" href="public/css/feedback.css">
 </head>
 
 <body>
@@ -113,7 +116,23 @@
                 <button class="btn-description"> <i class="fa-solid fa-list"></i> Descrição </button>
 
             </div>
-            
+
+            <div class="newpost">
+                <div class="infoUser">
+                    <div class="imgUser"></div>
+                    <strong id="user">Laisa</strong>
+                </div>
+                <form action="" class="form-post" id="formPost">
+                    <textarea name="textarea" id="textarea" placeholder="Adicione um comentário..."></textarea>
+
+                    <div class="iconsButton">
+                        <button class="btnSubmit">Publicar</button>
+                    </div>
+                </form>
+            </div>
+
+           <ul class="posts" id="posts"></ul>
+
         </div> <!-- content -->
 
     </main>
@@ -137,11 +156,16 @@
 
         document.querySelector('#price').innerText = `R$ ${(productObj.price).toFixed(2)}`;
         document.querySelector('#link-buy').href = productObj.permalink;
-        document.querySelector('#product-img').src = productObj.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg')
+        document.querySelector('#product-img').src = productObj.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg');
+
+
+
     </script>
 
     <script src="../partials/navbar.js" type="module"></script>
     <script src="../partials/footer.js" type="module"></script>
+
+    <script type="module" src="public/js/feedback.js"></script>
 </body>
 
 </html>
