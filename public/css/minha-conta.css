@@ -164,18 +164,21 @@ main {
     margin-bottom: 15px;
 }
 
-.btn-cancel {
+.btn-save, .btn-cancel {
     width: 8em;
     height: 3em;
     cursor: pointer;
-    border: 1px solid var(--dark-gray);
-    border-radius: 2em;
-    color: black;
     font-weight: bold;
     margin-right: 5px;
-    background-color: #fff;
+    border-radius: 12px;
     transition-duration: 0.3;
     box-shadow: rgba(0, 0, 0, .1);
+}
+
+.btn-cancel {
+    border: 1px solid var(--primary-red);
+    color: var(--primary-red);
+    background-color: #fff;
 }
 
 .btn-cancel:hover {
@@ -183,21 +186,13 @@ main {
 }
 
 .btn-save {
-    width: 8em;
-    height: 3em;
-    cursor: pointer;
-    border: none;
-    border-radius: 2em;
+    border: 1px solid var(--primary-red);
     color: #fff;
-    font-weight: bold;
-    margin-right: 5px;
     background-color: var(--primary-red);
-    transition-duration: 0.3;
-    box-shadow: rgba(0, 0, 0, .1);
 }
 
 .btn-save:hover {
-    background-color: #ea0000;
+    background-color: var(--primary-red-hover);
 }
 
 

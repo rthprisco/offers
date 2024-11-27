@@ -1,10 +1,12 @@
 const loginForm = document.querySelector('#login-form');
-const btnOpen = document.querySelector('.open');
+const btnOpen = document.querySelector('#open-login');
 const btnClose = document.querySelector('.btn-close');
 const blackoutModal = document.querySelector('.blackout-modal');
 
 btnOpen.addEventListener('click', () => {
     const isLoggedIn = localStorage.getItem('loggedInUser');
+
+    console.log(isLoggedIn)
 
     if (isLoggedIn) {
         window.location.href = 'minha-conta.html';
@@ -17,8 +19,8 @@ btnOpen.addEventListener('click', () => {
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const email = document.querySelector('#email').value;
-    const senha = document.querySelector('#senha').value;
+    const email = document.querySelector('#emailLogin').value;
+    const senha = document.querySelector('#senhaLogin').value;
 
     const users = JSON.parse(localStorage.getItem('users'));
 

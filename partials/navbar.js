@@ -23,8 +23,8 @@ function createNavbar() {
             <button></button>
         </div>
         <ul class="nav-list">
-          <li class="nav-item" class="meu">
-            <a href="#" class="open">
+          <li class="nav-item" id="open-login">
+            <a href="#">
               <img src="/public/images/icons/navbar/user.png" alt="ícone usuário">
               <span class="user">${userLogged()}</span>
             </a>

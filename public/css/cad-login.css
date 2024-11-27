@@ -60,7 +60,7 @@
     background: var(--primary-red);
     color: var(--white);
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 16px;
     padding: 6px 48px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, .3);
@@ -68,7 +68,7 @@
 }
 
 .caixa-modelo .btn-enviar:hover {
-    background: #E82832;
+    background: var(--primary-red-hover);
 }
 
 .caixa-modelo p {

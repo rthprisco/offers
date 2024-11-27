@@ -8,11 +8,11 @@ function createLoginModal() {
         <h1>Faça seu login</h1>
         <div class="input">
             <p>E-mail</p>
-            <input type="text" id="email" name="email">
+            <input type="text" id="emailLogin" name="emailLogin">
         </div>
         <div class="input">
             <p>Senha</p>
-            <input type="password" id="senha" name="senha">
+            <input type="password" id="senhaLogin" name="senhaLogin">
             <a href="#" class="esq-sehna">Esqueceu sua senha?</a>
         </div>
         <span id="error-login" class="span-error-box">Usuário ou senha incorreto.</span>
