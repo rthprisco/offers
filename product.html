@@ -34,17 +34,17 @@
 
                 <div class="first-colunm">
 
-                        <div class="product-img">
-                            <img src="../public/images/produtos/cafe.jpg" alt="produto" id="product-img">
-                        </div>
+                    <div class="product-img">
+                        <img src="../public/images/produtos/cafe.jpg" alt="produto" id="product-img">
+                    </div>
 
-                        <div class="actions">
-                            <button class="btn-save"><i class="fa-regular fa-heart"></i>Salvar</button>
-                            <!-- <i class="fa-solid fa-heart"></i> CORACAO CHEIO -->
-                            <button class="btn-share"><i class="fa-regular fa-share-from-square"></i> Compartilhar
-                            </button>
-                        </div>
-                    
+                    <div class="actions">
+                        <button class="btn-save"><i class="fa-regular fa-heart"></i>Salvar</button>
+                        <!-- <i class="fa-solid fa-heart"></i> CORACAO CHEIO -->
+                        <button class="btn-share"><i class="fa-regular fa-share-from-square"></i> Compartilhar
+                        </button>
+                    </div>
+
                 </div> <!-- first colunm -->
 
                 <div class="second-colunm">
@@ -53,7 +53,7 @@
 
                         <div>
                             <h2 id="title"> Titulo produto Marca peso 500g </h2>
-                            <span id="rating">
+                            <span id="rating-product">
                                 <i class="fa-regular fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
@@ -79,7 +79,7 @@
 
                     <div class="compare-box">
 
-                        <p class="compare-text"> Menor preço histórico: </p>
+                        <p class="compare-text"> DESCONTÔMETRO </p>
 
                         <div class="meter">
                             <div class="outer-circle">
@@ -111,28 +111,35 @@
             </div>
 
             <div class="info-box">
-
-                <button class="btn-rating"> <i class="fa-regular fa-star"></i> Avaliações </button>
-
-                <button class="btn-description"> <i class="fa-solid fa-list"></i> Descrição </button>
-
+                <button id="rating" class="tab active"> <i class="fa-regular fa-star"></i> Avaliações </button>
+                <button id="description" class="tab"> <i class="fa-solid fa-list"></i> Descrição </button>
+                <button id="price_history" class="tab"> <i class="fa-solid fa-chart-line"></i> Histórico </button>
             </div>
 
-            <div class="newpost">
-                <div class="infoUser">
-                    <div class="imgUser"></div>
-                    <strong id="user">Laisa</strong>
-                </div>
-                <form action="" class="form-post" id="formPost">
-                    <textarea name="textarea" id="textarea" placeholder="Adicione um comentário..."></textarea>
-
-                    <div class="iconsButton">
-                        <button class="btnSubmit">Publicar</button>
+            <div id="rating-content" class="info-box-content active">
+                <div class="newpost">
+                    <div class="infoUser">
+                        <div class="imgUser"></div>
+                        <strong id="user">Laisa</strong>
                     </div>
-                </form>
+                    <form action="" class="form-post" id="formPost">
+                        <textarea name="textarea" id="textarea" placeholder="Adicione um comentário..."></textarea>
+
+                        <div class="iconsButton">
+                            <button class="btnSubmit">Publicar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <ul class="posts" id="posts"></ul>
             </div>
 
-           <ul class="posts" id="posts"></ul>
+            <div id="desc-content" class="info-box-content">
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor placeat voluptatem ea vel voluptates sit facilis exercitationem fuga assumenda, dignissimos ipsa eius consequatur possimus nostrum autem voluptas laborum in culpa?</p>
+            </div>
+
+            <div id="price-history-content" class="info-box-content"></div>
 
         </div> <!-- content -->
 

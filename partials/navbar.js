@@ -13,7 +13,7 @@ function createNavbar() {
             <a href="/"><img src="/public/images/Logo.png" alt="Logo"></a>
         </div>
         <div class="search-form">
-            <input placeholder="Pesquise pelo seu produto..." id="search-input" class="product-input">
+            <input type="text" placeholder="Pesquise pelo seu produto..." id="search-input" class="product-input">
             <div id="result" class="result-container">
             <p id="welcome" class="welcome-message" onclick="openModal()"><i class="fa-solid fa-location-dot"></i> Insira seu CEP</p>
             <p id="cep-info" class="cep-info hidden" onclick="openModal()"></p>

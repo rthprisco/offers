@@ -1,4 +1,4 @@
-import { createPost } from "./feedback.js";
+import { createPost } from './feedback.js';
 
 const params = new URLSearchParams(window.location.search);
 const product = params.get('product');
@@ -22,7 +22,31 @@ const allFeedback = JSON.parse(localStorage.getItem('feedback'));
 const posts = allFeedback.find(elem => elem.id === productId);
 const postsList = document.querySelector('#posts');
 
-posts.posts.forEach(elem => {
-    console.log(elem)
-    postsList.appendChild(createPost(elem.user, elem.post))
+if (posts) {
+    posts.posts.forEach(elem => {
+        postsList.appendChild(createPost(elem.user, elem.post));
+    });
+}
+
+
+// Avaliação e descrição
+const tabs = document.querySelectorAll('.tab');
+const contents = {
+    rating: document.getElementById('rating-content'),
+    description: document.getElementById('desc-content'),
+    price_history: document.getElementById('price-history-content')
+};
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        console.log(Object.values(contents));
+        Object.values(contents).forEach(content => content.classList.remove('active'));
+
+        tab.classList.add('active');
+        contents[tab.id].classList.add('active');
+    });
 });
+
+
+// Descontômetro

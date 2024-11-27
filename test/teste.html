@@ -1,96 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Header, Main e Footer</title>
-    <style>
-        /* style.css */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs com Conteúdo Dinâmico</title>
+  <style>
+    /* Estilos Gerais */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
 
-        html,
-        body {
-            height: 100%;
-        }
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-        }
+    .tab {
+      border: none;
+      background: none;
+      font-size: 16px;
+      padding: 10px;
+      cursor: pointer;
+      position: relative;
+    }
 
-        /* HEADER */
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
+    .tab.active::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: black;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
 
-        header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
+    .content {
+      display: none;
+      margin-top: 20px;
+    }
 
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        /* MAIN */
-        main {
-            flex: 1;
-            /* Permite que o main ocupe o espaço restante */
-            padding: 2rem;
-            background-color: #f4f4f4;
-        }
-
-        main h2 {
-            margin-top: 0;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-    </style>
+    .content.active {
+      display: block;
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <h1>Bem-vindo à Minha Página</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Seção Principal</h2>
-            <p>Esta é a seção principal da página. Você pode adicionar texto, imagens ou qualquer outro conteúdo aqui.
-            </p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
-    </footer>
-</body>
+  <div class="tabs">
+    <button id="avaliacoes" class="tab active">⭐ Avaliações</button>
+    <button id="descricao" class="tab">📋 Descrição</button>
+  </div>
 
+  <div id="conteudo-avaliacoes" class="content active">
+    <p>Este é o conteúdo das avaliações.</p>
+  </div>
+  <div id="conteudo-descricao" class="content">
+    <p>Este é o conteúdo da descrição.</p>
+  </div>
+
+  <script>
+    // Seleciona os botões das abas e os conteúdos
+    const tabs = document.querySelectorAll(".tab");
+    const contents = {
+      avaliacoes: document.getElementById("conteudo-avaliacoes"),
+      descricao: document.getElementById("conteudo-descricao"),
+    };
+
+    // Adiciona evento de clique às abas
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        // Remove a classe 'active' de todas as abas e conteúdos
+        tabs.forEach((t) => t.classList.remove("active"));
+        Object.values(contents).forEach((content) => content.classList.remove("active"));
+
+        // Adiciona a classe 'active' na aba clicada e no conteúdo correspondente
+        tab.classList.add("active");
+        contents[tab.id].classList.add("active");
+      });
+    });
+  </script>
+</body>
 </html>
