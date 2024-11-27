@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="/public/css/slider.css">
     <link rel="stylesheet" href="/public/css/card-produto.css">
-    <link rel="stylesheet" href="/public/css/cad-login.css">
-
-    <!-- <link rel="stylesheet" href=" /css/mobile.css"> -->
 
     <!-- CDN -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -25,36 +22,17 @@
 </head>
 
 <body>
-    
-    <div id="modal" class="modal">
-        <div class="modal-content">
-          <h2>Digite o CEP</h2>
-          <input type="text" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="formatarCep(this)">
-          <button onclick="buscarCep()">Buscar</button>
-          <button onclick="closeModal()">Fechar</button>
-        </div>
-      </div>
-   
-    <form id="login-form" class="caixa-modelo caixa-login">
-        <span class="btn-close" style="cursor: pointer;"><img src="./public/images/icons/close.png"
-                alt="ícone close"></span>
-        <h1>Faça seu login</h1>
-        <div class="input">
-            <p>E-mail</p>
-            <input type="text" id="email" name="email">
-        </div>
-        <div class="input">
-            <p>Senha</p>
-            <input type="password" id="senha" name="senha">
-            <a href="#" class="esq-sehna">Esqueceu sua senha?</a>
-        </div>
-        <span id="error-login" class="span-error-box">Usuário ou senha incorreto.</span>
-        <button type="submit" class="btn-enviar">Entrar</button>
 
-        <div class="link-cadastro">
-            <p>Ainda não tem cadastro?<a href="cadastro.html"> Cadastre-se</a></p>
+    <!-- <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Digite o CEP</h2>
+            <input type="text" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="formatarCep(this)">
+            <button onclick="buscarCep()">Buscar</button>
+            <button onclick="closeModal()">Fechar</button>
         </div>
-    </form>
+    </div> -->
+
+    <form id="login-form" class="caixa-modelo caixa-login"></form>
 
     <header id="header"></header>
 
@@ -63,14 +41,15 @@
         <div class="carousel">
             <div class="slider-container">
                 <div class="slider">
-                    <div class="slide active"><img src="./public/images/slides/banner-principal.png" alt="banner-principal"></div>
+                    <div class="slide active"><img src="./public/images/slides/banner-principal.png"
+                            alt="banner-principal"></div>
                     <div class="slide"><img src="./public/images/slides/slide-01.jpg" alt="Imagem 1"></div>
                     <div class="slide"><img src="./public/images/slides/slide-02.jpg" alt="Imagem 2"></div>
                     <div class="slide"><img src="./public/images/slides/slide-03.jpg" alt="Imagem 3"></div>
                     <div class="slide"><img src="./public/images/slides/slide-04.webp" alt="Imagem 4"></div>
                 </div>
             </div>
-    
+
             <div style="text-align: center;">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -79,7 +58,7 @@
                 <span class="dot" onclick="currentSlide(5)"></span>
             </div>
         </div>
-       
+
 
         <div class="categorias">
             <div class="cat" id="bebidas">
@@ -142,30 +121,25 @@
 
 
     </main>
-    
+
     <footer id="footer"></footer>
 
-    <div class="filtro"></div>
+    <!-- Scripts obrigatórios -->
+    <script src="./partials/navbar.js" type="module" defer></script>
 
+    <script src="partials/login.js" type="module" defer></script>
 
-    <script type="module" src="./partials/navbar.js"></script>
+    <script src="public/js/login.js" defer></script>
 
-    <script type="module" src="public/js/login.js"></script>
-    
-    
-    
-    <script type="module" src="./partials/produto.js"></script>
+    <script src="public/js/search.js" defer></script>
 
-    <script type="module" src="./partials/footer.js"></script>
+    <script src="./partials/footer.js" type="module" defer></script>
 
-    <script src="public/js/slider.js"></script>
+    <!-- Scripts da página -->
+    <script src="public/js/slider.js" defer></script>
 
-    
-    <script type="module" src="public/js/index-products.js"></script>
+    <script src="public/js/index-products.js" type="module" defer></script>
 
-    <script type="module" src="public/js/search.js"></script>
-
-    <!-- <script src="public/js/main.js" ></script> -->
 
 </body>
 

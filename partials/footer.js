@@ -5,7 +5,7 @@ function createFooter() {
     footer.innerHTML = `
         <p>© 2024 - OFFers</p>
         <div class="redes">
-            <a href="https://www.instagram.com/darasautoservice/" target="_blank">
+            <a href="#" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
             </a>
             <a href="#">

@@ -15,9 +15,12 @@ formPost.addEventListener('submit', (e) => {
     const posts = document.querySelector('#posts');
     const allFeedback = JSON.parse(localStorage.getItem('feedback')) || [];
 
-    const t = createPost(loggedUser.nome, text.value)
+    if (text.value === '') {
+        alert('Campo vazio');
+        return;
+    }
 
-    posts.appendChild(t);
+    posts.appendChild(createPost(loggedUser.nome, text.value));
 
     const thisPost = allFeedback.find(elem => elem.id === productId) || [];
 

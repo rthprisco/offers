@@ -133,7 +133,7 @@ h2 {
     text-decoration: underline;
 }
 
-.filtro {
+.blackout-modal {
     display: none;
     position: fixed;
     top: 0;

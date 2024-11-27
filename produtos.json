@@ -27,7 +27,7 @@
         "mercado": "Royal",
         "mercado-img": "./public/images/logo-royal.jpg",
         "validade": "Oferta válida até 28/06",
-        "categoria": "congelados"
+        "categoria": "mercearia"
     },
     {
         "img": "./public/images/produtos/ativ.jpg",

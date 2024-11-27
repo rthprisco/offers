@@ -22,8 +22,6 @@ const allFeedback = JSON.parse(localStorage.getItem('feedback'));
 const posts = allFeedback.find(elem => elem.id === productId);
 const postsList = document.querySelector('#posts');
 
-console.log(postsList)
-
 posts.posts.forEach(elem => {
     console.log(elem)
     postsList.appendChild(createPost(elem.user, elem.post))

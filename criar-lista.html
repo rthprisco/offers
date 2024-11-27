@@ -15,24 +15,24 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
     <div id="modal" class="modal">
         <div class="modal-content">
-          <h2>Digite o CEP</h2>
-          <input type="text" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="formatarCep(this)">
-          <button onclick="buscarCep()">Buscar</button>
-          <button onclick="closeModal()">Fechar</button>
+            <h2>Digite o CEP</h2>
+            <input type="text" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="formatarCep(this)">
+            <button onclick="buscarCep()">Buscar</button>
+            <button onclick="closeModal()">Fechar</button>
         </div>
-      </div>
+    </div>
 
-      
+    <form id="login-form" class="caixa-modelo caixa-login"></form>
 
     <header id="header"></header>
-    
+
     <main>
         <div class="todo-app">
             <h2><i class='bx bx-list-plus'></i> Minha Lista</h2>
@@ -44,16 +44,23 @@
 
         </div>
     </main>
-        
+
     </div>
 
     <footer id="footer"></footer>
-    
-    <!-- Componentes JS -->
-    <script src="./partials/navbar.js" type="module"></script>
-    <script src="./partials/footer.js" type="module"></script>
-    
-    
+
+    <!-- Scripts obrigatórios -->
+    <script src="./partials/navbar.js" type="module" defer></script>
+
+    <script src="partials/login.js" type="module" defer></script>
+
+    <script src="public/js/login.js" defer></script>
+
+    <script src="public/js/search.js" defer></script>
+
+    <script src="./partials/footer.js" type="module" defer></script>
+
+    <!-- Scripts da página -->
     <script src="./public/js/criar-lista.js"></script>
 </body>
 

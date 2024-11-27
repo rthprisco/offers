@@ -57,7 +57,7 @@ nav {
     pointer-events: none; /* Garante que a imagem não bloqueie cliques no input */
 }
 
-.nav-list ul {
+.nav-list {
     display: flex;
     list-style: none;
     align-items: center;
@@ -169,21 +169,12 @@ nav {
         transition: 1s ease-out;
 
         align-items: center;
-        justify-content: center;
-    }
-
-    .nav-list ul {
-        position: relative;
-        top: 20%;
         flex-direction: column;
-        /* pointer-events: none; */
     }
 
     .nav-list a {
         font-size: 16px;
         opacity: 0;
-
-        
         display: flex;
         justify-content: start;
     }
