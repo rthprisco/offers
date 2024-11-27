@@ -52,7 +52,7 @@ nav {
     height: 28px;
     user-select: none;
     position: absolute;
-    top: 50%;
+    top: 27%;
     right: 12px;
     transform: translateY(-50%);
     pointer-events: none; /* Garante que a imagem não bloqueie cliques no input */
