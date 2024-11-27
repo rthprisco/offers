@@ -14,6 +14,7 @@ function createNavbar() {
         </div>
         <div class="search-form">
             <input type="text" placeholder="Pesquise pelo seu produto..." id="search-input" class="product-input">
+            <img src="/public/images/icons/search.png" alt="ícone de pesquisa">
             <div id="result" class="result-container">
             <p id="welcome" class="welcome-message" onclick="openModal()"><i class="fa-solid fa-location-dot"></i> Insira seu CEP</p>
             <p id="cep-info" class="cep-info hidden" onclick="openModal()"></p>
@@ -64,6 +65,8 @@ const nav = document.querySelector('.nav');
 
 hamburger.addEventListener('click', () => nav.classList.toggle('active'));
 
+
+// CEP
 function openModal() {
   document.getElementById('modal').style.display = 'flex';
 }
@@ -121,8 +124,11 @@ function carregarCepSalvo() {
 
     welcomeMessage.classList.add('hidden');
     cepInfo.classList.remove('hidden');
-    cepInfo.textContent = `${data.localidade || 'N/A'} - ${data.uf || 'N/A'}`;
+    cepInfo.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${data.localidade || 'N/A'} - ${data.uf || 'N/A'}`;
   }
 }
 
 document.addEventListener('DOMContentLoaded', carregarCepSalvo);  
+
+hamburger.addEventListener('click', () => nav.classList.toggle('active'));
+

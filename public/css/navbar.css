@@ -23,8 +23,6 @@ nav {
 .search-form {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 460px;
     flex-direction: column;
     cursor: pointer;
@@ -51,7 +49,7 @@ nav {
     height: 28px;
     user-select: none;
     position: absolute;
-    top: 50%;
+    top: 27%;
     right: 12px;
     transform: translateY(-50%);
     pointer-events: none; /* Garante que a imagem não bloqueie cliques no input */
@@ -112,7 +110,7 @@ nav {
 
 @media (max-width: 768px) {
     header {
-        height: 120px;
+        height: 125px;
     }
 
     nav {
@@ -239,7 +237,7 @@ nav {
         color: #fff;
         text-decoration: none;
         cursor: pointer;
-        margin-left: 20px;
+        margin-left: 8px;
       }
       .hidden {
         display: none;

@@ -37,7 +37,7 @@
                     <a href="#" class="menu-link"> <i class="fa-solid fa-bell menu-icon"></i> Notificações </a>
                     <a href="#" class="menu-link"> <i class="fa-solid fa-heart menu-icon"></i> Lista de Favoritos </a>
                     <a href="#" class="menu-link"> <i class="fa-solid fa-gear menu-icon"></i> Configurações </a>
-                    <a href="#" class="menu-link"> <i class="fa-solid fa-right-from-bracket menu-icon"></i> Sair </a>
+                    <a href="#" class="menu-link" id="logout"> <i class="fa-solid fa-right-from-bracket menu-icon"></i> Sair </a>
                 </div>
             </div>
             <form class="acc">
@@ -80,6 +80,12 @@
         </div>
     </main>
 
+    <script>
+        document.querySelector('#logout').addEventListener('click', function () {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = 'index.html';
+        });
+    </script>
 
     <footer id="footer"></footer>
 
@@ -93,5 +99,8 @@
     <script src="public/js/search.js" defer></script>
 
     <script src="./partials/footer.js" type="module" defer></script>
+
+    <script src="./public/js/modal.js"></script>
+
 </body>
 </html>
