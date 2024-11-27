@@ -1,58 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OFFers - Comparativo de preços de supermercados</title>
+    <title>Document</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/public/css/footer.css">
+    <script src="https://kit.fontawesome.com/97c47b7afc.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="public/images/favicon-offers.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./public/css/minha-conta.css">
-    <link rel="stylesheet" href="./public/css/navbar.css">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/footer.css"> 
-    <link rel="stylesheet" href="./public/css/card-produto.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/variables.css">
+    <link rel="stylesheet" href="public/css/minha-conta.css">
 </head>
-
 <body>
-    <header id="header"></header>
 
+    <header id="header"></header>
+    
     <main>
-        <div class="menu">
-            <nav>
-                <ul>
-                    <div class="usuario">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Nome</p>
-                        <a href="#">Minha Conta</a>
+        <div class="container">
+            <div class="profile">
+                <div class="profile-header">
+                    <div class="profile-border"><img src="public/images/Dora ft perfil.jpeg" alt="profile" class="profile-img"></div>
+                    <div class="profile-text-container">
+                        <h1 class="profile-title"> Nome da pessoa </h1>
+                        <p class="profile-email"> nomedapessoa@gmail.com </p>
                     </div>
-                    <div class="linha1"></div>
-                    <li><a href="#">Meu Carrinho</a></li>
-                    <li><a href="#">Favoritos</a></li>
-                    <li><a href="#">Feedback</a></li>
-                    <div class="linha1"></div>
-                    <li><a href="#">Trocar de Senha</a></li>
-                    <div class="linha1"></div>
-                    <li><a href="#">Central de Ajuda</a></li>
-                    <li><a href="#">Termo de Uso</a></li>
-                    <li id="logout"><a href="index.html">Sair</a></li>
-                </ul>
-            </nav>
+                </div>
+                <div class="menu">
+                    <a href="#" class="menu-link"> <i class="fa-solid fa-circle-user menu-icon"> </i> Minha Conta </a>
+                    <a href="#" class="menu-link"> <i class="fa-solid fa-bell menu-icon"></i> Notificações </a>
+                    <a href="#" class="menu-link"> <i class="fa-solid fa-heart menu-icon"></i> Lista de Favoritos </a>
+                    <a href="#" class="menu-link"> <i class="fa-solid fa-gear menu-icon"></i> Configurações </a>
+                    <a href="#" class="menu-link"> <i class="fa-solid fa-right-from-bracket menu-icon"></i> Sair </a>
+                </div>
+            </div>
+            <form class="acc">
+                <div class="acc-header">
+                    <h1 class="acc-title"> Informações da Conta </h1>
+                </div>
+                <div class="acc-edit">
+                    <div class="input-container">
+                        <label> Nome </label>
+                        <input type="text" placeholder="Primeiro Nome">
+                    </div>
+                    <div class="input-container">
+                        <label> E-mail </label>
+                        <input type="email" placeholder="Ultimo nome">
+                    </div>
+                </div>
+                <div class="acc-edit">
+                    <div class="input-container">
+                        <label> Telefone </label>
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <div class="input-container">
+                        <label> Cidade/Estado </label>
+                        <input type="text" placeholder="Número">
+                    </div>
+                </div>
+                <div class="acc-edit">
+                    <div class="input-container">
+                        <label> Endereço: </label>
+                        <textarea name="endereço"> </textarea>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn-cancel"> Cancelar </button>
+                    <button class="btn-save"> Salvar </button>
+                </div>
+
+            </form>
         </div>
     </main>
-    
-    <script>
-        document.querySelector('#logout').addEventListener('click', function () {
-            localStorage.removeItem('loggedInUser');
-            // window.location.href = 'index.html';
-        });
-    </script>
-    <script src="./partials/navbar.js"></script>
-</body>
 
+
+    <footer id="footer"></footer>
+
+    <script src="partials/navbar.js" type="module"></script>
+    <script src="partials/footer.js" type="module"></script>
+</body>
 </html>
