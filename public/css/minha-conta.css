@@ -45,11 +45,12 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .profile-title {
     font-size: 20px;
+    text-transform: capitalize;
 }
 
 .profile-email {
@@ -69,20 +70,20 @@ main {
     margin-right: 10px;
 }
 
-.menu-link:first-child {
+.menu-link.active {
     color: #fff;
     background-color: var(--primary-blue);
 }
 
-.menu-link:hover {
+/* .menu-link:hover {
     background-color: white;
     color: var(--primary-blue);
-}
+} */
 
-.menu-link:first-child:hover {
+/* .menu-link:first-child:hover {
     background-color: var(--primary-blue);
     color: #fff;
-}
+} */
 
 .acc {
     flex: 2;
@@ -132,13 +133,14 @@ main {
     box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
     border-radius: 5px;
     padding: 5px;
-    color: black;
+    color: var(--dark-gray);
     background-color: #f1f1f1;
 }
 
 .input-container input:focus {
     outline: none;
     border: 1px solid black;
+    color: black;
     /* background-color: #fff; */
 }
 

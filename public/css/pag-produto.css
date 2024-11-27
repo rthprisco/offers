@@ -307,7 +307,6 @@ input:checked+.toggle-button::before {
 
 .info-box-content {
     display: none;
-    /* margin-top: 20px; */
 }
 
 .info-box-content.active {

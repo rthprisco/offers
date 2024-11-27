@@ -4,9 +4,9 @@ const btnClose = document.querySelector('.btn-close');
 const blackoutModal = document.querySelector('.blackout-modal');
 
 btnOpen.addEventListener('click', () => {
-    const isLoggedIn = localStorage.getItem('loggedInUser');
+    const isLoggedIn = JSON.parse(localStorage.getItem('loggedInUser'));
 
-    console.log(isLoggedIn)
+    console.log(!!isLoggedIn)
 
     if (isLoggedIn) {
         window.location.href = 'minha-conta.html';
@@ -24,14 +24,16 @@ loginForm.addEventListener('submit', (e) => {
 
     const users = JSON.parse(localStorage.getItem('users'));
 
-    const user = users.find(u => u.email === email && u.senha === senha);
-    
-    if (user) {
-        localStorage.setItem('loggedInUser', JSON.stringify({ email: email, nome: user.nome }));
-        window.location.href = 'index.html';
-    }
-    else {
-        document.querySelector('#error-login').style.display = 'block';
+    if (users) {
+        const user = users.find(u => u.email === email && u.senha === senha);
+
+        if (user) {
+            localStorage.setItem('loggedInUser', JSON.stringify({ email: email, nome: user.nome, telefone: user.telefone }));
+            window.location.href = 'index.html';
+        }
+        else {
+            document.querySelector('#error-login').style.display = 'block';
+        }
     }
 });
 

@@ -27,8 +27,8 @@
         <div class="modal-content">
             <h2>Digite o CEP</h2>
             <input type="text" id="cep" placeholder="00000-000" maxlength="9" oninput="formatarCep(this)">
+            <button onclick="closeModal()" class="close">Fechar</button>
             <button onclick="buscarCep()">Buscar</button>
-            <button onclick="closeModal()">Fechar</button>
         </div>
     </div>
 
@@ -133,7 +133,7 @@
 
     <script src="public/js/search.js" defer></script>
 
-    <script src="./public/js/modal.js"></script>
+    <script src="public/js/modal.js"></script>
 
     <script src="partials/footer.js" type="module" defer></script>
 

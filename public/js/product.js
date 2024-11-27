@@ -18,7 +18,7 @@ document.querySelector('#link-buy').href = productObj.permalink;
 document.querySelector('#product-img').src = productObj.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg');
 
 
-const allFeedback = JSON.parse(localStorage.getItem('feedback'));
+const allFeedback = JSON.parse(localStorage.getItem('feedback')) || [];
 const posts = allFeedback.find(elem => elem.id === productId);
 const postsList = document.querySelector('#posts');
 
