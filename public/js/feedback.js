@@ -1,124 +1,45 @@
-import { isLogged } from "./utils.js";
-
-// class FormPost {
-//     constructor(idForm, idTextarea, idUlPost) {
-//         this.form = document.getElementById(idForm);
-//         this.textarea = document.getElementById(idTextarea);
-//         this.ulPost = document.getElementById(idUlPost);
-//         this.addSubmit();
-//     }
-
-//     onSubmit(func) {
-//         this.form.addEventListener('submit', func)
-//     }
-
-
-//     formValidade(value) {
-//         if (value == '' || value == null || value == undefined || value.lenght < 3) {
-//             return false
-//         }
-//         return true
-//     }
-
-//     getTime() {
-//         const time = new Date();
-//         const hour = time.getHours();
-//         const minutes = time.getMinutes();
-//         return `${hour}h ${minutes}min`
-//     }
-
-//     addSubmit() {
-//         const handleSubmit = (event) => {
-//             event.preventDefault();
-//             if (this.formValidade(this.textarea.value)) {
-//                 const time = this.getTime();
-//                 const newPost = document.createElement("li");
-//                 newPost.classList.add('post');
-//                 newPost.innerHTML = `
-//                 <div class="inforUserPost">
-//                     <div class="imgUserPost"></div>
-
-//                     <div class="nomeANDhora">
-//                         <strong>Araujo</strong>
-//                         <p>${time}</p>
-//                     </div>
-//                 </div>
-//                 <p>
-//                    ${this.textarea.value}
-//                 </p>
-
-//                 <div class="btnPost">
-//                     <button type="button" class="filePost" id="like">
-//                         <img src="./public/images/feedback/heart.svg" alt="Curtir">
-//                         Curtir
-//                     </button>
-//                     <button type="button" class="filePost" id="comment">
-//                         <img src="./public/images/feedback/comment.svg" alt="Comentar">
-//                         Comentar
-//                         </button>
-//                     <button type="button" class="filePost" id="compart">
-//                         <img src="./public/images/feedback/share.svg" alt="Compartilhar">
-//                         Compartilhar
-//                     </button>
-//                 </div>
-//                 `;
-//                 this.ulPost.append(newPost);
-//                 this.textarea.value = "";
-
-
-//             } else {
-//                 alert('Verifique o campo digitado.')
-//             }
-//         }
-
-
-//         this.onSubmit(handleSubmit)
-
-//     }
-
-// }
-// const postForm = new FormPost('formPost', 'textarea', 'posts')
+import { isLogged, formatTime } from "./utils.js";
+import { productId } from "./product.js";
 
 const formPost = document.querySelector('#formPost');
+const loggedUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
 formPost.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    const date = new Date();
+    const h = date.getHours();
+    const m = date.getMinutes();
+
     const text = document.querySelector('#textarea');
     const posts = document.querySelector('#posts');
+    const allFeedback = JSON.parse(localStorage.getItem('feedback')) || [];
 
-    const newPost = document.createElement("li");
-    newPost.classList.add('post');
-    newPost.innerHTML = `
-                <div class="inforUserPost">
-                    <div class="imgUserPost"></div>
+    const t = createPost(loggedUser.nome, text.value)
 
-                    <div class="nomeANDhora">
-                        <strong>Araujo</strong>
-                        <p>HORAS</p>
-                    </div>
-                </div>
-                <p> ${text.value} </p>
+    posts.appendChild(t);
 
-                <!-- <div class="btnPost">
-                    <button type="button" class="filePost" id="like">
-                        <img src="./public/images/feedback/heart.svg" alt="Curtir">
-                        Curtir
-                    </button>
-                    <button type="button" class="filePost" id="comment">
-                        <img src="./public/images/feedback/comment.svg" alt="Comentar">
-                        Comentar
-                        </button>
-                    <button type="button" class="filePost" id="compart">
-                        <img src="./public/images/feedback/share.svg" alt="Compartilhar">
-                        Compartilhar
-                    </button>
-                </div> -->
-                `;
+    const thisPost = allFeedback.find(elem => elem.id === productId) || [];
 
-    console.log(newPost)
+    if (thisPost.posts) {
+        thisPost.posts.push({ user: loggedUser.nome, post: text.value });
 
-    posts.appendChild(newPost);
+        const feedback = allFeedback.map(elem => elem.id === productId ? thisPost : elem);
+
+        localStorage.setItem('feedback', JSON.stringify(feedback));
+    }
+    else {
+        const firstPost = {
+            id: productId,
+            posts: [{ user: loggedUser.nome, post: text.value }]
+        };
+
+        allFeedback.push(firstPost);
+        localStorage.setItem('feedback', JSON.stringify(allFeedback));
+    }
+
+
+
     text.value = '';
 });
 
@@ -127,5 +48,39 @@ if (!isLogged()) {
 }
 else {
     const user = document.querySelector('#user');
-    user.innerText = JSON.parse(localStorage.getItem('loggedInUser')).nome
+    user.innerText = loggedUser.nome;
+}
+
+export function createPost(user, text) {
+
+    const newPost = document.createElement("li");
+    newPost.classList.add('post');
+    newPost.innerHTML = `
+        <div class="inforUserPost">
+            <div class="imgUserPost"></div>
+
+                <div class="nomeANDhora">
+                    <strong>${user}</strong>
+                    <!-- <p>Horário do post</p> -->
+                </div>
+            </div>
+            <p> ${text} </p>
+
+            <!-- <div class="btnPost">
+                <button type="button" class="filePost" id="like">
+                    <img src="./public/images/feedback/heart.svg" alt="Curtir">
+                    Curtir
+                </button>
+                <button type="button" class="filePost" id="comment">
+                    <img src="./public/images/feedback/comment.svg" alt="Comentar">
+                    Comentar
+                </button>
+                <button type="button" class="filePost" id="compart">
+                    <img src="./public/images/feedback/share.svg" alt="Compartilhar">
+                    Compartilhar
+                </button>
+            </div> -->
+    `;
+
+    return newPost;
 }

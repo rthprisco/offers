@@ -139,33 +139,12 @@
 
     <footer id="footer"></footer>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const produto = params.get('product');
-
-        const productObj = JSON.parse(produto);
-
-        console.log(productObj);
-
-        document.querySelector('#title').innerText = productObj.title;
-        document.querySelector('#market').innerText = productObj.official_store_name || productObj.seller.nickname;
-
-        if (productObj.original_price) {
-            document.querySelector('#original-price').innerText = `R$ ${(productObj.original_price).toFixed(2)}`;
-        }
-
-        document.querySelector('#price').innerText = `R$ ${(productObj.price).toFixed(2)}`;
-        document.querySelector('#link-buy').href = productObj.permalink;
-        document.querySelector('#product-img').src = productObj.thumbnail.replace(/(\w+)\.jpg/gi, 'W.jpg');
-
-
-
-    </script>
+    <script src="public/js/product.js" type="module"></script>
 
     <script src="../partials/navbar.js" type="module"></script>
     <script src="../partials/footer.js" type="module"></script>
 
-    <script type="module" src="public/js/feedback.js"></script>
+    <script src="public/js/feedback.js" type="module"></script>
 </body>
 
 </html>
