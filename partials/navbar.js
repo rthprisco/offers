@@ -36,7 +36,7 @@ function createNavbar() {
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" title="Confira os encartes">
+            <a href="encartes.html" title="Confira os encartes">
               <img src="/public/images/icons/navbar/journal.png" alt="ícone encartes">
               <span>Confira os encartes</span>
             </a>
