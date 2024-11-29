@@ -19,8 +19,8 @@ function cadastrar() {
         const users = JSON.parse(localStorage.getItem("users")) || [];
         users.push(newUser);
         localStorage.setItem('users', JSON.stringify(users));
-        localStorage.setItem('loggedInUser', JSON.stringify({ email: email, nome: nome }));
-        window.location.href = 'index.html';
+        localStorage.setItem('loggedInUser', JSON.stringify({ email: email, nome: nome, telefone: telefone }));
+        window.location.href = '/';
     }
 }
 
@@ -28,9 +28,9 @@ function validar({ nome, email, telefone, senha, confirmarSenha }) {
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const errors = [];
 
-    const campos = {nome, email, telefone, senha, confirmarSenha};
+    const campos = { nome, email, telefone, senha, confirmarSenha };
     Object.entries(campos).forEach(([key, value]) => {
-        if (!value) errors.push({id: `${key}-erro`, msg: `Preencha o campo ${key.replace('-', ' ')}.`});
+        if (!value) errors.push({ id: `${key}-erro`, msg: `Preencha o campo ${key.replace('-', ' ')}.` });
     })
 
     if (users.some(u => u.email === email)) errors.push({ id: 'email-erro', msg: 'Esse email já está sendo utilizado.' });

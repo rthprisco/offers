@@ -31,6 +31,7 @@ h2 {
 .content-product {
     display: flex;
     height: 100%;
+    gap: 45px;
 }
 
 .first-colunm {
@@ -87,12 +88,6 @@ h2 {
     width: 320px;
 }
 
-.second-box {
-    display: flex;
-    flex-direction: column;
-    height: 350px;
-
-}
 
 #rating-product {
     display: flex;
@@ -323,33 +318,10 @@ input:checked+.toggle-button::before {
         flex-direction: column;
         flex-wrap: wrap;
         gap: 20px;
-        /* padding: 16px; */
-    }
-
-    .first-colunm {
-        display: flex;
-        justify-content: left;
-    }
-
-    .product-img {
-        width: 300px;
-        justify-content: left;
-    }
-
-    .actions .btn-save {
-        padding-left: 0;
     }
 
     .second-colunm {
-        padding: 0;
-    }
-
-    .second-box {
-        height: 250px;
-    }
-
-    .third-colunm {
-        padding: 0 16px 0 0;
+        width: 100%;
     }
 
     .toggle-button {

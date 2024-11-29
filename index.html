@@ -25,7 +25,7 @@
 
     <div id="modal" class="modal">
         <div class="modal-content">
-            <h2>Digite o CEP</h2>
+            <h2>Digite seu CEP</h2>
             <input type="text" id="cep" placeholder="00000-000" maxlength="9" oninput="formatarCep(this)">
             <button onclick="closeModal()" class="close">Fechar</button>
             <button onclick="buscarCep()">Buscar</button>
@@ -125,9 +125,12 @@
     <footer id="footer"></footer>
 
     <!-- Scripts obrigatórios -->
-    <script src="partials/navbar.js" type="module" defer></script>
 
-    <script src="partials/login.js" type="module" defer></script>
+    <script src="partials/navbar.js" type="module"></script>
+
+    <script src="partials/login.js" type="module"></script>
+
+    <script src="partials/footer.js" type="module"></script>
 
     <script src="public/js/login.js" defer></script>
 
@@ -135,12 +138,10 @@
 
     <script src="public/js/modal.js"></script>
 
-    <script src="partials/footer.js" type="module" defer></script>
-
     <!-- Scripts da página -->
-    <script src="public/js/slider.js" defer></script>
+    <script src="public/js/slider.js"></script>
 
-    <script src="public/js/index-products.js" type="module" defer></script>
+    <script src="public/js/index-products.js" type="module"></script>
 </body>
 
 </html>

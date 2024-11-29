@@ -13,10 +13,22 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Encartes</title>
+    <title>OFFers - Comparativo de preços de supermercados</title>
+    <link rel="shortcut icon" href="public/images/favicon-offers.png" type="image/x-icon">
 </head>
 
 <body>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Digite seu CEP</h2>
+            <input type="text" id="cep" placeholder="00000-000" maxlength="9" oninput="formatarCep(this)">
+            <button onclick="closeModal()" class="close">Fechar</button>
+            <button onclick="buscarCep()">Buscar</button>
+        </div>
+    </div>
+
+    <form id="login-form" class="caixa-modelo caixa-login"></form>
 
     <header id="header"></header>
 
