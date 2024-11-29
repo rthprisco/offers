@@ -19,6 +19,8 @@
     --text-link: #4450FA;
 
     --active-tab: #000;
+
+    --opt-acc: var(--primary-blue);
 }
 
 :root.dark-mode {
@@ -42,4 +44,6 @@
     --shadow-card: 0 0 16px #FF2934;
 
     --active-tab: #ff2934;
+
+    --opt-acc: var(--primary-red);
 }
