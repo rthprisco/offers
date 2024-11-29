@@ -1,6 +1,6 @@
 /* ADICIONAR OS COMENTARIOS */
 .newpost {
-    background-color: #f1f1f1;
+    background-color: var(--background-input-text);
     margin: 15px 0;
     padding: 25px;
     max-width: 100%;
@@ -38,13 +38,15 @@
 }
 
 .newpost .form-post textarea {
-    background-color: #FBFBFB;
+    background: var(--gray);
+    /* background-color: #FBFBFB; */
     margin: 15px 0;
     padding: 25px;
     border-radius: 10px;
     resize: none;
     border: 0;
     outline: none;
+    color: var(--text);
 }
 
 .newpost .form-post .iconsButton {
@@ -96,8 +98,9 @@
 /* COMENTARIOS PUBLICADOS */
 .posts .post {
     list-style-type: none;
-    margin-bottom: 50px;
-    background-color: #F1F1F1;
+    margin-bottom: 15px;
+    background: var(--background-input-text);
+    /* background-color: #F1F1F1; */
     border-radius: 10px;
     /* box-shadow: 1px 0 3px rgb(0, 0, 0, 0.2); */
     padding: 25px;
@@ -132,7 +135,7 @@
 .posts .post>p {
     width: 100%;
     padding: 10px;
-    color: #333;
+    color: var(--text);
 
 }
 

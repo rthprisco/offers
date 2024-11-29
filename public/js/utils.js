@@ -5,11 +5,13 @@ export function isLogged() {
     return !!user;
 }
 
-export function linkCSS(path) {
-    const css = document.createElement('link');
-
-    css.rel = 'stylesheet';
-    css.href = path;
-
-    document.head.appendChild(css);
+export function linkCSS(href) {
+    return new Promise((resolve, reject) => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        link.onload = () => resolve();
+        link.onerror = () => reject(new Error(`Falha ao carregar o CSS: ${href}`));
+        document.head.appendChild(link);
+    })
 }

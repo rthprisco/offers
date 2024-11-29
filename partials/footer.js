@@ -1,5 +1,7 @@
 import { linkCSS } from '../public/js/utils.js'
 
+linkCSS('public/css/footer.css');
+
 function createFooter() {
     const footer = document.querySelector('#footer');
     footer.innerHTML = `
@@ -16,8 +18,6 @@ function createFooter() {
             </a>
         </div>
     `;
-
-    linkCSS('public/css/footer.css');
 }
 
 createFooter();

@@ -12,7 +12,7 @@
 }
 
 .item { 
-    background-color: #fff; 
+    background-color: var(--background-component); 
     border-radius: 10px;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.4); 
     padding: 20px;
@@ -43,7 +43,7 @@
     border-radius: 2em;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: var(--background-component);
     color: var(--primary-red);
     text-decoration: none;
     border: 2px solid var(--primary-red);

@@ -12,7 +12,7 @@ function createLoginModal() {
         </div>
         <div class="input">
             <p>Senha</p>
-            <input type="password" id="senhaLogin" name="senhaLogin">
+            <input type="password" id="senhaLogin" name="senhaLogin" autocomplete="off">
             <a href="#" class="esq-sehna">Esqueceu sua senha?</a>
         </div>
         <span id="error-login" class="span-error-box">Usuário ou senha incorreto.</span>
@@ -22,8 +22,8 @@ function createLoginModal() {
             <p>Ainda não tem cadastro?<a href="cadastro.html"> Cadastre-se</a></p>
         </div>
     `;
-
-    linkCSS('public/css/cad-login.css');
 }
 
-createLoginModal();
+linkCSS('public/css/cad-login.css')
+    .then(() => createLoginModal())
+    .then(() => document.dispatchEvent(new Event('modalLoginReady')));
