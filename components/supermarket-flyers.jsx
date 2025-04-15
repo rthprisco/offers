@@ -17,7 +17,7 @@ export default function SupermarketFlyers() {
           Encontre as melhores ofertas e promoções dos supermercados da sua região
         </p>
       </header>
-      <div className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-2 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {supermarkets.map((supermarket) => (
           <SupermarketCard key={supermarket.id} supermarket={supermarket} />
         ))}
@@ -30,7 +30,7 @@ function SupermarketCard({ supermarket }) {
   return (
     <Card className="overflow-hidden transition-all hover:shadow-md group border-muted h-full flex flex-col">
       <CardContent className="p-0 flex flex-col h-full">
-        <Link href={`/supermarket-flyers/${supermarket.id}`} className="block flex-1 flex flex-col">
+        <Link href={`/supermarket-flyers/${supermarket.id}`} className=" flex-1 flex flex-col">
           <div className="relative h-40 sm:h-48 w-full bg-muted/30 flex items-center justify-center overflow-hidden">
             <div className="relative w-full h-full">
               <Image
@@ -63,7 +63,7 @@ function SupermarketCard({ supermarket }) {
               <Button
                 variant="outline"
                 size="sm"
-                className="text-xs font-medium px-3 py-1 h-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                className="text-xs font-medium px-3 py-1 h-auto border-primary text-primary hover:bg-primary-red hover:text-primary-foreground hover:border-primary-red"
               >
                 Ver Encarte
               </Button>

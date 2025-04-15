@@ -233,7 +233,7 @@ export default function ShoppingList() {
   }
 
   return (
-    <Card className="w-full max-w-md mx-auto">
+    <Card className="w-96 md:w-[500px] ">
       <CardHeader>
         <CardTitle className="text-center">Listas de Compras</CardTitle>
       </CardHeader>
