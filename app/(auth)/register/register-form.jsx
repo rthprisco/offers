@@ -18,7 +18,6 @@ export default function RegisterForm() {
       <p className="text-sm text-slate-600">
         Para receber as melhores offertas
       </p>
-
       <div className="flex flex-col gap-3 py-6">
         <InputField
           label="Nome"

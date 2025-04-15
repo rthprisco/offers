@@ -19,7 +19,7 @@ export default async function Navbar() {
 
   return (
     <header className="bg-primary-blue flex w-full items-center justify-around shadow md:gap-8">
-      <div className="flex w-14 md:w-20 flex-col justify-center">
+      <div className="flex w-14 flex-col justify-center md:w-20">
         <Link href="/">
           <Image
             src="/logo-offers.svg"
@@ -70,7 +70,7 @@ export default async function Navbar() {
           </li>
           <li>
             <Link
-              href="/"
+              href="/supermarket-flyers"
               title="Confira os encartes"
               className="flex items-center gap-1 p-4 text-sm text-white"
             >
@@ -79,7 +79,7 @@ export default async function Navbar() {
           </li>
           <li>
             <Link
-              href="/"
+              href="#"
               title="Alterar tema"
               className="flex items-center gap-1 p-4 text-sm text-white"
             >

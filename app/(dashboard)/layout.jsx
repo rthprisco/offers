@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer";
-import MenuMobile from "@/components/navbar/menu-mobile";
+import MenuMobile from "@/components/navbar/mobile/menu-mobile";
 
 export default function DashboardLayout({ children }) {
   return (

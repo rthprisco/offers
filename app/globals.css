@@ -40,6 +40,19 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+@layer utilities {
+  /* Esconder a scrollbar */
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none; /* Chrome e Safari */
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none; /* IE e Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 @theme inline {
   /* --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -50,7 +63,7 @@
   --color-category: #d9d9d9;
 
   --color-filter-black: rgba(0, 0, 0, 0.5);
-  
+
   --color-primary-red: #ff2934;
   --color-primary-red-hover: #e82832;
   --color-primary-blue: #4450fa;
