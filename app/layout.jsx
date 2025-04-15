@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Providers from "@/components/providers";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -15,8 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={`${poppins.className} flex flex-col min-h-screen antialiased`}>
-        {children}
+      <body
+        className={`${poppins.className} flex min-h-screen flex-col antialiased`}
+      >
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

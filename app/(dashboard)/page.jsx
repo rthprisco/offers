@@ -40,9 +40,9 @@ export default function Home() {
           { icon: "Apple", title: "Hortifruti" },
           { icon: "Pickaxe", title: "Limpeza" },
           { icon: "CakeSlice", title: "Matinais e sobremesas" },
-          { icon: "Pizza", title: "Mercearia"},
-          { icon: "Croissant", title: "Padaria"},
-          { icon: "SprayCan", title: "Perfumaria e higiene"}
+          { icon: "Pizza", title: "Mercearia" },
+          { icon: "Croissant", title: "Padaria" },
+          { icon: "SprayCan", title: "Perfumaria e higiene" },
         ]}
       />
 

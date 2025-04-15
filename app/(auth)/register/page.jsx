@@ -8,7 +8,7 @@ export default async function Register() {
   const session = await auth();
 
   if (session) return redirect("/");
-  
+
   return (
     <main className="flex h-screen flex-col items-center justify-center">
       <Link href="/" className="mb-2 flex items-center gap-1 text-slate-600">
@@ -21,7 +21,7 @@ export default async function Register() {
       <div className="pt-2">
         <p className="text-slate-600">
           Já possui uma conta?{" "}
-          <Link href="/login" className="text-primary-blue">
+          <Link href="/login" className="text-primary-blue hover:underline">
             Fazer login
           </Link>
         </p>

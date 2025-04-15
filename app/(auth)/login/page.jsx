@@ -21,7 +21,7 @@ export default async function Login() {
       <div className="pt-2">
         <p className="text-slate-600">
           Ainda não possui cadastro?{" "}
-          <Link href="/register" className="text-primary-blue">
+          <Link href="/register" className="text-primary-blue hover:underline">
             Registre-se
           </Link>
         </p>

@@ -1,6 +1,6 @@
 "use server";
 
-import prisma from "@/lib/prisma";
+import prisma from "@/lib/db/prisma";
 import { z } from "zod";
 import { hash } from "bcryptjs";
 import { signIn, signOut } from "@/auth";
@@ -10,8 +10,11 @@ const schema = z
   .object({
     name: z.string().min(3, "Nome deve possui no mínimo 3 letras"),
     email: z.string().email("E-mail inválido"),
-    phone: z.string().min(2, "Telefone inválido"),
-    password: z.string().min(3, "A senha deve ter no mínimo 3 caracteres"),
+    phone: z
+      .string()
+      .min(10, "Número de telefone inválido")
+      .max(11, "Número de telefone inválido"),
+    password: z.string(),
     confirmPassword: z.string().min(1, "Confirme sua senha"),
   })
   .refine((data) => data.password === data.confirmPassword, {
