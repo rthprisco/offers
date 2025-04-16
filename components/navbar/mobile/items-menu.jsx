@@ -1,12 +1,14 @@
 "use client";
 
+import { CircleUser } from "lucide-react";
 import { IoIosMenu } from "react-icons/io";
 import { LuListChecks, LuNewspaper } from "react-icons/lu";
-import { GoHome } from "react-icons/go";
+import { GoHeart, GoHome, GoPerson, GoSignOut } from "react-icons/go";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Link from "next/link";
 import { useState } from "react";
+import { logout } from "@/controllers/authController";
 
 export default function ItemsMenu({ session }) {
   const pathname = usePathname();
@@ -77,11 +79,31 @@ export default function ItemsMenu({ session }) {
           </li>
           <li className="mb-4">
             {session ? (
-              <Link href="/my-account">{`Olá, ${userName}!`}</Link>
+              <Link href="/my-account" className="flex gap-2">
+                <GoPerson size={24} />
+                {`Olá, ${userName}!`}
+              </Link>
             ) : (
-              <Link href="/login">Faça seu login</Link>
+              <Link href="/login" className="flex gap-2">
+                <GoPerson size={24} /> Faça seu login
+              </Link>
             )}
           </li>
+          {session && (
+            <>
+              <li className="mb-4 flex gap-2">
+                <GoHeart size={24} />
+                Favoritos
+              </li>
+              <li className="mb-4" onClick={() => setOpenMenu(false)}>
+                <p className="flex gap-2" onClick={logout}>
+                  <GoSignOut size={24} />
+                  Sair
+                </p>
+              </li>
+            </>
+          )}
+
           {/* {links.map(({ label, href, icon }) => (
             <li key={href} className="mb-4">
               <Link
@@ -99,7 +121,10 @@ export default function ItemsMenu({ session }) {
 
       {/* Fundo escuro ao abrir o menu */}
       {openMenu && (
-        <div className="fixed inset-0 z-10 bg-black/60 md:hidden" onClick={toggleMenu} />
+        <div
+          className="fixed inset-0 z-10 bg-black/60 md:hidden"
+          onClick={toggleMenu}
+        />
       )}
     </div>
   );

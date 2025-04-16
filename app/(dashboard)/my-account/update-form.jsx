@@ -35,7 +35,7 @@ export default function UpdateForm() {
     return <p>Carregando dados...</p>;
   }
 
-  const { id, name, email, phone } = session.user;
+  const { id, name, email, phone } = session?.user;
 
   return (
     <Form

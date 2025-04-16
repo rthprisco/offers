@@ -35,16 +35,29 @@ export async function register(_prevState, formData) {
     };
   }
 
-  const existingUser = await prisma.user.findUnique({
+  const existingEmail = await prisma.user.findUnique({
     where: {
       email: data.email,
     },
   });
 
-  if (existingUser) {
+  const existingPhone = await prisma.user.findUnique({
+    where: {
+      phone: data.phone,
+    },
+  });
+
+  if (existingEmail) {
     return {
       success: false,
       errors: { email: "Esse e-mail já está cadastrado" },
+    };
+  }
+
+  if (existingPhone) {
+    return {
+      success: false,
+      errors: { phone: "Esse telefone já está cadastrado" },
     };
   }
 
@@ -75,10 +88,22 @@ export async function login(_prevState, formData) {
       redirect: true,
       redirectTo: "/",
     });
+
+    return {
+      success: false,
+      error: "E-mail ou senha incorretos",
+    };
   } catch (error) {
     // Correção do erro nativo do auth.js (está em beta)
     if (isRedirectError(error)) {
       throw error;
+    }
+
+    if (error.type === "CredentialsSignin") {
+      return {
+        success: false,
+        error: "E-mail e/ou senha incorretos",
+      };
     }
   }
 }
