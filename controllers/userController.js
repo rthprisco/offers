@@ -1,6 +1,6 @@
 "use server";
 
-import prisma from "@/lib/db/prisma";
+import { db } from "@/lib/db";
 import { compare, hash } from "bcryptjs";
 import { z } from "zod";
 
@@ -8,7 +8,7 @@ export async function updateUser(_prevState, formData) {
   const entries = Array.from(formData.entries());
   const data = Object.fromEntries(entries);
 
-  await prisma.user.update({
+  await db.user.update({
     where: {
       id: data.id,
     },
@@ -36,7 +36,7 @@ export async function updatePassword(_prevState, formData) {
   const entries = Array.from(formData.entries());
   const data = Object.fromEntries(entries);
 
-  const user = await prisma.user.findUnique({
+  const user = await db.user.findUnique({
     where: {
       id: data.id,
     },
@@ -62,7 +62,7 @@ export async function updatePassword(_prevState, formData) {
 
   const newHashedPassword = await hash(data.newPassword, 10);
 
-  await prisma.user.update({
+  await db.user.update({
     where: {
       id: data.id,
     },

@@ -1,6 +1,6 @@
 "use server"
 
-export function create (){
+export async function create (){
 
     
 }

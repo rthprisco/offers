@@ -1,9 +1,12 @@
 import ShoppingList from "@/components/shopping-list";
+import { currentUser } from "@/lib/auth";
 
-export default function Home() {
+export default async function Home() {
+  const user = await currentUser();
+
   return (
-    <main className="flex justify-center items-center h-screen">
-      <ShoppingList />
+    <main className="flex h-screen items-center justify-center">
+      <ShoppingList userId={user.id} />
     </main>
   );
 }

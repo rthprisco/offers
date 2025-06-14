@@ -1,6 +1,6 @@
 "use server";
 
-import prisma from "@/lib/db/prisma";
+import { db } from "@/lib/db";
 import { z } from "zod";
 import { hash } from "bcryptjs";
 import { signIn, signOut } from "@/auth";
@@ -35,13 +35,13 @@ export async function register(_prevState, formData) {
     };
   }
 
-  const existingEmail = await prisma.user.findUnique({
+  const existingEmail = await db.user.findUnique({
     where: {
       email: data.email,
     },
   });
 
-  const existingPhone = await prisma.user.findUnique({
+  const existingPhone = await db.user.findUnique({
     where: {
       phone: data.phone,
     },
@@ -63,7 +63,7 @@ export async function register(_prevState, formData) {
 
   const hashedPassword = await hash(data.password, 10);
 
-  await prisma.user.create({
+  await db.user.create({
     data: {
       name: data.name,
       email: data.email,
@@ -72,16 +72,18 @@ export async function register(_prevState, formData) {
     },
   });
 
-  await signIn("credentials", {
-    email: formData.get("email"),
-    password: formData.get("password"),
-    redirect: true,
-    redirectTo: "/",
-  });
+  // await signIn("credentials", {
+  //   email: formData.get("email"),
+  //   password: formData.get("password"),
+  //   redirect: true,
+  //   redirectTo: "/",
+  // });
 }
 
 export async function login(_prevState, formData) {
   try {
+    // const teste = formData.get("email")
+    // console.log(teste)
     await signIn("credentials", {
       email: formData.get("email"),
       password: formData.get("password"),
