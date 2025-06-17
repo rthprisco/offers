@@ -1,6 +1,6 @@
 "use client";
 
-import { logout } from "@/controllers/authController";
+//import { logout } from "@/controllers/authController";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GoPerson, GoLock, GoHeart, GoBell, GoSignOut } from "react-icons/go";

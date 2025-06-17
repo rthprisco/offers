@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import ShoppingList from "@/components/shopping-list";
 import { currentUser } from "@/lib/auth";
 

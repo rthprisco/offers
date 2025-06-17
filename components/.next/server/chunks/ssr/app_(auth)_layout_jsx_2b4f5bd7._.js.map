@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Gabriel%20Dias/Desktop/offers-main/app/%28auth%29/layout.jsx"],"sourcesContent":["export default function AuthLayout({ children }) {\n  return <div>{children}</div>;\n}\n"],"names":[],"mappings":";;;;;AAAe,SAAS,WAAW,EAAE,QAAQ,EAAE;IAC7C,qBAAO,8OAAC;kBAAK;;;;;;AACf","debugId":null}}]
+}

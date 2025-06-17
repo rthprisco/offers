@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Gabriel%20Dias/Desktop/offers-main/app/loading.jsx"],"sourcesContent":["export default function Loading() {\n  return <div>Loading...</div>\n}\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBAAO,8OAAC;kBAAI;;;;;;AACd","debugId":null}}]
+}

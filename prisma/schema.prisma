@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
+  //output   = "../generated/prisma"
 }
 
 datasource db {
@@ -23,7 +23,7 @@ model User {
   id            String    @id @default(cuid())
   name          String
   email         String    @unique
-  emailVerified DateTime?
+ emailVerified DateTime?
   phone         String    @unique
   image         String?
   password      String?
@@ -56,8 +56,8 @@ model VerificationToken {
   token   String   @unique
   expires DateTime
 
-  @@unique([email, token])
-}
+   @@unique([email, token])
+ }
 
 model List {
   id     String     @id @default(cuid())
@@ -71,5 +71,5 @@ model ListItem {
   itemName  String
   isChecked Boolean @default(false)
   ListId    String
-  List      List    @relation(fields: [ListId], references: [id])
+ List      List    @relation(fields: [ListId], references: [id])
 }

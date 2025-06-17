@@ -1,0 +1,49 @@
+{
+  "node": {
+    "00276f892105d7385c7d2ca9657f385d8002d34432": {
+      "workers": {
+        "app/(dashboard)/my-account/page": {
+          "moduleId": "[project]/.next-internal/server/app/(dashboard)/my-account/page/actions.js { ACTIONS_MODULE0 => \"[project]/controllers/authController.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/(dashboard)/my-account/actions.jsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(dashboard)/my-account/page": "action-browser"
+      }
+    },
+    "601babf6d8d9e0ef217a12e7bc617aa8c0bb60659b": {
+      "workers": {
+        "app/(dashboard)/my-account/page": {
+          "moduleId": "[project]/.next-internal/server/app/(dashboard)/my-account/page/actions.js { ACTIONS_MODULE0 => \"[project]/controllers/authController.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/(dashboard)/my-account/actions.jsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(dashboard)/my-account/page": "action-browser"
+      }
+    },
+    "607d1310458d84362eabd580a6f546866ddf025dee": {
+      "workers": {
+        "app/(dashboard)/my-account/page": {
+          "moduleId": "[project]/.next-internal/server/app/(dashboard)/my-account/page/actions.js { ACTIONS_MODULE0 => \"[project]/controllers/authController.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/(dashboard)/my-account/actions.jsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(dashboard)/my-account/page": "action-browser"
+      }
+    },
+    "006a1f09bada961cb44772a1680a11dd47ee6b9abe": {
+      "workers": {
+        "app/(dashboard)/my-account/page": {
+          "moduleId": "[project]/.next-internal/server/app/(dashboard)/my-account/page/actions.js { ACTIONS_MODULE0 => \"[project]/controllers/authController.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/(dashboard)/my-account/actions.jsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(dashboard)/my-account/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}

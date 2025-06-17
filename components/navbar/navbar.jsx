@@ -77,15 +77,17 @@ export default async function Navbar() {
               <Newspaper size={28} />
             </Link>
           </li>
-          <li>
-            <Link
-              href="#"
-              title="Alterar tema"
-              className="flex items-center gap-1 p-4 text-sm text-white"
-            >
-              <Sun size={28} />
-            </Link>
-          </li>
+         <li>
+          {typeof window !== "undefined" && (
+          <Link
+            href="#"
+            title="Alterar tema"
+            className="flex items-center gap-1 p-4 text-sm text-white"
+    >
+            <Sun size={28} />
+          </Link>
+            )}
+        </li>
         </ul>
       </div>
       <div className="md:hidden">

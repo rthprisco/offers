@@ -1,0 +1,10 @@
+[
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/my-account(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/my-account"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/create-list(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/create-list"
+  }
+]

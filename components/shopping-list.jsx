@@ -14,7 +14,7 @@ export default function ShoppingList({ userId }) {
       if (saved) {
         setList(JSON.parse(saved));
       }
-      setIsLoaded(true); // Marca que já carregou
+      setIsLoaded(true);
     }
   }, [userId]);
 
@@ -35,8 +35,8 @@ export default function ShoppingList({ userId }) {
   const togglePurchased = (index) => {
     setList(
       list.map((el, i) =>
-        i === index ? { ...el, isPurchased: !el.isPurchased } : el,
-      ),
+        i === index ? { ...el, isPurchased: !el.isPurchased } : el
+      )
     );
     setSaved(false);
   };
@@ -54,10 +54,26 @@ export default function ShoppingList({ userId }) {
     setSaved(false);
   };
 
-  const handleSave = () => {
-    if (userId) {
-      localStorage.setItem(`shopping-list-${userId}`, JSON.stringify(list));
-      setSaved(true);
+  const handleSave = async () => {
+    if (!userId) return;
+
+    try {
+      const res = await fetch("/api/save-list", {
+        method: "POST",
+        body: JSON.stringify({ userId, list }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const result = await res.json();
+      if (result.success) {
+        setSaved(true);
+      } else {
+        console.error("Erro ao salvar:", result.error);
+      }
+    } catch (err) {
+      console.error("Erro na requisição:", err);
     }
   };
 
@@ -132,3 +148,5 @@ export default function ShoppingList({ userId }) {
     </div>
   );
 }
+
+
