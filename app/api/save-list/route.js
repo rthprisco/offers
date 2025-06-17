@@ -37,4 +37,3 @@ export async function POST(request) {
     return NextResponse.json({ error: "Erro ao salvar lista" }, { status: 500 });
   }
 }
-
