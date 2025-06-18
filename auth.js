@@ -6,7 +6,7 @@ import authConfig from "@/auth.config";
 import { getUserById } from "./models/user";
 
 export const {
-  handlers: { GET, POST },
+  handlers,
   signIn,
   signOut,
   auth,

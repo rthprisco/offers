@@ -5,7 +5,7 @@ import Google from "next-auth/providers/google";
 import { LoginSchema } from "@/schemas";
 import { getUserByEmail } from "@/models/user";
 
-export default authConfig = {
+const authConfig = {
   providers: [
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -32,3 +32,5 @@ export default authConfig = {
     }),
   ],
 };
+
+export default authConfig;

@@ -1,7 +1,0 @@
-{
-  "/(dashboard)/create-list/page": "app/(dashboard)/create-list/page.js",
-  "/(dashboard)/page": "app/(dashboard)/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/api/save-list/route": "app/api/save-list/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
-}
