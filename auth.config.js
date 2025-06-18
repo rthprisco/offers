@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import bcriptjs from "bcryptjs";
 
 import Credentials from "next-auth/providers/credentials";
@@ -6,7 +5,7 @@ import Google from "next-auth/providers/google";
 import { LoginSchema } from "@/schemas";
 import { getUserByEmail } from "@/models/user";
 
-export default {
+export default authConfig = {
   providers: [
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
