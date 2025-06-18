@@ -57,7 +57,7 @@ export default function UserInfo({ label, user }) {
     <div className="flex w-[400px] flex-col gap-3 rounded-lg bg-white px-8 py-6 shadow-md">
       <Form>
         <h3 className="text-xl">{label}</h3>
-        {/* <p>ID: {user.id}</p> */}
+        <p>ID: {user.id}</p>
         <div className="flex flex-col gap-3 py-6">
           <input type="text" name="id" value={user.id} hidden disabled />
           <InputField label="Nome" type="text" name="name" value={user?.name} />
@@ -78,7 +78,7 @@ export default function UserInfo({ label, user }) {
           Salvar alterações
         </Button>
       </Form>
-      <DeleteAccountForm />
+      <DeleteAccountForm idUser={user.id} />
     </div>
   );
 }
