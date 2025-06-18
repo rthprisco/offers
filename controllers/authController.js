@@ -72,12 +72,12 @@ export async function register(_prevState, formData) {
     },
   });
 
-  // await signIn("credentials", {
-  //   email: formData.get("email"),
-  //   password: formData.get("password"),
-  //   redirect: true,
-  //   redirectTo: "/",
-  // });
+  await signIn("credentials", {
+    email: formData.get("email"),
+    password: formData.get("password"),
+    redirect: true,
+    redirectTo: "/",
+  });
 }
 
 export async function login(_prevState, formData) {

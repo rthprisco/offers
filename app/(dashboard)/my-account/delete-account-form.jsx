@@ -1,24 +1,16 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
- import { deleteAccount } from "./actions";
- import { useFormStatus } from "react-dom";
+import { deleteAccount } from "./actions";
 
- export default function DeleteAccountForm() {
- const { pending } = useFormStatus();
-
-   return (
-     <form action={deleteAccount}>
-       <Button
-         type="submit"
-        
-         disabled={pending}
-       >
-         {pending ? "Deletando..." : "Deletar "}
-      </Button>
-     </form>
-   );
- }
-
-
-
+export default function DeleteAccountForm() {
+  return (
+    <Button
+      onClick={() => {
+        deleteAccount();
+      }}
+    >
+      Deletar
+    </Button>
+  );
+}
