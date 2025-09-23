@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  devIndicators: false,
+  images: {
+    domains: ['via.placeholder.com'], 
+    
+  },
+};
 
 export default nextConfig;

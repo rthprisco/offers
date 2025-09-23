@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-background flex flex-col items-center gap-11 px-4 py-6 md:px-24 md:py-12">
+    <div className="bg-background flex flex-col items-center gap-6 md:gap-11 px-4 py-6 md:px-24 md:py-12">
       <HomeCarousel />
       <Categorias
         categorias={[
@@ -40,13 +40,13 @@ export default function Home() {
           { icon: "Apple", title: "Hortifruti" },
           { icon: "Pickaxe", title: "Limpeza" },
           { icon: "CakeSlice", title: "Matinais e sobremesas" },
-          { icon: "Pizza", title: "Mercearia"},
-          { icon: "Croissant", title: "Padaria"},
-          { icon: "SprayCan", title: "Perfumaria e higiene"}
+          { icon: "Pizza", title: "Mercearia" },
+          { icon: "Croissant", title: "Padaria" },
+          { icon: "SprayCan", title: "Perfumaria e higiene" },
         ]}
       />
 
-      <h2>Ofertas da semana!</h2>
+      <h2 className="text-2xl font-bold">Ofertas da semana!</h2>
 
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 md:gap-4 lg:grid-cols-5 lg:gap-5 xl:grid-cols-6">
         {products.map((product, index) => (
@@ -57,6 +57,7 @@ export default function Home() {
             promotion={product.promocao}
             market={product.mercado}
             key={index + 1}
+            id={index}
           />
         ))}
       </div>

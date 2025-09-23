@@ -1,14 +1,13 @@
-import { logout } from "@/controllers/authController";
-import Form from "next/form";
-import { Button } from "@/components/ui/button";
+import UpdateForm from "./update-form";
+
 
 export default function MyAccount() {
   return (
-    <div>
-      Minha Conta
-      <Form action={logout}>
-        <Button>Sair</Button>
-      </Form>
+    <div className="w-[560px]">
+      <h2 className="m-6 text-3xl">Minha conta</h2>
+
+      <UpdateForm />
+     
     </div>
   );
 }

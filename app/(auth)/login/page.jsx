@@ -1,31 +1,27 @@
-import { auth } from "@/auth";
 import LoginForm from "./login-form";
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { IoMdArrowBack } from "react-icons/io";
+import { ArrowLeft } from "lucide-react";
 
-export default async function Login() {
-  const session = await auth();
-
-  if (session) return redirect("/");
-
+export default function Login() {
   return (
-    <main className="flex h-screen flex-col items-center justify-center">
-      <Link href="/" className="mb-2 flex items-center gap-1 text-slate-600">
-        <IoMdArrowBack />
-        Voltar
-      </Link>
-
-      <LoginForm />
-
-      <div className="pt-2">
-        <p className="text-slate-600">
-          Ainda não possui cadastro?{" "}
-          <Link href="/register" className="text-primary-blue">
-            Registre-se
-          </Link>
-        </p>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+      <div className="w-full max-w-md mx-auto relative">
+        <Link 
+          href="/" 
+          className="absolute -top-16 left-0 flex items-center gap-2 text-slate-600 hover:text-slate-800 transition-colors"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Voltar
+        </Link>
+        
+        <LoginForm />
       </div>
-    </main>
+    </div>
   );
 }
+
+export const metadata = {
+  title: 'Login Pessoal - Offers',
+  description: 'Faça login na sua conta pessoal',
+};
+

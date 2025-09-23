@@ -1,7 +1,10 @@
-export const metadata = {
-  title: "Autenticação",
-};
+import AccessibilityGuide from "@/components/AccessibilityGuide/AccessibilityGuide";
 
 export default function AuthLayout({ children }) {
-  return <div>{children}</div>;
+  return (
+    <>
+      <main id="main-content">{children}</main>
+      <AccessibilityGuide />
+    </>
+  );
 }
