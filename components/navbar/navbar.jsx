@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import {
   CircleUser,
@@ -9,13 +12,44 @@ import {
   Search,
   MapPin,
   Save,
+  LogOut,
 } from "lucide-react";
 import { GoBell } from "react-icons/go";
-import { auth } from "@/auth";
-import DropMenuMyAccount from "./drop-menu-my-account";
+import UserDropdown from "./UserDropdown";
 
-export default async function Navbar() {
-  const session = await auth();
+export default function Navbar() {
+  const [user, setUser] = useState(null);
+  const [userType, setUserType] = useState(null);
+
+  useEffect(() => {
+    const userData = localStorage.getItem("user_data");
+    const mercadoData = localStorage.getItem("mercado_data");
+
+    if (userData) {
+      setUser(JSON.parse(userData));
+      setUserType("user");
+    } else if (mercadoData) {
+      setUser(JSON.parse(mercadoData));
+      setUserType("mercado");
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user_data");
+    localStorage.removeItem("mercado_data");
+    localStorage.removeItem("user_type"); // Remover o tipo de usuário também
+    localStorage.removeItem("mercado_token");
+    window.location.href = "/";
+  };
+
+  const getUserDisplayName = () => {
+    if (!user) return null;
+    if (userType === "mercado") {
+      return user.nome;
+    } else {
+      return user.name;
+    }
+  };
 
   return (
     <header className="bg-primary-blue flex w-full items-center justify-around shadow md:gap-8">
@@ -29,6 +63,7 @@ export default async function Navbar() {
           />
         </Link>
       </div>
+
       <div className="flex w-[240px] flex-col justify-center gap-2 py-4 md:w-[460px]">
         <div className="relative flex items-center">
           <input
@@ -43,31 +78,54 @@ export default async function Navbar() {
           <span className="text-xs">Insira seu CEP</span>
         </div>
       </div>
+
       <div className="hidden flex-col justify-center md:flex">
         <ul className="flex list-none items-center">
-          <li className="flex gap-2 p-4">
+          <li className="flex gap-2 p-4 relative group">
             <CircleUser size={28} color="white" />
-            {session ? (
-              <DropMenuMyAccount session={session} />
+            {user ? (
+              <div className="flex items-center text-sm text-white">
+                {userType === "mercado" ? (
+                  <div className="relative group">
+                    <span className="cursor-pointer">
+                      Olá, {getUserDisplayName()}
+                    </span>
+                    <div className="absolute hidden group-hover:block hover:block top-full right-0 mt-2">
+                      <UserDropdown handleLogout={handleLogout} />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <p>Olá, {getUserDisplayName()}</p>
+                    <button
+                      onClick={handleLogout}
+                      title="Sair"
+                      className="flex items-center text-white hover:text-gray-200 transition-colors"
+                    >
+                      <LogOut size={16} />
+                    </button>
+                  </div>
+                )}
+              </div>
             ) : (
-              <Link
-                href="/login"
-                title="Faça seu login"
-                className="flex items-center text-sm text-white"
-              >
-                <p>Faça seu login</p>
-              </Link>
+              <div className="flex items-center gap-2 text-sm text-white">
+                <Link href="/login" className="hover:underline">
+                  Login
+                </Link>
+              </div>
             )}
           </li>
+
           <li>
             <Link
               href="/create-list"
-              title="Faça seu login ou cadastre-se"
+              title="Criar Lista"
               className="flex items-center gap-1 p-4 text-sm text-white"
             >
               <ListChecks size={28} />
             </Link>
           </li>
+
           <li>
             <Link
               href="/supermarket-flyers"
@@ -77,6 +135,7 @@ export default async function Navbar() {
               <Newspaper size={28} />
             </Link>
           </li>
+
           <li>
             <Link
               href="/salvos"
@@ -86,19 +145,21 @@ export default async function Navbar() {
               <Save size={28} />
             </Link>
           </li>
-         <li>
-          {typeof window !== "undefined" && (
-          <Link
-            href="#"
-            title="Alterar tema"
-            className="flex items-center gap-1 p-4 text-sm text-white"
-    >
-            <Sun size={28} />
-          </Link>
+
+          <li>
+            {typeof window !== "undefined" && (
+              <Link
+                href="#"
+                title="Alterar tema"
+                className="flex items-center gap-1 p-4 text-sm text-white"
+              >
+                <Sun size={28} />
+              </Link>
             )}
-        </li>
+          </li>
         </ul>
       </div>
+
       <div className="md:hidden">
         <GoBell size={24} color="white" />
       </div>

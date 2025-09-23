@@ -1,12 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
 }
 
 datasource db {
@@ -14,32 +7,47 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum UserRole {
-  ADMIN
-  USER
+model Usuario {
+  id        Int      @id @default(autoincrement())
+  nome      String   @db.VarChar(100)
+  email     String   @unique @db.VarChar(150)
+  senha     String   @db.VarChar(255)
+  criado_em DateTime @default(now())
+
+  accounts Account[]
+  lists    List[]
 }
 
-model User {
-  id            String    @id @default(cuid())
-  name          String
-  email         String    @unique
-  emailVerified DateTime?
-  phone         String    @unique
-  image         String?
-  password      String?
-  role          UserRole  @default(USER)
-  accounts      Account[]
-  List          List[]
+model Mercado {
+  id        Int       @id @default(autoincrement())
+  nome      String
+  email     String    @unique
+  senha     String
+  cnpj      String?   @unique
+  criadoEm  DateTime  @default(now())
+  ofertas   Oferta[]
+}
 
-  // Relacionamentos
-  reviews   Review[]
-  feedbacks Feedback[]
-  favorites Favorite[]
+model Oferta {
+  id                   Int       @id @default(autoincrement())
+  nomeProduto          String
+  descricao            String?
+  precoOriginal        Float
+  precoPromocional     Float
+  categoria            String
+  dataInicio           DateTime
+  dataFim              DateTime
+  quantidadeDisponivel Int       @default(0)
+  imagemUrl            String?
+  mercadoId            Int
+  criadoEm             DateTime  @default(now())
+
+  mercado              Mercado   @relation(fields: [mercadoId], references: [id])
 }
 
 model Account {
   id                String  @id @default(cuid())
-  userId            String  @map("user_id")
+  userId            Int     @map("user_id")
   type              String
   provider          String
   providerAccountId String  @map("provider_account_id")
@@ -50,24 +58,15 @@ model Account {
   scope             String?
   id_token          String? @db.Text
   session_state     String?
-  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user              Usuario @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }
 
-model VerificationToken {
-  id      String   @id @default(cuid())
-  email   String
-  token   String   @unique
-  expires DateTime
-
-  @@unique([email, token])
-}
-
 model List {
   id     String     @id @default(cuid())
-  userId String
-  user   User       @relation(fields: [userId], references: [id])
+  userId Int
+  user   Usuario    @relation(fields: [userId], references: [id])
   items  ListItem[]
 }
 
@@ -101,7 +100,7 @@ model Review {
   createdAt DateTime @default(now())
 
   userId    String?   
-  user      User?     @relation(fields: [userId], references: [id])
+  user      Usuario?  @relation(fields: [userId], references: [id])
 
   product   Product   @relation(fields: [productId], references: [id])
 }
@@ -113,9 +112,9 @@ model Feedback {
   createdAt DateTime @default(now())
 
   userId    String?
-  user      User?     @relation(fields: [userId], references: [id])
+  user      Usuario? @relation(fields: [userId], references: [id])
 
-  product   Product   @relation(fields: [productId], references: [id])
+  product   Product  @relation(fields: [productId], references: [id])
 }
 
 model Favorite {
@@ -124,8 +123,8 @@ model Favorite {
   userId    String   
   createdAt DateTime @default(now())
 
-  user      User     @relation(fields: [userId], references: [id])
-  product   Product  @relation(fields: [productId], references: [id])
+  user      Usuario   @relation(fields: [userId], references: [id])
+  product   Product   @relation(fields: [productId], references: [id])
 
   @@unique([productId, userId])
 }
@@ -139,3 +138,11 @@ model PriceHistory {
   product   Product  @relation(fields: [productId], references: [id])
 }
 
+model VerificationToken {
+  id      String   @id @default(cuid())
+  email   String
+  token   String   @unique
+  expires DateTime
+
+  @@unique([email, token])
+}
