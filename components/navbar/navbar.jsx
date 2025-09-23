@@ -8,9 +8,9 @@ import {
   Sun,
   Search,
   MapPin,
+  Save,
 } from "lucide-react";
 import { GoBell } from "react-icons/go";
-
 import { auth } from "@/auth";
 import DropMenuMyAccount from "./drop-menu-my-account";
 
@@ -75,6 +75,15 @@ export default async function Navbar() {
               className="flex items-center gap-1 p-4 text-sm text-white"
             >
               <Newspaper size={28} />
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/salvos"
+              title="Meus produtos salvos"
+              className="flex items-center gap-1 p-4 text-sm text-white"
+            >
+              <Save size={28} />
             </Link>
           </li>
          <li>
