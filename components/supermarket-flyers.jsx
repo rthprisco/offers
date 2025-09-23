@@ -1,9 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
-import { CalendarDays, MapPin, ShoppingBag } from "lucide-react";
+import Link from "next/link"
+import Image from "next/image"
+import { CalendarDays, MapPin, ShoppingBag } from "lucide-react"
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function SupermarketFlyers() {
   return (
@@ -11,13 +11,10 @@ export default function SupermarketFlyers() {
       <header className="mb-6 text-center sm:mb-10 sm:text-left">
         <div className="mb-2 flex items-center justify-center gap-2 sm:justify-start">
           <ShoppingBag className="text-primary h-6 w-6" />
-          <h1 className="text-2xl font-bold sm:text-4xl">
-            Encartes de Supermercados
-          </h1>
+          <h1 className="text-2xl font-bold sm:text-4xl">Encartes de Supermercados</h1>
         </div>
         <p className="text-muted-foreground max-w-2xl text-sm sm:text-base">
-          Encontre as melhores ofertas e promoções dos supermercados da sua
-          região
+          Encontre as melhores ofertas e promoções dos supermercados da sua região
         </p>
       </header>
       <div className="grid grid-cols-2 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4">
@@ -26,17 +23,14 @@ export default function SupermarketFlyers() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 function SupermarketCard({ supermarket }) {
   return (
     <Card className="group border-muted flex h-full flex-col overflow-hidden transition-all hover:shadow-md">
       <CardContent className="flex h-full flex-col p-0">
-        <Link
-          href={`/supermarket-flyers/${supermarket.id}`}
-          className="flex flex-1 flex-col"
-        >
+        <Link href={`/supermarket-flyers/${supermarket.id}`} className="flex flex-1 flex-col">
           <div className="bg-muted/30 relative flex h-40 w-full items-center justify-center overflow-hidden sm:h-48">
             <div className="relative h-full w-full">
               <Image
@@ -54,25 +48,23 @@ function SupermarketCard({ supermarket }) {
             <div className="absolute top-2 right-2"></div>
           </div>
           <div className="flex flex-1 flex-col p-3 sm:p-4">
-            <h3 className="mb-1 line-clamp-1 text-base font-bold sm:text-lg">
+            <h3 className="mb-1 line-clamp-2 text-sm font-bold leading-tight min-[480px]:text-base sm:text-lg sm:line-clamp-1 md:line-clamp-2 lg:line-clamp-1">
               {supermarket.name}
             </h3>
             <div className="mb-3 flex items-center gap-1">
-              <MapPin className="text-muted-foreground h-3 w-3" />
-              <p className="text-muted-foreground line-clamp-1 text-xs">
-                {supermarket.location}
-              </p>
+              <MapPin className="text-muted-foreground h-3 w-3 flex-shrink-0" />
+              <p className="text-muted-foreground line-clamp-1 text-xs">{supermarket.location}</p>
             </div>
 
-            <div className="mt-auto flex flex-col items-center justify-between md:flex-row">
+            <div className="mt-auto flex flex-col items-center justify-between gap-2 sm:gap-3 md:flex-row md:gap-1">
               <div className="text-muted-foreground flex items-center text-xs">
-                <CalendarDays className="mr-1 h-3 w-3" />
-                <span>Válido até {supermarket.validUntil}</span>
+                <CalendarDays className="mr-1 h-3 w-3 flex-shrink-0" />
+                <span className="whitespace-nowrap">Válido até {supermarket.validUntil}</span>
               </div>
               <Button
                 variant="outline"
                 size="sm"
-                className="border-primary text-primary hover:bg-primary-red hover:text-primary-foreground hover:border-primary-red mt-4 h-auto px-3 py-1 text-xs font-medium md:mt-0"
+                className="border-primary text-primary hover:bg-primary-red hover:text-primary-foreground hover:border-primary-red h-auto px-3 py-1 text-xs font-medium whitespace-nowrap bg-transparent"
               >
                 Ver Encarte
               </Button>
@@ -81,7 +73,7 @@ function SupermarketCard({ supermarket }) {
         </Link>
       </CardContent>
     </Card>
-  );
+  )
 }
 
 const supermarkets = [
@@ -94,7 +86,7 @@ const supermarkets = [
   },
   {
     id: 2,
-    name: "Family Supermarket",
+    name: "Family Market",
     image: "/logos/2.avif?height=300&width=400",
     validUntil: "20/04/2025",
     location: "Barra Mansa, RJ",
@@ -108,7 +100,7 @@ const supermarkets = [
   },
   {
     id: 4,
-    name: "Vegan Supermarket",
+    name: "Vegan Market",
     image: "/logos/4.avif?height=300&width=400",
     validUntil: "25/04/2025",
     location: "Barra Mansa, RJ",
@@ -141,4 +133,4 @@ const supermarkets = [
     validUntil: "16/04/2025",
     location: "Barra Mansa, RJ",
   },
-];
+]
