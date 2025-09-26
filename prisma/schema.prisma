@@ -16,20 +16,23 @@ model Usuario {
 
   accounts Account[]
   lists    List[]
+  Review   Review[]
+  Feedback Feedback[]
+  Favorite Favorite[]
 }
 
 model Mercado {
-  id        Int       @id @default(autoincrement())
-  nome      String
-  email     String    @unique
-  senha     String
-  cnpj      String?   @unique
-  criadoEm  DateTime  @default(now())
-  ofertas   Oferta[]
+  id       Int      @id @default(autoincrement())
+  nome     String
+  email    String   @unique
+  senha    String
+  cnpj     String?  @unique
+  criadoEm DateTime @default(now())
+  ofertas  Oferta[]
 }
 
 model Oferta {
-  id                   Int       @id @default(autoincrement())
+  id                   Int      @id @default(autoincrement())
   nomeProduto          String
   descricao            String?
   precoOriginal        Float
@@ -37,12 +40,12 @@ model Oferta {
   categoria            String
   dataInicio           DateTime
   dataFim              DateTime
-  quantidadeDisponivel Int       @default(0)
+  quantidadeDisponivel Int      @default(0)
   imagemUrl            String?
   mercadoId            Int
-  criadoEm             DateTime  @default(now())
+  criadoEm             DateTime @default(now())
 
-  mercado              Mercado   @relation(fields: [mercadoId], references: [id])
+  mercado Mercado @relation(fields: [mercadoId], references: [id])
 }
 
 model Account {
@@ -79,18 +82,18 @@ model ListItem {
 }
 
 model Product {
-  id            String         @id @default(cuid())
-  name          String
-  description   String?
-  price         Float
-  oldPrice      Float?
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  price       Float
+  oldPrice    Float?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 
-  reviews       Review[]
-  feedbacks     Feedback[]
-  favorites     Favorite[]
-  priceHistory  PriceHistory[]
+  reviews      Review[]
+  feedbacks    Feedback[]
+  favorites    Favorite[]
+  priceHistory PriceHistory[]
 }
 
 model Review {
@@ -99,10 +102,10 @@ model Review {
   rating    Int
   createdAt DateTime @default(now())
 
-  userId    String?   
-  user      Usuario?  @relation(fields: [userId], references: [id])
+  userId Int
+  user   Usuario @relation(fields: [userId], references: [id])
 
-  product   Product   @relation(fields: [productId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
 }
 
 model Feedback {
@@ -111,20 +114,20 @@ model Feedback {
   comment   String
   createdAt DateTime @default(now())
 
-  userId    String?
-  user      Usuario? @relation(fields: [userId], references: [id])
+  userId Int
+  user   Usuario @relation(fields: [userId], references: [id])
 
-  product   Product  @relation(fields: [productId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
 }
 
 model Favorite {
   id        String   @id @default(cuid())
   productId String
-  userId    String   
+  userId    Int
   createdAt DateTime @default(now())
 
-  user      Usuario   @relation(fields: [userId], references: [id])
-  product   Product   @relation(fields: [productId], references: [id])
+  user    Usuario @relation(fields: [userId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
 
   @@unique([productId, userId])
 }
@@ -135,7 +138,7 @@ model PriceHistory {
   price     Float
   createdAt DateTime @default(now())
 
-  product   Product  @relation(fields: [productId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
 }
 
 model VerificationToken {

@@ -1,11 +1,14 @@
 "use client";
-
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer";
+// import MenuMobile from "@/components/navbar/mobile/menu-mobile";
 import { Save, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avaliacao } from "@/components/produto-individual/avaliacao";
 import { Feedback } from "@/components/produto-individual/feedback";
 import { HistoricoPreco } from "@/components/produto-individual/historico-preco";
+
 
 export default function DetalhesProduto({ product }) {
   const handleSaveProduct = () => {
@@ -41,9 +44,11 @@ export default function DetalhesProduto({ product }) {
         alert("Não foi possível copiar a URL.");
       });
   };
-
+   
   return (
+  
     <div className="bg-white min-h-screen font-sans text-black">
+      <Navbar />
       <main className="max-w-xl mx-auto p-6">
         <div className="flex justify-end gap-2 mb-8">
           <Button 
@@ -89,7 +94,11 @@ export default function DetalhesProduto({ product }) {
         <section id="feedback" className="my-8">
           <Feedback productId={product.id} />
         </section>
+
       </main>
+      <Footer/>
     </div>
   );
+
+  
 }

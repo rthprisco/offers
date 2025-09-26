@@ -1,5 +1,7 @@
 "use client";
 
+import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
@@ -25,8 +27,9 @@ export default function SavedProductsPage() {
   };
 
   return (
-    <div className="bg-white min-h-screen font-sans text-black p-6">
-      <main className="max-w-xl mx-auto">
+    <div className="bg-white min-h-screen font-sans text-black ">
+      <Navbar/>
+      <main className="max-w-xl mx-auto p-6">
         <h1 className="text-3xl font-bold mb-6 text-center">Meus Produtos Salvos</h1>
         
         {savedProducts.length === 0 ? (
@@ -63,6 +66,7 @@ export default function SavedProductsPage() {
           </div>
         )}
       </main>
+      <Footer/>
     </div>
   );
 }
