@@ -3,13 +3,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import SearchBar from "./SearchBar";
+
 
 import {
   CircleUser,
   ListChecks,
   Newspaper,
   Sun,
-  Search,
   MapPin,
   Save,
   LogOut,
@@ -37,22 +38,19 @@ export default function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem("user_data");
     localStorage.removeItem("mercado_data");
-    localStorage.removeItem("user_type"); // Remover o tipo de usuário também
+    localStorage.removeItem("user_type");
     localStorage.removeItem("mercado_token");
     window.location.href = "/";
   };
 
   const getUserDisplayName = () => {
     if (!user) return null;
-    if (userType === "mercado") {
-      return user.nome;
-    } else {
-      return user.name;
-    }
+    return userType === "mercado" ? user.nome : user.name;
   };
 
   return (
     <header className="bg-primary-blue flex w-full items-center justify-around shadow md:gap-8">
+
       <div className="flex w-14 flex-col justify-center md:w-20">
         <Link href="/">
           <Image
@@ -64,21 +62,14 @@ export default function Navbar() {
         </Link>
       </div>
 
+      {/* Busca e CEP  */}
       <div className="flex w-[240px] flex-col justify-center gap-2 py-4 md:w-[460px]">
-        <div className="relative flex items-center">
-          <input
-            type="text"
-            placeholder="Pesquise pelo seu produto..."
-            className="bg-background relative h-10 w-full rounded-xl border-none px-4 py-0 text-sm shadow focus:outline-none"
-          />
-          <Search className="absolute right-3 hidden md:block" color="gray" />
-        </div>
+        <SearchBar />
         <div className="hidden items-center gap-1 text-white md:flex">
           <MapPin size={16} />
           <span className="text-xs">Insira seu CEP</span>
         </div>
       </div>
-
       <div className="hidden flex-col justify-center md:flex">
         <ul className="flex list-none items-center">
           <li className="flex gap-2 p-4 relative group">
@@ -90,7 +81,7 @@ export default function Navbar() {
                     <span className="cursor-pointer">
                       Olá, {getUserDisplayName()}
                     </span>
-                    <div className="absolute hidden group-hover:block hover:block top-full right-0 mt-2">
+                    <div className="absolute hidden group-hover:block top-full right-0 mt-2">
                       <UserDropdown handleLogout={handleLogout} />
                     </div>
                   </div>
@@ -115,6 +106,7 @@ export default function Navbar() {
               </div>
             )}
           </li>
+
 
           <li>
             <Link
@@ -166,3 +158,5 @@ export default function Navbar() {
     </header>
   );
 }
+
+

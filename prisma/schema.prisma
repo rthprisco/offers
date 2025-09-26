@@ -16,6 +16,9 @@ model Usuario {
 
   accounts Account[]
   lists    List[]
+  reviews   Review[]
+  feedbacks Feedback[]
+  favorites Favorite[]
 }
 
 model Mercado {
@@ -99,7 +102,7 @@ model Review {
   rating    Int
   createdAt DateTime @default(now())
 
-  userId    String?   
+  userId    Int?   
   user      Usuario?  @relation(fields: [userId], references: [id])
 
   product   Product   @relation(fields: [productId], references: [id])
@@ -111,16 +114,16 @@ model Feedback {
   comment   String
   createdAt DateTime @default(now())
 
-  userId    String?
+  userId    Int?
   user      Usuario? @relation(fields: [userId], references: [id])
 
   product   Product  @relation(fields: [productId], references: [id])
 }
 
 model Favorite {
-  id        String   @id @default(cuid())
+  id        String  @id @default(cuid())
   productId String
-  userId    String   
+  userId    Int  
   createdAt DateTime @default(now())
 
   user      Usuario   @relation(fields: [userId], references: [id])
