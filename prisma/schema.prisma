@@ -30,6 +30,11 @@ model User {
   role          UserRole  @default(USER)
   accounts      Account[]
   List          List[]
+
+  // Relacionamentos
+  reviews   Review[]
+  feedbacks Feedback[]
+  favorites Favorite[]
 }
 
 model Account {
@@ -73,3 +78,64 @@ model ListItem {
   ListId    String
   List      List    @relation(fields: [ListId], references: [id])
 }
+
+model Product {
+  id            String         @id @default(cuid())
+  name          String
+  description   String?
+  price         Float
+  oldPrice      Float?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  reviews       Review[]
+  feedbacks     Feedback[]
+  favorites     Favorite[]
+  priceHistory  PriceHistory[]
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  productId String
+  rating    Int
+  createdAt DateTime @default(now())
+
+  userId    String?   
+  user      User?     @relation(fields: [userId], references: [id])
+
+  product   Product   @relation(fields: [productId], references: [id])
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  productId String
+  comment   String
+  createdAt DateTime @default(now())
+
+  userId    String?
+  user      User?     @relation(fields: [userId], references: [id])
+
+  product   Product   @relation(fields: [productId], references: [id])
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  productId String
+  userId    String   
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id])
+  product   Product  @relation(fields: [productId], references: [id])
+
+  @@unique([productId, userId])
+}
+
+model PriceHistory {
+  id        String   @id @default(cuid())
+  productId String
+  price     Float
+  createdAt DateTime @default(now())
+
+  product   Product  @relation(fields: [productId], references: [id])
+}
+

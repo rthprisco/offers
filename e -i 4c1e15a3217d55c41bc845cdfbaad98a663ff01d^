@@ -1,0 +1,270 @@
+[33mcommit 4c1e15a3217d55c41bc845cdfbaad98a663ff01d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Yasmin Machado <ym1969436@gmail.com>
+Date:   Tue Sep 23 11:12:09 2025 -0300
+
+    pagina de produto individual
+
+[33mcommit 9fdc718ee88fb6a01f21e2b4d2e971f7bd2829f3[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Jun 18 10:12:48 2025 -0300
+
+    arrumando delete user
+
+[33mcommit 9a97cf3a48018f4f67ee94c3436ac4416228debb[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Jun 18 09:20:37 2025 -0300
+
+    arrumando prisma/client
+
+[33mcommit b74d99ce90bb4a3e8316828db552aeab990b4df6[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Jun 18 08:23:52 2025 -0300
+
+    teste deploy
+
+[33mcommit 512b7e3bc8de3de7bbcd40cd65ab97b1a5bc2bca[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Jun 17 23:29:03 2025 -0300
+
+    ?
+
+[33mcommit cf9c3bdaaf7fa044d8550c7d0bb26a99f5853261[m
+Merge: 8729ce7 c2e312c
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Jun 17 22:40:56 2025 -0300
+
+    
+
+[33mcommit 8729ce7a2bf6dd87f78706c60614e4743fb4bfe7[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Jun 17 22:29:00 2025 -0300
+
+    Ajustes
+
+[33mcommit fbd42d33d5dc4fc71a45dd65961754b337672f98[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Jun 17 22:00:38 2025 -0300
+
+    delete migrations
+
+[33mcommit 235e950f12d44378e1ced5747f878e061553d3c3[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Jun 17 21:54:15 2025 -0300
+
+    Pronto
+
+[33mcommit c2e312cef936131ef83bb4c3d19c28b811f7c1b1[m[33m ([m[1;31morigin/origin/nattan[m[33m)[m
+Author: NattanSouza <136857550+NattanSouza@users.noreply.github.com>
+Date:   Tue Jun 17 20:02:12 2025 -0300
+
+    Delete lista
+    
+    Lista deletando itens individualmente ou deletando a lista completa
+
+[33mcommit 559c1f306bacb83e9a65feacac70868b5e554551[m
+Author: GabrielPains <gaabrieldiasp@gmail.com>
+Date:   Mon Jun 16 21:54:24 2025 -0300
+
+    lista insert e delete user
+
+[33mcommit eadcdf9ca9eb323a6e45afc240e02147eae96bbd[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Sat Jun 14 10:06:55 2025 -0300
+
+    Salvando lista no LocalStorage
+
+[33mcommit 6865e89853e5ac78524f9d81cbf66db51d0aa38e[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Apr 16 16:29:04 2025 -0300
+
+    Validações de login e cadastro
+
+[33mcommit 3fad8b68a3c9bd470c897f51f3ec95713d732f0e[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Apr 15 20:48:56 2025 -0300
+
+    remove unused vercel configuration file
+
+[33mcommit 7facca8bfc48929819bdf6dba08c318ac004218b[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Apr 15 19:40:36 2025 -0300
+
+    Mudanças
+
+[33mcommit 2fcc7feb678f5d4f785418bfe11b4744b86c0c2c[m
+Merge: c9bf81f 09a10af
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Mon Apr 14 22:34:57 2025 -0300
+
+    Merge remote-tracking branch 'origin/marcello'
+
+[33mcommit c9bf81f3b84e4fd621a2ebefcb40628b091d773b[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Mon Apr 14 22:17:18 2025 -0300
+
+    Quase pronto
+
+[33mcommit f50b789d5bd8f271c4656399222ec4ab0b451040[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Apr 9 14:13:35 2025 -0300
+
+    Next.js
+
+[33mcommit c594f717b7f23a173a4860a0acd51596381e948e[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Fri Nov 29 19:34:31 2024 -0300
+
+    usuário feedback
+
+[33mcommit ab8fafe997152c5625dda044970077a89d8ad5ab[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Fri Nov 29 19:25:54 2024 -0300
+
+    Ajuste
+
+[33mcommit b8bda69132536b3132bb9a5c1b5c4495858ad0e4[m[33m ([m[1;31morigin/arthur[m[33m)[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Fri Nov 29 19:16:34 2024 -0300
+
+    Tema escuro finalizado
+
+[33mcommit e7b7475820d9a9bbe194e83f353a68e28c4f4994[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Fri Nov 29 17:49:18 2024 -0300
+
+    Implementando tema escuro
+
+[33mcommit b49b86f7f965c7c05f52e5d874a4e8f5ffba68e6[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Thu Nov 28 21:43:59 2024 -0300
+
+    Ajuste de responsividade
+
+[33mcommit ecc9ab89207c455dbf5248aabd5779949393354d[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Thu Nov 28 17:37:12 2024 -0300
+
+    Adicionado página de encartas
+
+[33mcommit 09a10af112778e5769835365893b40e76028a19f[m
+Author: Marcello Felício <marcelloflc@gmail.com>
+Date:   Wed Nov 27 22:19:49 2024 -0300
+
+    Pagina de encartes
+
+[33mcommit 3d0903fd267b6ccdd7d33146c313efc0f2e4ecf2[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Nov 27 20:51:34 2024 -0300
+
+    Acho que acabou
+
+[33mcommit e857c793e0e74838be9a7beb4fe3d7c2e1d0d58b[m
+Merge: 09a1d28 e4c408e
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Nov 27 15:39:35 2024 -0300
+
+    Resolve merge
+
+[33mcommit 09a1d2833e44f5d566a74845993b1ffc312bd9d6[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Nov 27 15:05:57 2024 -0300
+
+    Corrigindo login e cadastro
+
+[33mcommit 0bb69a8cedf5c8185373a9b92732628af867144f[m
+Merge: e929345 4676b96
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Nov 27 15:05:16 2024 -0300
+
+    Resolve merge conflict in minha-conta.html
+
+[33mcommit e92934538bef86656164320ef9dcffe289280edb[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Nov 27 14:23:44 2024 -0300
+
+    Refinos e aba do histórico de preços
+
+[33mcommit e4c408e064cc3ed8b0ecc80f49d9ad8c2b0268d4[m
+Author: Marcello Felício <marcelloflc@gmail.com>
+Date:   Wed Nov 27 12:34:31 2024 -0300
+
+    ajustes modal em todas as pagina
+
+[33mcommit 4a155ffb5583a5c2ec7de88820ea5e2f64ddafd5[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Wed Nov 27 01:36:58 2024 -0300
+
+    Correção de erros
+
+[33mcommit 4676b96cae70d9b6fddc899c931a0ad95829e27c[m[33m ([m[1;31morigin/henry[m[33m)[m
+Author: Henry <henrymarlen.souza@gmail.com>
+Date:   Tue Nov 26 23:22:28 2024 -0300
+
+    html e css minha conta finalizado
+
+[33mcommit 994d58160ee15d4896c0851ae76db8606f5ee33f[m
+Merge: 4038bb0 3ce26a7
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Nov 26 22:36:03 2024 -0300
+
+    Merge branch 'marcello'
+
+[33mcommit 4038bb0b4e2282d7881b20d27b3adbccf840835d[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Nov 26 22:03:20 2024 -0300
+
+    Feedback finalizado
+
+[33mcommit efd50e8d1988632f30237b97f3e9e8d4b256bbdc[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Tue Nov 26 00:07:19 2024 -0300
+
+    Colocando feedback na página do produto
+
+[33mcommit 381e9cc6fd00612155b952d07fb16ae0ea9e2218[m
+Merge: 4bfc4ca a2d0e33
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Mon Nov 25 16:51:25 2024 -0300
+
+    Merge branch 'yasmin' of https://github.com/rthprisco/offers into arthur
+
+[33mcommit 4bfc4ca8be09b74e383082eb27d5b5253d1f9e31[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Mon Nov 25 16:51:07 2024 -0300
+
+    Alguns detalhes (css)
+
+[33mcommit dbb58b95467f2ee4d7ecd457f06831a808bf40a9[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Mon Nov 25 12:41:12 2024 -0300
+
+    Ajustes em CSS
+
+[33mcommit f27985f217d0de00f3aa5ae7fb3e3ce3859026f7[m
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Sun Nov 24 19:30:25 2024 -0300
+
+    Criando página individual dos produtos
+
+[33mcommit baa43e500c116870d58125f9aef8c9574abe3943[m
+Merge: 9a9701d a35f7c9
+Author: Arthur Prisco <arthurprisco45@gmail.com>
+Date:   Sat Nov 23 18:37:28 2024 -0300
+
+    Merge branch 'henry' of https://github.com/rthprisco/offers into arthur
+
+[33mcommit a2d0e33ab1c093cdecde5e34694089f7f72b48c0[m[33m ([m[1;31morigin/yasmin[m[33m)[m
+Author: Yasmin Machado <ym1969436@gmail.com>
+Date:   Sat Nov 23 16:55:08 2024 -0300
+
+    feedback
+
+[33mcommit a35f7c906647bf1857cf6059cf1a8c950b48f82e[m
+Author: Henry <henrymarlen.souza@gmail.com>
+Date:   Sat Nov 23 16:08:37 2024 -0300
+
+    html e css da pagina de produtos finalizada
+
+[33mcommit 3ce26a7672e0778ef68a7ed839557c82e20a33c0[m
+Author: Marcello Felício <marcelloflc@gmail.com>
+Date:   Fri Nov 2

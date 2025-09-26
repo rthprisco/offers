@@ -57,6 +57,7 @@ export default function Home() {
             promotion={product.promocao}
             market={product.mercado}
             key={index + 1}
+            id={index}
           />
         ))}
       </div>

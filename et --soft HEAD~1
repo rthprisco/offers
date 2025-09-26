@@ -1,0 +1,81 @@
+[33m4c1e15a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mtemp-commit[m[33m)[m pagina de produto individual
+[33m9fdc718[m arrumando delete user
+[33m9a97cf3[m arrumando prisma/client
+[33mb74d99c[m teste deploy
+[33m512b7e3[m ?
+[33mcf9c3bd[m 
+[33m8729ce7[m Ajustes
+[33mfbd42d3[m delete migrations
+[33m235e950[m Pronto
+[33mc2e312c[m[33m ([m[1;31morigin/origin/nattan[m[33m)[m Delete lista
+[33m559c1f3[m lista insert e delete user
+[33meadcdf9[m Salvando lista no LocalStorage
+[33m6865e89[m Validações de login e cadastro
+[33m3fad8b6[m remove unused vercel configuration file
+[33m7facca8[m Mudanças
+[33m2fcc7fe[m Merge remote-tracking branch 'origin/marcello'
+[33mc9bf81f[m Quase pronto
+[33mf50b789[m Next.js
+[33mc594f71[m usuário feedback
+[33mab8fafe[m Ajuste
+[33mb8bda69[m[33m ([m[1;31morigin/arthur[m[33m)[m Tema escuro finalizado
+[33me7b7475[m Implementando tema escuro
+[33mb49b86f[m Ajuste de responsividade
+[33mecc9ab8[m Adicionado página de encartas
+[33m09a10af[m Pagina de encartes
+[33m3d0903f[m Acho que acabou
+[33me857c79[m Resolve merge
+[33m09a1d28[m Corrigindo login e cadastro
+[33m0bb69a8[m Resolve merge conflict in minha-conta.html
+[33me929345[m Refinos e aba do histórico de preços
+[33me4c408e[m ajustes modal em todas as pagina
+[33m4a155ff[m Correção de erros
+[33m4676b96[m[33m ([m[1;31morigin/henry[m[33m)[m html e css minha conta finalizado
+[33m994d581[m Merge branch 'marcello'
+[33m4038bb0[m Feedback finalizado
+[33mefd50e8[m Colocando feedback na página do produto
+[33m381e9cc[m Merge branch 'yasmin' of https://github.com/rthprisco/offers into arthur
+[33m4bfc4ca[m Alguns detalhes (css)
+[33mdbb58b9[m Ajustes em CSS
+[33mf27985f[m Criando página individual dos produtos
+[33mbaa43e5[m Merge branch 'henry' of https://github.com/rthprisco/offers into arthur
+[33ma2d0e33[m[33m ([m[1;31morigin/yasmin[m[33m)[m feedback
+[33ma35f7c9[m html e css da pagina de produtos finalizada
+[33m3ce26a7[m Adicionado a opção de ocultar meu CEP quando ele for digitado
+[33m9a9701d[m Ajustes de css
+[33maa42956[m Paginação finalizada
+[33mb097de8[m Iniciando API CEP
+[33md7e7cca[m teste
+[33m3335db7[m Ajuste na navbar mobile
+[33mc8e3e3c[m Merge branch 'laisa'
+[33m0acad70[m Merge branch 'henry' into main
+[33mcac3618[m API
+[33me6323c8[m detalhes
+[33m816aaab[m resposividade
+[33mf254d82[m filtro de categorias finalizado
+[33m327663a[m API mercado livre finalizada
+[33m00eaa10[m Validação de cadastro finalizado
+[33md3a6aa3[m[33m ([m[1;31morigin/laisa[m[33m)[m feedback e minha conta
+[33m0cba0f4[m[33m ([m[1;31morigin/v1.0.0[m[33m)[m responsividade pag cadastro
+[33m9c472eb[m Começando validação do cadastro
+[33mbd0338e[m Paginação de produtos
+[33me03906f[m v1.0.0
+[33mb8d56be[m Gambi finalizada
+[33m1b910a1[m Ajustes CSS
+[33mc241188[m Ajustes Slider
+[33m368513d[m Terminando a navbar
+[33ma0200be[m +C:/Program Files/Git/- Pronto
+[33md2a03f9[m Gambi
+[33me78578f[m Login quase implementado
+[33me701c70[m Pronto
+[33m19e61d1[m Quase pronto, quase
+[33mc373bf7[m Tela principal quase pronta
+[33md1376b8[m Ajustes de estilo - Adicionado ícone na barra de pesquisa - Ajuste de espaçamento na navbar - Adicionado área de paginação - Adicionado favicon
+[33me30f524[m Adiconado slider
+[33m0a4b5f8[m Adicionado tela de login e cadastro
+[33m0c8bddd[m Iniciando o banner
+[33m59c4c0b[m style(css): Desenvolvendo css
+[33md1a2dc0[m Ícones adicionados nos links da nav
+[33mf9304f3[m Criando CSS para a navbar
+[33md660aa8[m[33m ([m[1;31morigin/develop/login[m[33m, [m[1;31morigin/develop/encartes[m[33m)[m Iniciando a navbar
+[33m72e8c70[m Primeiro commit
