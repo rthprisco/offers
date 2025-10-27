@@ -20,7 +20,11 @@ export default function CardProduct({
         height={20}
         className="mb-2 object-contain"
       />
+<<<<<<< HEAD
       <h3 className="line-clamp-2 text-center" href="http://localhost:3000/produto/1">{title}</h3>
+=======
+      <h3 className="line-clamp-2 text-center">{title}</h3>
+>>>>>>> marcello
       <div className="flex w-full flex-col items-start">
         <span className="text-xs text-gray-500 line-through">
           R$ {price.toFixed(2)}

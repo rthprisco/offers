@@ -1,27 +1,31 @@
+import { auth } from "@/auth";
 import RegisterForm from "./register-form";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { redirect } from "next/navigation";
+import { IoMdArrowBack } from "react-icons/io";
 
-export default function Register() {
+export default async function Register() {
+  const session = await auth();
+
+  if (session) return redirect("/");
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 p-4">
-      <div className="w-full max-w-2xl mx-auto relative">
-        <Link 
-          href="/" 
-          className="absolute -top-16 left-0 flex items-center gap-2 text-slate-600 hover:text-slate-800 transition-colors"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Voltar
-        </Link>
-        
-        <RegisterForm />
+    <main className="flex h-screen flex-col items-center justify-center">
+      <Link href="/" className="mb-2 flex items-center gap-1 text-slate-600">
+        <IoMdArrowBack />
+        Voltar
+      </Link>
+
+      <RegisterForm />
+
+      <div className="pt-2">
+        <p className="text-slate-600">
+          Já possui uma conta?{" "}
+          <Link href="/login" className="text-primary-blue">
+            Fazer login
+          </Link>
+        </p>
       </div>
-    </div>
+    </main>
   );
 }
-
-export const metadata = {
-  title: 'Cadastro Pessoal - Offers',
-  description: 'Crie sua conta pessoal na plataforma',
-};
-
