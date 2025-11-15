@@ -1,0 +1,66 @@
+[
+  {
+    "img": "/placeholder.svg?height=120&width=120",
+    "titulo": "Refrigerante Cola 2L",
+    "preco_original": 8.90,
+    "promocao": 6.49,
+    "mercado": "Mercado XYZ",
+    "categoria": "Bebidas"
+  },
+  {
+    "img": "/placeholder.svg?height=120&width=120",
+    "titulo": "Biscoito Integral 200g",
+    "preco_original": 4.50,
+    "promocao": 3.29,
+    "mercado": "Mercado ABC",
+    "categoria": "Biscoitos"
+  },
+  {
+    "img": "/placeholder.svg?height=120&width=120",
+    "titulo": "Carne Vermelha 500g",
+    "preco_original": 32.90,
+    "promocao": 24.99,
+    "mercado": "Mercado XYZ",
+    "categoria": "Carnes"
+  },
+  {
+    "img": "/placeholder.svg?height=120&width=120",
+    "titulo": "Cereal Matinal 400g",
+    "preco_original": 12.50,
+    "promocao": 8.99,
+    "mercado": "Mercado ABC",
+    "categoria": "Cereais e farinhas"
+  },
+  {
+    "img": "/placeholder.svg?height=120&width=120",
+    "titulo": "Frango Congelado 1kg",
+    "preco_original": 18.90,
+    "promocao": 14.49,
+    "mercado": "Mercado XYZ",
+    "categoria": "Congelados"
+  },
+  {
+    "img": "/placeholder.svg?height=120&width=120",
+    "titulo": "Queijo Meia Cura 500g",
+    "preco_original": 22.50,
+    "promocao": 17.99,
+    "mercado": "Mercado ABC",
+    "categoria": "Frios e laticínios"
+  },
+  {
+    "img": "/placeholder.svg?height=120&width=120",
+    "titulo": "Tomate Caqui 1kg",
+    "preco_original": 5.90,
+    "promocao": 4.49,
+    "mercado": "Mercado XYZ",
+    "categoria": "Hortifruti"
+  },
+  {
+    "img": "/placeholder.svg?height=120&width=120",
+    "titulo": "Detergente Neutro 500ml",
+    "preco_original": 2.50,
+    "promocao": 1.99,
+    "mercado": "Mercado ABC",
+    "categoria": "Limpeza"
+  }
+]
