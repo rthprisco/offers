@@ -1,378 +1,146 @@
 [
   {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Refrigerante Cola 2L",
-    "preco_original": 8.90,
-    "promocao": 6.49,
+    "img": "/public/produtos/amaciante.jpg?height=120&width=120",
+    "titulo": "Amaciante",
+    "preco_original": 9.90,
+    "promocao": 7.49,
+    "mercado": "Mercado XYZ",
+    "categoria": "Limpeza"
+  },
+  {
+    "img": "/public/produtos/ativ.jpg?height=120&width=120",
+    "titulo": "Ativ",
+    "preco_original": 10.50,
+    "promocao": 8.90,
+    "mercado": "Mercado XYZ",
+    "categoria": "Laticínios"
+  },
+  {
+    "img": "/public/produtos/bisnaguinha.jpg?height=120&width=120",
+    "titulo": "Bisnaguinha",
+    "preco_original": 4.50,
+    "promocao": 3.99,
+    "mercado": "Mercado XYZ",
+    "categoria": "Panificados"
+  },
+  {
+    "img": "/public/produtos/cafe.jpg?height=120&width=120",
+    "titulo": "Café",
+    "preco_original": 12.90,
+    "promocao": 10.49,
     "mercado": "Mercado XYZ",
     "categoria": "Bebidas"
   },
   {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Biscoito de Maisena 400g",
-    "preco_original": 3.50,
-    "promocao": 2.49,
-    "mercado": "Supermercado ABC",
-    "categoria": "Biscoitos"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Carne Moída 1kg",
-    "preco_original": 22.90,
-    "promocao": 19.90,
+    "img": "/public/produtos/carne-seca.jpg?height=120&width=120",
+    "titulo": "Carne-seca",
+    "preco_original": 25.90,
+    "promocao": 21.99,
     "mercado": "Mercado XYZ",
     "categoria": "Carnes"
   },
   {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Arroz Branco 5kg",
-    "preco_original": 20.90,
-    "promocao": 17.90,
-    "mercado": "Supermercado ABC",
-    "categoria": "Cereais e farinhas"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Frango Congelado 1kg",
-    "preco_original": 15.50,
-    "promocao": 12.90,
-    "mercado": "Mercado XYZ",
-    "categoria": "Congelados"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Queijo Mussarela 500g",
-    "preco_original": 12.90,
-    "promocao": 10.99,
-    "mercado": "Supermercado ABC",
-    "categoria": "Frios e laticínios"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Maçã Gala 1kg",
+    "img": "/public/produtos/chocolate.jpg?height=120&width=120",
+    "titulo": "Chocolate",
     "preco_original": 5.90,
     "promocao": 4.50,
     "mercado": "Mercado XYZ",
-    "categoria": "Hortifruti"
+    "categoria": "Doces"
   },
   {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Detergente Líquido 500ml",
+    "img": "/public/produtos/corona.jpg?height=120&width=120",
+    "titulo": "Corona (Cerveja)",
+    "preco_original": 14.90,
+    "promocao": 12.99,
+    "mercado": "Mercado XYZ",
+    "categoria": "Bebidas"
+  },
+  {
+    "img": "/public/produtos/danone.jpg?height=120&width=120",
+    "titulo": "Danone",
+    "preco_original": 5.00,
+    "promocao": 3.99,
+    "mercado": "Mercado XYZ",
+    "categoria": "Laticínios"
+  },
+  {
+    "img": "/public/produtos/leite.jpg?height=120&width=120",
+    "titulo": "Leite",
+    "preco_original": 3.50,
+    "promocao": 2.99,
+    "mercado": "Mercado XYZ",
+    "categoria": "Laticínios"
+  },
+  {
+    "img": "/public/produtos/linguica-suina.jpg?height=120&width=120",
+    "titulo": "Linguiça suína",
+    "preco_original": 18.90,
+    "promocao": 15.49,
+    "mercado": "Mercado XYZ",
+    "categoria": "Carnes"
+  },
+  {
+    "img": "/public/produtos/odorizador.jpg?height=120&width=120",
+    "titulo": "Odorizador",
+    "preco_original": 7.50,
+    "promocao": 5.90,
+    "mercado": "Mercado XYZ",
+    "categoria": "Higiene"
+  },
+  {
+    "img": "/public/produtos/refresco.jpg?height=120&width=120",
+    "titulo": "Refresco",
+    "preco_original": 3.20,
+    "promocao": 2.50,
+    "mercado": "Mercado XYZ",
+    "categoria": "Bebidas"
+  },
+  {
+    "img": "/public/produtos/requeijao.jpg?height=120&width=120",
+    "titulo": "Requeijão",
+    "preco_original": 6.80,
+    "promocao": 5.50,
+    "mercado": "Mercado XYZ",
+    "categoria": "Laticínios"
+  },
+  {
+    "img": "/public/produtos/sabonete.jpg?height=120&width=120",
+    "titulo": "Sabonete",
     "preco_original": 2.90,
     "promocao": 2.49,
-    "mercado": "Supermercado ABC",
-    "categoria": "Limpeza"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Achocolatado em Pó 400g",
-    "preco_original": 8.90,
-    "promocao": 6.99,
     "mercado": "Mercado XYZ",
-    "categoria": "Matinais e sobremesas"
+    "categoria": "Higiene"
   },
   {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Óleo de Soja 900ml",
-    "preco_original": 4.90,
-    "promocao": 3.99,
-    "mercado": "Supermercado ABC",
-    "categoria": "Mercearia"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Pão Francês 10 unidades",
-    "preco_original": 6.90,
-    "promocao": 5.50,
-    "mercado": "Mercado XYZ",
-    "categoria": "Padaria"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Shampoo 300ml",
-    "preco_original": 9.90,
-    "promocao": 7.49,
-    "mercado": "Supermercado ABC",
-    "categoria": "Perfumaria e higiene"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Suco de Laranja 1L",
-    "preco_original": 5.90,
-    "promocao": 4.49,
-    "mercado": "Mercado XYZ",
-    "categoria": "Bebidas"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Biscoito Salgado 200g",
-    "preco_original": 3.50,
-    "promocao": 2.80,
-    "mercado": "Supermercado ABC",
-    "categoria": "Biscoitos"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Linguiça Toscana 500g",
-    "preco_original": 11.90,
-    "promocao": 9.90,
-    "mercado": "Mercado XYZ",
-    "categoria": "Carnes"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Farinha de Mandioca 1kg",
-    "preco_original": 6.90,
-    "promocao": 5.90,
-    "mercado": "Supermercado ABC",
-    "categoria": "Cereais e farinhas"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Peixe Congelado 1kg",
-    "preco_original": 22.90,
-    "promocao": 19.90,
-    "mercado": "Mercado XYZ",
-    "categoria": "Congelados"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Requeijão Cremoso 500g",
-    "preco_original": 9.90,
-    "promocao": 7.99,
-    "mercado": "Supermercado ABC",
-    "categoria": "Frios e laticínios"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Tomate 1kg",
-    "preco_original": 6.90,
-    "promocao": 5.50,
-    "mercado": "Mercado XYZ",
-    "categoria": "Hortifruti"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Sabão em Pó 1kg",
-    "preco_original": 8.90,
-    "promocao": 6.99,
-    "mercado": "Supermercado ABC",
-    "categoria": "Limpeza"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Pudim de Leite 400g",
-    "preco_original": 7.90,
-    "promocao": 5.99,
-    "mercado": "Mercado XYZ",
-    "categoria": "Matinais e sobremesas"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Açúcar Refinado 1kg",
-    "preco_original": 3.99,
-    "promocao": 3.29,
-    "mercado": "Supermercado ABC",
-    "categoria": "Mercearia"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Baguete 500g",
-    "preco_original": 4.90,
-    "promocao": 3.99,
-    "mercado": "Mercado XYZ",
-    "categoria": "Padaria"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Creme Dental 90g",
-    "preco_original": 4.90,
-    "promocao": 3.49,
-    "mercado": "Supermercado ABC",
-    "categoria": "Perfumaria e higiene"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Água Mineral 1,5L",
-    "preco_original": 1.99,
-    "promocao": 1.49,
-    "mercado": "Mercado XYZ",
-    "categoria": "Bebidas"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Biscoito Amanteigado 300g",
-    "preco_original": 5.50,
-    "promocao": 4.40,
-    "mercado": "Supermercado ABC",
-    "categoria": "Biscoitos"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Peito de Frango 1kg",
-    "preco_original": 14.90,
-    "promocao": 12.90,
-    "mercado": "Mercado XYZ",
-    "categoria": "Carnes"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Granola 500g",
-    "preco_original": 9.90,
-    "promocao": 8.49,
-    "mercado": "Supermercado ABC",
-    "categoria": "Cereais e farinhas"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Pizza Congelada Quatro Queijos 500g",
-    "preco_original": 18.90,
-    "promocao": 15.90,
-    "mercado": "Mercado XYZ",
-    "categoria": "Congelados"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Iogurte Grego 170g",
-    "preco_original": 5.90,
-    "promocao": 4.80,
-    "mercado": "Supermercado ABC",
-    "categoria": "Frios e laticínios"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Cenoura 1kg",
-    "preco_original": 4.90,
-    "promocao": 3.80,
-    "mercado": "Mercado XYZ",
-    "categoria": "Hortifruti"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Alvejante 1L",
-    "preco_original": 3.90,
-    "promocao": 2.99,
-    "mercado": "Supermercado ABC",
-    "categoria": "Limpeza"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Torta de Limão 500g",
-    "preco_original": 14.90,
-    "promocao": 11.99,
-    "mercado": "Mercado XYZ",
-    "categoria": "Matinais e sobremesas"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Feijão Carioca 1kg",
-    "preco_original": 7.90,
-    "promocao": 6.90,
-    "mercado": "Supermercado ABC",
-    "categoria": "Mercearia"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Pão de Queijo 200g",
-    "preco_original": 6.90,
-    "promocao": 5.50,
-    "mercado": "Mercado XYZ",
-    "categoria": "Padaria"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Desodorante Aerosol 150ml",
-    "preco_original": 9.90,
-    "promocao": 7.50,
-    "mercado": "Supermercado ABC",
-    "categoria": "Perfumaria e higiene"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Refrigerante Uva 2L",
-    "preco_original": 8.90,
-    "promocao": 6.49,
-    "mercado": "Mercado XYZ",
-    "categoria": "Bebidas"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Biscoito de Polvilho 400g",
-    "preco_original": 3.99,
+    "img": "/public/produtos/sardinha.jpg?height=120&width=120",
+    "titulo": "Sardinha",
+    "preco_original": 4.00,
     "promocao": 3.50,
-    "mercado": "Supermercado ABC",
-    "categoria": "Biscoitos"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Costela Bovina 1kg",
-    "preco_original": 34.90,
-    "promocao": 29.90,
     "mercado": "Mercado XYZ",
-    "categoria": "Carnes"
+    "categoria": "Conservas"
   },
   {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Fubá 1kg",
-    "preco_original": 3.50,
-    "promocao": 2.80,
-    "mercado": "Supermercado ABC",
-    "categoria": "Cereais e farinhas"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Hamburguer Congelado 500g",
-    "preco_original": 15.90,
-    "promocao": 12.90,
-    "mercado": "Mercado XYZ",
-    "categoria": "Congelados"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Cream Cheese 200g",
+    "img": "/public/produtos/toddy.jpg?height=120&width=120",
+    "titulo": "Toddy",
     "preco_original": 8.90,
     "promocao": 7.49,
-    "mercado": "Supermercado ABC",
-    "categoria": "Frios e laticínios"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Beterraba 1kg",
-    "preco_original": 5.90,
-    "promocao": 4.80,
     "mercado": "Mercado XYZ",
-    "categoria": "Hortifruti"
+    "categoria": "Bebidas"
   },
   {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Desinfetante 500ml",
-    "preco_original": 4.90,
-    "promocao": 3.99,
-    "mercado": "Supermercado ABC",
-    "categoria": "Limpeza"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Tiramisu 500g",
-    "preco_original": 19.90,
-    "promocao": 17.90,
+    "img": "/public/produtos/torta.jpg?height=120&width=120",
+    "titulo": "Torta",
+    "preco_original": 15.00,
+    "promocao": 12.90,
     "mercado": "Mercado XYZ",
-    "categoria": "Matinais e sobremesas"
+    "categoria": "Doces"
   },
   {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Macarrão Espaguete 500g",
-    "preco_original": 3.90,
-    "promocao": 3.29,
-    "mercado": "Supermercado ABC",
-    "categoria": "Mercearia"
-  },
-  {
-    "img": "/placeholder.svg?height=120&width=120",
-    "titulo": "Pão Integral 400g",
-    "preco_original": 6.90,
-    "promocao": 5.90,
+    "img": "/public/produtos/vinho.jpg?height=120&width=120",
+    "titulo": "Vinho",
+    "preco_original": 29.90,
+    "promocao": 24.90,
     "mercado": "Mercado XYZ",
-    "categoria": "Padaria"
+    "categoria": "Bebidas"
   }
 ]

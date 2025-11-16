@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import HomeCarousel from '../../components/Carousel';
 import Categorias from '../../components/Categorias';
 import CardProduct from '../../components/CardProduct';
-import Pagination from '../../components/Pagination';
+import Pagination from "../../components/Pagination";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -57,7 +57,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-gray-50 flex flex-col items-center gap-6 md:gap-11 px-4 py-6 md:px-24 md:py-12">
+    <div className="bg-gradient-to-b from-gray-50 to-white flex flex-col items-center gap-6 md:gap-8 lg:gap-10 px-3 sm:px-4 md:px-6 lg:px-12 xl:px-24 py-6 md:py-10 lg:py-12 min-h-screen">
       <HomeCarousel />
       <Categorias
         categorias={categoriasList}
@@ -65,9 +65,9 @@ export default function Home() {
         selectedCategory={selectedCategory}
       />
 
-      <h2 className="text-2xl font-bold">Ofertas da semana!</h2>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">Ofertas da semana!</h2>
 
-      <div className="grid grid-cols-2 gap-0.5 sm:grid-cols-3 sm:gap-1 md:grid-cols-4 md:gap-1 lg:grid-cols-5 lg:gap-2 xl:grid-cols-6 w-full">
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 md:gap-4 lg:grid-cols-5 lg:gap-5 xl:grid-cols-6 w-full auto-rows-max">
         {paginatedProducts.length > 0 ? (
           paginatedProducts.map((product, index) => (
             <CardProduct
