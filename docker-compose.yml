@@ -4,8 +4,8 @@ services:
   sonarqube:
     image: sonarqube:latest
     container_name: sonarqube
-    expose:
-      - "9000"
+    ports:
+      - "9000:9000"
     environment:
       SONAR_JDBC_URL: jdbc:postgresql://postgres:5432/sonar
       SONAR_JDBC_USERNAME: sonar
@@ -28,20 +28,6 @@ services:
       POSTGRES_DB: sonar
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    networks:
-      - sonar-network
-
-  nginx:
-    image: nginx:alpine
-    container_name: sonar-nginx
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./nginx/certs:/etc/nginx/certs
-    depends_on:
-      - sonarqube
     networks:
       - sonar-network
 

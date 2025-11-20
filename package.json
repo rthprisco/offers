@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sonar:report": "node scripts/generate-sonar-report.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
@@ -18,7 +19,11 @@
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.9.5",
-    "tailwindcss": "^4.1.16"
+    "tailwindcss": "^4.1.16",
+    "zod": "3.25.76",
+    "fs": "0.0.1-security",
+    "path": "0.12.7",
+    "process": "0.11.10"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
