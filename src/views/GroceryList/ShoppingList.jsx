@@ -7,15 +7,16 @@ export default function ShoppingList() {
   const defaultLists = [];
   const [lists, setLists] = useState(defaultLists);
   const [activeListId, setActiveListId] = useState(1);
+  const activeList = lists.find((l) => l.id === activeListId);
   const [newItemName, setNewItemName] = useState("");
   const [newItemQuantity, setNewItemQuantity] = useState(1);
   const [newItemUnit, setNewItemUnit] = useState("un");
+ 
   const [isNewListDialogOpen, setIsNewListDialogOpen] = useState(false);
   const [newListName, setNewListName] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
+  
 
-
-  //GET /listas
   useEffect(() => {
   const fetchLists = async () => {
     try {
@@ -225,7 +226,7 @@ const addList = async () => {
     );
   };
 
-  return (
+ return (
     <div className="w-[90%] md:w-[500px] bg-white rounded-lg shadow flex flex-col mx-auto mt-10">
       {/* Header */}
       <div className="p-4 border-b-0">
@@ -233,7 +234,7 @@ const addList = async () => {
       </div>
 
       {/* Content */}
-      <div className="p-4 flex">
+      <div className="p-4 flex-=">
         {/* Abas */}
         < div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-1 overflow-x-auto min-w-0 flex-1">
@@ -381,7 +382,52 @@ const addList = async () => {
           <p className="text-center text-gray-400">Nenhuma lista disponível</p>
         )}
       </div>
-     
+
+      {/* Footer */}
+      <div className="p-4 border-t-0 flex flex-col gap-3">
+        <div className="flex justify-center gap-2 w-full">
+          <button
+            onClick={() => {
+              const purchased = activeList.items.filter((item) => item.purchased).length;
+              const total = activeList.items.length;
+              alert(
+                `Progresso: ${purchased}/${total} itens comprados (${
+                  total > 0 ? Math.round((purchased / total) * 100) : 0
+                }%)`
+              );
+            }}
+            className="px-3 py-1 border rounded text-sm"
+          >
+            Ver Progresso
+          </button>
+          <button
+            onClick={() => removeList(activeListId)}
+            disabled={lists.length <= 1}
+            className="px-3 py-1 border rounded text-sm flex items-center gap-1 disabled:opacity-50"
+          >
+            <Trash2 className="h-4 w-4" /> Excluir Lista
+          </button>
+        </div>
+
+        <div className="flex justify-center gap-2 w-full">
+          <button
+            onClick={exportLists}
+            className="px-3 py-1 border rounded text-sm"
+          >
+            Exportar
+          </button>
+          <div className="relative">
+            <button className="px-3 py-1 border rounded text-sm">Importar</button>
+            <input
+              type="file"
+              accept=".json"
+              onChange={importLists}
+              className="absolute inset-0 opacity-0 cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Modal Nova Lista */}
       {isNewListDialogOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">

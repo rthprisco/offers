@@ -6,6 +6,7 @@ import Login from "./views/Login";
 import MyAccountPage from "./views/MyAccount";
 import CreateAccountPage from "./views/CreateAccount";
 import GroceryList from "./views/GroceryList";
+import ShoppingList from "./views/GroceryList/ShoppingList";
 
 export default function App() {
   return (
@@ -13,7 +14,12 @@ export default function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
+
+          
           <Route path="/grocery-list" element={<GroceryList />} />
+          
+          <Route path="/shopping-list" element={<ShoppingList />} />
+
           <Route path="/my-account" element={<MyAccountPage />} />
         </Route>
 

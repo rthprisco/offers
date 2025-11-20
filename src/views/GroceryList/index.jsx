@@ -1,3 +1,9 @@
+import ShoppingList from "./ShoppingList";
+
 export default function GroceryList() {
-    return <div>Criar Lista</div>
+  return (
+    <div>
+      <ShoppingList />
+    </div>
+  );
 }
